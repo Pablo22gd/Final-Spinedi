@@ -11,19 +11,21 @@ namespace clase
         public static SqlCommand CrearComando()
 
         {
-            string _cadenaConexion = Configuracion.CadenaConexion;
+            //string _cadenaConexion = Configuracion.CadenaConexion;
 
-            SqlConnection _conexion = new SqlConnection();
+            //SqlConnection _conexion = new SqlConnection();
 
-            _conexion.ConnectionString = _cadenaConexion;
+            //_conexion.ConnectionString = _cadenaConexion;
 
-            SqlCommand _comando = new SqlCommand();
+            SqlConnection _conexion = new SqlConnection ("data source = 192.168.5.112; initial catalog = Stock; user id = julian; password = casa12");
 
-            _comando = _conexion.CreateCommand();
+            //SqlCommand _comando = new SqlCommand();
 
-            _comando.CommandType = CommandType.Text;
+            //_comando = _conexion.CreateCommand();
 
-            return _comando;
+            //_comando.CommandType = CommandType.Text;
+
+            //return _comando;
         }
 }
 }

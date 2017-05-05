@@ -10,8 +10,7 @@ namespace clase
 
     {
         static string
-        cadenaConexion=@"Data Source=.\MSPDeveloper;Initial
-Catalog=Tienda;User ID=sa;Password=mredison";
+        cadenaConexion= @"data source = 192.168.5.112; initial catalog = Stock; user id = julian; password = casa12";
         public static string CadenaConexion
         {
             get { return cadenaConexion; }
