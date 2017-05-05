@@ -1,0 +1,31 @@
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\wflSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\wflSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\wflSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\brlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\dtlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\brlSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\brlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\dtlSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Release\dtlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\ResolveAssemblyReference.cache
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\wflSistema.Resources.resources
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\GenerateResource.read.1.tlog
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\GenerateResource.write.1.tlog
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\wflSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\wflSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Release\wflSistema.pdb
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\wflSistema.dll
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\wflSistema.pdb
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\wflSistema.xml
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\brlSistema.dll
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\dtlSistema.dll
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\brlSistema.pdb
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\brlSistema.xml
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\dtlSistema.pdb
+C:\TP-Spinedi\PruebaCapas\wflSistema\bin\Release\dtlSistema.xml
+C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.vbprojResolveAssemblyReference.cache
+C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.Resources.resources
+C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.vbproj.GenerateResource.Cache
+C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.dll
+C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.xml
+C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.pdb

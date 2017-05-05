@@ -1,0 +1,25 @@
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Release\brlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Release\brlSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Release\brlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Release\dtlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Release\dtlSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Release\dtlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\ResolveAssemblyReference.cache
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\brlSistema.Resources.resources
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\GenerateResource.read.1.tlog
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\GenerateResource.write.1.tlog
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\brlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\brlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\obj\Release\brlSistema.pdb
+C:\TP-Spinedi\PruebaCapas\brlSistema\bin\Release\brlSistema.dll
+C:\TP-Spinedi\PruebaCapas\brlSistema\bin\Release\brlSistema.pdb
+C:\TP-Spinedi\PruebaCapas\brlSistema\bin\Release\brlSistema.xml
+C:\TP-Spinedi\PruebaCapas\brlSistema\bin\Release\dtlSistema.dll
+C:\TP-Spinedi\PruebaCapas\brlSistema\bin\Release\dtlSistema.pdb
+C:\TP-Spinedi\PruebaCapas\brlSistema\bin\Release\dtlSistema.xml
+C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.vbprojResolveAssemblyReference.cache
+C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.Resources.resources
+C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.vbproj.GenerateResource.Cache
+C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.dll
+C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.xml
+C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.pdb

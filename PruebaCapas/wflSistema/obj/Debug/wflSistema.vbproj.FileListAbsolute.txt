@@ -1,0 +1,32 @@
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\wflSistema.dll
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\wflSistema.pdb
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\wflSistema.xml
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\brlSistema.dll
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\dtlSistema.dll
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\brlSistema.pdb
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\brlSistema.xml
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\dtlSistema.pdb
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\bin\Debug\dtlSistema.xml
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\ResolveAssemblyReference.cache
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\wflSistema.Resources.resources
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\GenerateResource.read.1.tlog
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\GenerateResource.write.1.tlog
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\wflSistema.dll
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\wflSistema.xml
+d:\mis documentos\visual studio 2010\Projects\PruebaCapas\wflSistema\obj\Debug\wflSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\wflSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\wflSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\wflSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\brlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\dtlSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\brlSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\brlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\dtlSistema.pdb
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\bin\Debug\dtlSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\ResolveAssemblyReference.cache
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\wflSistema.Resources.resources
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\GenerateResource.read.1.tlog
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\GenerateResource.write.1.tlog
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\wflSistema.dll
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\wflSistema.xml
+D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\wflSistema\obj\Debug\wflSistema.pdb
