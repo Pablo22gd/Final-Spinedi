@@ -1,0 +1,3 @@
+C:\Final Spinedi\clase\Presentacion.cs\obj\Debug\Presentacion.cs.Productos.resources
+C:\Final Spinedi\clase\Presentacion.cs\obj\Debug\Presentacion.cs.Properties.Resources.resources
+C:\Final Spinedi\clase\Presentacion.cs\obj\Debug\Presentacion.cs.csproj.GenerateResource.Cache

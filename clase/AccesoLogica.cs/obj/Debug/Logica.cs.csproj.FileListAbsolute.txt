@@ -1,0 +1,4 @@
+C:\Final Spinedi\clase\AccesoLogica.cs\obj\Debug\Logica.cs.csprojResolveAssemblyReference.cache
+C:\Final Spinedi\clase\AccesoLogica.cs\obj\Debug\AccesoLogica.cs.AccesoLogica.resources
+C:\Final Spinedi\clase\AccesoLogica.cs\obj\Debug\AccesoLogica.cs.Properties.Resources.resources
+C:\Final Spinedi\clase\AccesoLogica.cs\obj\Debug\Logica.cs.csproj.GenerateResource.Cache
