@@ -29,3 +29,18 @@ C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.vbproj.GenerateResou
 C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.dll
 C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.xml
 C:\TP-Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.pdb
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\wflSistema.dll
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\wflSistema.pdb
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\wflSistema.xml
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\brlSistema.dll
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\brlSistema.pdb
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\brlSistema.xml
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\wflSistema\bin\Release\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.vbprojResolveAssemblyReference.cache
+C:\Final Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.Resources.resources
+C:\Final Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.vbproj.GenerateResource.Cache
+C:\Final Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.dll
+C:\Final Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.xml
+C:\Final Spinedi\PruebaCapas\wflSistema\obj\Release\wflSistema.pdb

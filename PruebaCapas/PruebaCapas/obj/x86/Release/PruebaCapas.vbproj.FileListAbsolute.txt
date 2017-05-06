@@ -17,3 +17,6 @@ C:\TP-Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.vbproj.Generat
 C:\TP-Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.exe
 C:\TP-Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.xml
 C:\TP-Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.pdb
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.exe
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.xml
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.pdb

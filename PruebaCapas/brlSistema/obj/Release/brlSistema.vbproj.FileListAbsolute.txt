@@ -23,3 +23,15 @@ C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.vbproj.GenerateResou
 C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.dll
 C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.xml
 C:\TP-Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.pdb
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Release\brlSistema.dll
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Release\brlSistema.pdb
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Release\brlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Release\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Release\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Release\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.vbprojResolveAssemblyReference.cache
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.Resources.resources
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.vbproj.GenerateResource.Cache
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.dll
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Release\brlSistema.pdb

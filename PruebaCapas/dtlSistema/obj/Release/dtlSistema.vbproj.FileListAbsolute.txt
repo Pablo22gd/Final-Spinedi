@@ -17,3 +17,12 @@ C:\TP-Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.vbproj.GenerateResou
 C:\TP-Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.dll
 C:\TP-Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.xml
 C:\TP-Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\dtlSistema\bin\Release\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\dtlSistema\bin\Release\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\dtlSistema\bin\Release\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.vbprojResolveAssemblyReference.cache
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.Resources.resources
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.vbproj.GenerateResource.Cache
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Release\dtlSistema.pdb
