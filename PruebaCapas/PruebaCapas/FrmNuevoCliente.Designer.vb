@@ -22,52 +22,55 @@ Partial Class FrmIngresarNuevoCliente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LblAsistenteNuevoCliente = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmIngresarNuevoCliente))
+        Me.LblIngresarNuevoCliente = New System.Windows.Forms.Label()
+        Me.PictureNuevoCliente = New System.Windows.Forms.PictureBox()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.LblApellido = New System.Windows.Forms.Label()
         Me.LblDNI = New System.Windows.Forms.Label()
         Me.LblDomicilio = New System.Windows.Forms.Label()
         Me.LblSexo = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.TxtApellido = New System.Windows.Forms.TextBox()
+        Me.TxtDNI = New System.Windows.Forms.TextBox()
+        Me.TxtDomicilio = New System.Windows.Forms.TextBox()
+        Me.TxtTelefono = New System.Windows.Forms.TextBox()
+        Me.TxtEmail = New System.Windows.Forms.TextBox()
+        Me.LblFechaDeNacimiento = New System.Windows.Forms.Label()
+        Me.CbSexo = New System.Windows.Forms.ComboBox()
         Me.LblTelefono = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DTPFechaDeNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.LblEmail = New System.Windows.Forms.Label()
         Me.LblProvincia = New System.Windows.Forms.Label()
         Me.LblLocalidad = New System.Windows.Forms.Label()
-        Me.LblFechaAlta = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.CbProvincia = New System.Windows.Forms.ComboBox()
+        Me.CbLocalidad = New System.Windows.Forms.ComboBox()
         Me.LblEstado = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CbEstado = New System.Windows.Forms.ComboBox()
+        Me.BtnVolver = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
+        CType(Me.PictureNuevoCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'LblAsistenteNuevoCliente
+        'LblIngresarNuevoCliente
         '
-        Me.LblAsistenteNuevoCliente.AutoSize = True
-        Me.LblAsistenteNuevoCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAsistenteNuevoCliente.Location = New System.Drawing.Point(580, 67)
-        Me.LblAsistenteNuevoCliente.Name = "LblAsistenteNuevoCliente"
-        Me.LblAsistenteNuevoCliente.Size = New System.Drawing.Size(166, 16)
-        Me.LblAsistenteNuevoCliente.TabIndex = 0
-        Me.LblAsistenteNuevoCliente.Text = "Ingresar Nuevo Cliente"
+        Me.LblIngresarNuevoCliente.AutoSize = True
+        Me.LblIngresarNuevoCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIngresarNuevoCliente.Location = New System.Drawing.Point(580, 67)
+        Me.LblIngresarNuevoCliente.Name = "LblIngresarNuevoCliente"
+        Me.LblIngresarNuevoCliente.Size = New System.Drawing.Size(166, 16)
+        Me.LblIngresarNuevoCliente.TabIndex = 0
+        Me.LblIngresarNuevoCliente.Text = "Ingresar Nuevo Cliente"
         '
-        'PictureBox1
+        'PictureNuevoCliente
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(583, 110)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(163, 163)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.PictureNuevoCliente.Image = CType(resources.GetObject("PictureNuevoCliente.Image"), System.Drawing.Image)
+        Me.PictureNuevoCliente.Location = New System.Drawing.Point(583, 110)
+        Me.PictureNuevoCliente.Name = "PictureNuevoCliente"
+        Me.PictureNuevoCliente.Size = New System.Drawing.Size(163, 163)
+        Me.PictureNuevoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureNuevoCliente.TabIndex = 1
+        Me.PictureNuevoCliente.TabStop = False
         '
         'LblNombre
         '
@@ -114,66 +117,66 @@ Partial Class FrmIngresarNuevoCliente
         Me.LblSexo.TabIndex = 6
         Me.LblSexo.Text = "Sexo"
         '
-        'TextBox1
+        'TxtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(151, 79)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.TxtNombre.Location = New System.Drawing.Point(151, 79)
+        Me.TxtNombre.Multiline = True
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(210, 20)
+        Me.TxtNombre.TabIndex = 7
         '
-        'TextBox2
+        'TxtApellido
         '
-        Me.TextBox2.Location = New System.Drawing.Point(151, 105)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.TxtApellido.Location = New System.Drawing.Point(151, 105)
+        Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.Size = New System.Drawing.Size(210, 20)
+        Me.TxtApellido.TabIndex = 8
         '
-        'TextBox3
+        'TxtDNI
         '
-        Me.TextBox3.Location = New System.Drawing.Point(151, 130)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.TxtDNI.Location = New System.Drawing.Point(151, 130)
+        Me.TxtDNI.Name = "TxtDNI"
+        Me.TxtDNI.Size = New System.Drawing.Size(210, 20)
+        Me.TxtDNI.TabIndex = 9
         '
-        'TextBox4
+        'TxtDomicilio
         '
-        Me.TextBox4.Location = New System.Drawing.Point(151, 159)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox4.TabIndex = 10
+        Me.TxtDomicilio.Location = New System.Drawing.Point(151, 159)
+        Me.TxtDomicilio.Name = "TxtDomicilio"
+        Me.TxtDomicilio.Size = New System.Drawing.Size(210, 20)
+        Me.TxtDomicilio.TabIndex = 10
         '
-        'TextBox7
+        'TxtTelefono
         '
-        Me.TextBox7.Location = New System.Drawing.Point(151, 245)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox7.TabIndex = 13
+        Me.TxtTelefono.Location = New System.Drawing.Point(151, 245)
+        Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.Size = New System.Drawing.Size(210, 20)
+        Me.TxtTelefono.TabIndex = 13
         '
-        'TextBox8
+        'TxtEmail
         '
-        Me.TextBox8.Location = New System.Drawing.Point(151, 271)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(210, 20)
-        Me.TextBox8.TabIndex = 14
+        Me.TxtEmail.Location = New System.Drawing.Point(151, 271)
+        Me.TxtEmail.Name = "TxtEmail"
+        Me.TxtEmail.Size = New System.Drawing.Size(210, 20)
+        Me.TxtEmail.TabIndex = 14
         '
-        'Label1
+        'LblFechaDeNacimiento
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(31, 220)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Fecha de Nacimiento"
+        Me.LblFechaDeNacimiento.AutoSize = True
+        Me.LblFechaDeNacimiento.Location = New System.Drawing.Point(31, 220)
+        Me.LblFechaDeNacimiento.Name = "LblFechaDeNacimiento"
+        Me.LblFechaDeNacimiento.Size = New System.Drawing.Size(108, 13)
+        Me.LblFechaDeNacimiento.TabIndex = 15
+        Me.LblFechaDeNacimiento.Text = "Fecha de Nacimiento"
         '
-        'ComboBox1
+        'CbSexo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Masculino ", "Femenino"})
-        Me.ComboBox1.Location = New System.Drawing.Point(151, 186)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(210, 21)
-        Me.ComboBox1.TabIndex = 16
+        Me.CbSexo.FormattingEnabled = True
+        Me.CbSexo.Items.AddRange(New Object() {"Masculino ", "Femenino"})
+        Me.CbSexo.Location = New System.Drawing.Point(151, 186)
+        Me.CbSexo.Name = "CbSexo"
+        Me.CbSexo.Size = New System.Drawing.Size(210, 21)
+        Me.CbSexo.TabIndex = 16
         '
         'LblTelefono
         '
@@ -184,12 +187,12 @@ Partial Class FrmIngresarNuevoCliente
         Me.LblTelefono.TabIndex = 17
         Me.LblTelefono.Text = "Telefono"
         '
-        'DateTimePicker1
+        'DTPFechaDeNacimiento
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(151, 219)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(210, 20)
-        Me.DateTimePicker1.TabIndex = 18
+        Me.DTPFechaDeNacimiento.Location = New System.Drawing.Point(151, 214)
+        Me.DTPFechaDeNacimiento.Name = "DTPFechaDeNacimiento"
+        Me.DTPFechaDeNacimiento.Size = New System.Drawing.Size(210, 20)
+        Me.DTPFechaDeNacimiento.TabIndex = 18
         '
         'LblEmail
         '
@@ -218,120 +221,122 @@ Partial Class FrmIngresarNuevoCliente
         Me.LblLocalidad.TabIndex = 21
         Me.LblLocalidad.Text = "Localidad"
         '
-        'LblFechaAlta
+        'CbProvincia
         '
-        Me.LblFechaAlta.AutoSize = True
-        Me.LblFechaAlta.Location = New System.Drawing.Point(31, 372)
-        Me.LblFechaAlta.Name = "LblFechaAlta"
-        Me.LblFechaAlta.Size = New System.Drawing.Size(72, 13)
-        Me.LblFechaAlta.TabIndex = 22
-        Me.LblFechaAlta.Text = "Fecha de alta"
+        Me.CbProvincia.FormattingEnabled = True
+        Me.CbProvincia.Location = New System.Drawing.Point(151, 303)
+        Me.CbProvincia.Name = "CbProvincia"
+        Me.CbProvincia.Size = New System.Drawing.Size(210, 21)
+        Me.CbProvincia.TabIndex = 23
         '
-        'ComboBox2
+        'CbLocalidad
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(151, 297)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(210, 21)
-        Me.ComboBox2.TabIndex = 23
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(151, 330)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(210, 21)
-        Me.ComboBox3.TabIndex = 24
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(151, 366)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(210, 20)
-        Me.DateTimePicker2.TabIndex = 25
+        Me.CbLocalidad.FormattingEnabled = True
+        Me.CbLocalidad.Location = New System.Drawing.Point(151, 336)
+        Me.CbLocalidad.Name = "CbLocalidad"
+        Me.CbLocalidad.Size = New System.Drawing.Size(210, 21)
+        Me.CbLocalidad.TabIndex = 24
         '
         'LblEstado
         '
         Me.LblEstado.AutoSize = True
-        Me.LblEstado.Location = New System.Drawing.Point(31, 404)
+        Me.LblEstado.Location = New System.Drawing.Point(31, 371)
         Me.LblEstado.Name = "LblEstado"
         Me.LblEstado.Size = New System.Drawing.Size(40, 13)
         Me.LblEstado.TabIndex = 26
         Me.LblEstado.Text = "Estado"
         '
-        'ComboBox4
+        'CbEstado
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Activo", "Inactivo"})
-        Me.ComboBox4.Location = New System.Drawing.Point(151, 404)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(210, 21)
-        Me.ComboBox4.TabIndex = 27
+        Me.CbEstado.FormattingEnabled = True
+        Me.CbEstado.Items.AddRange(New Object() {"Activo", "Inactivo"})
+        Me.CbEstado.Location = New System.Drawing.Point(151, 368)
+        Me.CbEstado.Name = "CbEstado"
+        Me.CbEstado.Size = New System.Drawing.Size(210, 21)
+        Me.CbEstado.TabIndex = 27
+        '
+        'BtnVolver
+        '
+        Me.BtnVolver.Location = New System.Drawing.Point(583, 316)
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.Size = New System.Drawing.Size(75, 23)
+        Me.BtnVolver.TabIndex = 28
+        Me.BtnVolver.Text = "Volver"
+        Me.BtnVolver.UseVisualStyleBackColor = True
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.Location = New System.Drawing.Point(670, 316)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnAgregar.TabIndex = 29
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'FrmIngresarNuevoCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(946, 526)
-        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.BtnAgregar)
+        Me.Controls.Add(Me.BtnVolver)
+        Me.Controls.Add(Me.CbEstado)
         Me.Controls.Add(Me.LblEstado)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.LblFechaAlta)
+        Me.Controls.Add(Me.CbLocalidad)
+        Me.Controls.Add(Me.CbProvincia)
         Me.Controls.Add(Me.LblLocalidad)
         Me.Controls.Add(Me.LblProvincia)
         Me.Controls.Add(Me.LblEmail)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DTPFechaDeNacimiento)
         Me.Controls.Add(Me.LblTelefono)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.CbSexo)
+        Me.Controls.Add(Me.LblFechaDeNacimiento)
+        Me.Controls.Add(Me.TxtEmail)
+        Me.Controls.Add(Me.TxtTelefono)
+        Me.Controls.Add(Me.TxtDomicilio)
+        Me.Controls.Add(Me.TxtDNI)
+        Me.Controls.Add(Me.TxtApellido)
+        Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.LblSexo)
         Me.Controls.Add(Me.LblDomicilio)
         Me.Controls.Add(Me.LblDNI)
         Me.Controls.Add(Me.LblApellido)
         Me.Controls.Add(Me.LblNombre)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.LblAsistenteNuevoCliente)
+        Me.Controls.Add(Me.PictureNuevoCliente)
+        Me.Controls.Add(Me.LblIngresarNuevoCliente)
         Me.Name = "FrmIngresarNuevoCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Nuevo Cliente"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Asistente Para Ingresar Nuevo Cliente"
+        CType(Me.PictureNuevoCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents LblAsistenteNuevoCliente As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents LblIngresarNuevoCliente As Label
+    Friend WithEvents PictureNuevoCliente As PictureBox
     Friend WithEvents LblNombre As Label
     Friend WithEvents LblApellido As Label
     Friend WithEvents LblDNI As Label
     Friend WithEvents LblDomicilio As Label
     Friend WithEvents LblSexo As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents TxtApellido As TextBox
+    Friend WithEvents TxtDNI As TextBox
+    Friend WithEvents TxtDomicilio As TextBox
+    Friend WithEvents TxtTelefono As TextBox
+    Friend WithEvents TxtEmail As TextBox
+    Friend WithEvents LblFechaDeNacimiento As Label
+    Friend WithEvents CbSexo As ComboBox
     Friend WithEvents LblTelefono As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DTPFechaDeNacimiento As DateTimePicker
     Friend WithEvents LblEmail As Label
     Friend WithEvents LblProvincia As Label
     Friend WithEvents LblLocalidad As Label
-    Friend WithEvents LblFechaAlta As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents CbProvincia As ComboBox
+    Friend WithEvents CbLocalidad As ComboBox
     Friend WithEvents LblEstado As Label
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents CbEstado As ComboBox
+    Friend WithEvents BtnVolver As Button
+    Friend WithEvents BtnAgregar As Button
 End Class
