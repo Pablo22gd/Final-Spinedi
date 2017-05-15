@@ -72,7 +72,7 @@ Partial Class FrmBajaCliente
         'CBFiltro
         '
         Me.CBFiltro.FormattingEnabled = True
-        Me.CBFiltro.Items.AddRange(New Object() {"DNI", "Apellido", "Numero de Cliente", "Cuit"})
+        Me.CBFiltro.Items.AddRange(New Object() {"DNI", "Apellido", "Numero de Cliente", "cuit"})
         Me.CBFiltro.Location = New System.Drawing.Point(178, 106)
         Me.CBFiltro.Name = "CBFiltro"
         Me.CBFiltro.Size = New System.Drawing.Size(179, 21)

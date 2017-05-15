@@ -7,6 +7,12 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub obtenerCliente(ByVal cbFiltro As String, ByVal txtbuscar As String, ByRef clientes As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerCliente(cbFiltro, txtbuscar, clientes)
+
+    End Sub
+
     Public Sub insertarRegistro(ByVal idcliente As Integer, ByRef strrazonsocial As String)
         Dim x As New dtlClientes
         x.insertarRegistro(idcliente, strrazonsocial)
@@ -28,4 +34,10 @@ Public Class brlClientes
         Dim x As New dtlClientes
         x.eliminarRegistro(idcliente)
     End Sub
+
+    Public Sub eliminarCliente(ByVal idcliente As Integer)
+        Dim x As New dtlClientes
+        x.eliminarCliente(idcliente)
+    End Sub
+
 End Class

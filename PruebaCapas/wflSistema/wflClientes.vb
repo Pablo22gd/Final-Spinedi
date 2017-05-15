@@ -3,6 +3,10 @@ Public Class wflClientes
     Public Sub obtenerRegistro(ByVal idcliente As Integer, ByRef clientes As DataTable)
         Dim x As New brlClientes
         x.obtenerRegistro(idcliente, clientes)
+    End Sub
+    Public Sub buscarCliente(ByVal cbFiltro As String, ByVal txtBuscar As String, ByRef clientes As DataTable)
+        Dim x As New brlClientes
+        x.obtenerCliente(cbFiltro, txtBuscar, clientes)
 
     End Sub
 
@@ -33,4 +37,16 @@ Public Class wflClientes
     ' En ese caso debere tener en la dtl un una dtl de facturas
     ' Una brl de facturas
     ' y aca traerlas y trabajarlas.
+
+
+    Public Sub eliminarCliente(ByVal idcliente As Integer, ByRef strmensaje As String)
+        Dim x As New brlClientes
+        If x.ExisteCliente(idcliente) Then
+            x.eliminarCliente(idcliente)
+            strmensaje = "El cliente se eliminó con exito"
+        Else
+            strmensaje = "El cliente no existe en la base"
+        End If
+    End Sub
+
 End Class
