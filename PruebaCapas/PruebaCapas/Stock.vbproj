@@ -72,6 +72,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmrBajaProveedor.Designer.vb">
+      <DependentUpon>FmrBajaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrBajaProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormIngreso.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
       <DependentUpon>FrmBajaCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmBajaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBajaProducto.Designer.vb">
+      <DependentUpon>FrmBajaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBajaProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.vb">
@@ -97,6 +109,12 @@
     <Compile Include="FrmModificarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmModificarProducto.Designer.vb">
+      <DependentUpon>FrmModificarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmModificarProveedor.Designer.vb">
       <DependentUpon>FrmModificarProveedor.vb</DependentUpon>
     </Compile>
@@ -107,6 +125,12 @@
       <DependentUpon>FrmNuevoCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmNuevoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoProducto.Designer.vb">
+      <DependentUpon>FrmNuevoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmNuevoProveedor.Designer.vb">
@@ -132,11 +156,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FmrBajaProveedor.resx">
+      <DependentUpon>FmrBajaProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIngreso.resx">
       <DependentUpon>FormIngreso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaCliente.resx">
       <DependentUpon>FrmBajaCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBajaProducto.resx">
+      <DependentUpon>FrmBajaProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
@@ -144,11 +174,17 @@
     <EmbeddedResource Include="FrmModificarCliente.resx">
       <DependentUpon>FrmModificarCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarProducto.resx">
+      <DependentUpon>FrmModificarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarProveedor.resx">
       <DependentUpon>FrmModificarProveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoCliente.resx">
       <DependentUpon>FrmNuevoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoProducto.resx">
+      <DependentUpon>FrmNuevoProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoProveedor.resx">
       <DependentUpon>FrmNuevoProveedor.vb</DependentUpon>

@@ -25,8 +25,8 @@ Partial Class FrmLogin
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.Lblpassword = New System.Windows.Forms.Label()
         Me.PictureLoguin = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
         Me.BtnVolver = New System.Windows.Forms.Button()
         CType(Me.PictureLoguin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,19 +58,19 @@ Partial Class FrmLogin
         Me.PictureLoguin.TabIndex = 2
         Me.PictureLoguin.TabStop = False
         '
-        'TextBox1
+        'TxtUsuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(152, 131)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(177, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.TxtUsuario.Location = New System.Drawing.Point(152, 131)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(177, 20)
+        Me.TxtUsuario.TabIndex = 3
         '
-        'TextBox2
+        'TxtPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(152, 192)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(177, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.TxtPassword.Location = New System.Drawing.Point(152, 192)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.Size = New System.Drawing.Size(177, 20)
+        Me.TxtPassword.TabIndex = 4
         '
         'BtnIngresar
         '
@@ -97,13 +97,13 @@ Partial Class FrmLogin
         Me.ClientSize = New System.Drawing.Size(812, 453)
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.BtnIngresar)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TxtPassword)
+        Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.PictureLoguin)
         Me.Controls.Add(Me.Lblpassword)
         Me.Controls.Add(Me.LblUsuario)
         Me.Name = "FrmLogin"
-        Me.Text = "FrmLogin"
+        Me.Text = "Login"
         CType(Me.PictureLoguin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -113,8 +113,8 @@ Partial Class FrmLogin
     Friend WithEvents LblUsuario As Label
     Friend WithEvents Lblpassword As Label
     Friend WithEvents PictureLoguin As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtUsuario As TextBox
+    Friend WithEvents TxtPassword As TextBox
     Friend WithEvents BtnIngresar As Button
     Friend WithEvents BtnVolver As Button
 End Class
