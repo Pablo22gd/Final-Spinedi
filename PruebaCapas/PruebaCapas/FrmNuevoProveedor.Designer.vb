@@ -37,9 +37,7 @@ Partial Class FrmNuevoProveedor
         Me.PictureNuevoProveedor = New System.Windows.Forms.PictureBox()
         Me.CbEstado = New System.Windows.Forms.ComboBox()
         Me.CbProvincia = New System.Windows.Forms.ComboBox()
-        Me.CbSexo = New System.Windows.Forms.ComboBox()
         Me.TxtDomicilio = New System.Windows.Forms.TextBox()
-        Me.TxtApellido = New System.Windows.Forms.TextBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.LblEstado = New System.Windows.Forms.Label()
         Me.LblLocalidad = New System.Windows.Forms.Label()
@@ -53,11 +51,7 @@ Partial Class FrmNuevoProveedor
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.TxtPrecioCompra = New System.Windows.Forms.TextBox()
         Me.TxtPrecioVenta = New System.Windows.Forms.TextBox()
-        Me.LblApellido = New System.Windows.Forms.Label()
-        Me.TxtDNI = New System.Windows.Forms.TextBox()
         Me.CbLocalidad = New System.Windows.Forms.ComboBox()
-        Me.LblDNI = New System.Windows.Forms.Label()
-        Me.LblSexo = New System.Windows.Forms.Label()
         Me.DGVNuevoProveedor = New System.Windows.Forms.DataGridView()
         CType(Me.NUDCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NUDProducto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,6 +170,7 @@ Partial Class FrmNuevoProveedor
         'CbEstado
         '
         Me.CbEstado.FormattingEnabled = True
+        Me.CbEstado.Items.AddRange(New Object() {"activo"})
         Me.CbEstado.Location = New System.Drawing.Point(266, 324)
         Me.CbEstado.Name = "CbEstado"
         Me.CbEstado.Size = New System.Drawing.Size(200, 21)
@@ -184,18 +179,11 @@ Partial Class FrmNuevoProveedor
         'CbProvincia
         '
         Me.CbProvincia.FormattingEnabled = True
+        Me.CbProvincia.Items.AddRange(New Object() {"bsas"})
         Me.CbProvincia.Location = New System.Drawing.Point(266, 223)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(200, 21)
         Me.CbProvincia.TabIndex = 85
-        '
-        'CbSexo
-        '
-        Me.CbSexo.FormattingEnabled = True
-        Me.CbSexo.Location = New System.Drawing.Point(266, 140)
-        Me.CbSexo.Name = "CbSexo"
-        Me.CbSexo.Size = New System.Drawing.Size(200, 21)
-        Me.CbSexo.TabIndex = 84
         '
         'TxtDomicilio
         '
@@ -203,13 +191,6 @@ Partial Class FrmNuevoProveedor
         Me.TxtDomicilio.Name = "TxtDomicilio"
         Me.TxtDomicilio.Size = New System.Drawing.Size(200, 20)
         Me.TxtDomicilio.TabIndex = 83
-        '
-        'TxtApellido
-        '
-        Me.TxtApellido.Location = New System.Drawing.Point(266, 88)
-        Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(200, 20)
-        Me.TxtApellido.TabIndex = 82
         '
         'TxtNombre
         '
@@ -320,47 +301,14 @@ Partial Class FrmNuevoProveedor
         Me.TxtPrecioVenta.Size = New System.Drawing.Size(200, 20)
         Me.TxtPrecioVenta.TabIndex = 102
         '
-        'LblApellido
-        '
-        Me.LblApellido.AutoSize = True
-        Me.LblApellido.Location = New System.Drawing.Point(131, 91)
-        Me.LblApellido.Name = "LblApellido"
-        Me.LblApellido.Size = New System.Drawing.Size(44, 13)
-        Me.LblApellido.TabIndex = 103
-        Me.LblApellido.Text = "Apellido"
-        '
-        'TxtDNI
-        '
-        Me.TxtDNI.Location = New System.Drawing.Point(266, 114)
-        Me.TxtDNI.Name = "TxtDNI"
-        Me.TxtDNI.Size = New System.Drawing.Size(200, 20)
-        Me.TxtDNI.TabIndex = 104
-        '
         'CbLocalidad
         '
         Me.CbLocalidad.FormattingEnabled = True
+        Me.CbLocalidad.Items.AddRange(New Object() {"bsas"})
         Me.CbLocalidad.Location = New System.Drawing.Point(266, 192)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(200, 21)
         Me.CbLocalidad.TabIndex = 105
-        '
-        'LblDNI
-        '
-        Me.LblDNI.AutoSize = True
-        Me.LblDNI.Location = New System.Drawing.Point(130, 117)
-        Me.LblDNI.Name = "LblDNI"
-        Me.LblDNI.Size = New System.Drawing.Size(26, 13)
-        Me.LblDNI.TabIndex = 106
-        Me.LblDNI.Text = "DNI"
-        '
-        'LblSexo
-        '
-        Me.LblSexo.AutoSize = True
-        Me.LblSexo.Location = New System.Drawing.Point(130, 140)
-        Me.LblSexo.Name = "LblSexo"
-        Me.LblSexo.Size = New System.Drawing.Size(31, 13)
-        Me.LblSexo.TabIndex = 107
-        Me.LblSexo.Text = "Sexo"
         '
         'DGVNuevoProveedor
         '
@@ -376,11 +324,7 @@ Partial Class FrmNuevoProveedor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 598)
         Me.Controls.Add(Me.DGVNuevoProveedor)
-        Me.Controls.Add(Me.LblSexo)
-        Me.Controls.Add(Me.LblDNI)
         Me.Controls.Add(Me.CbLocalidad)
-        Me.Controls.Add(Me.TxtDNI)
-        Me.Controls.Add(Me.LblApellido)
         Me.Controls.Add(Me.TxtPrecioVenta)
         Me.Controls.Add(Me.TxtPrecioCompra)
         Me.Controls.Add(Me.TxtTelefono)
@@ -399,9 +343,7 @@ Partial Class FrmNuevoProveedor
         Me.Controls.Add(Me.PictureNuevoProveedor)
         Me.Controls.Add(Me.CbEstado)
         Me.Controls.Add(Me.CbProvincia)
-        Me.Controls.Add(Me.CbSexo)
         Me.Controls.Add(Me.TxtDomicilio)
-        Me.Controls.Add(Me.TxtApellido)
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.LblEstado)
         Me.Controls.Add(Me.LblLocalidad)
@@ -438,9 +380,7 @@ Partial Class FrmNuevoProveedor
     Friend WithEvents PictureNuevoProveedor As PictureBox
     Friend WithEvents CbEstado As ComboBox
     Friend WithEvents CbProvincia As ComboBox
-    Friend WithEvents CbSexo As ComboBox
     Friend WithEvents TxtDomicilio As TextBox
-    Friend WithEvents TxtApellido As TextBox
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents LblEstado As Label
     Friend WithEvents LblLocalidad As Label
@@ -454,10 +394,6 @@ Partial Class FrmNuevoProveedor
     Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents TxtPrecioCompra As TextBox
     Friend WithEvents TxtPrecioVenta As TextBox
-    Friend WithEvents LblApellido As Label
-    Friend WithEvents TxtDNI As TextBox
     Friend WithEvents CbLocalidad As ComboBox
-    Friend WithEvents LblDNI As Label
-    Friend WithEvents LblSexo As Label
     Friend WithEvents DGVNuevoProveedor As DataGridView
 End Class

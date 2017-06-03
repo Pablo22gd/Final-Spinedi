@@ -18,6 +18,30 @@ Public Class brlClientes
         x.insertarRegistro(idcliente, strrazonsocial)
     End Sub
 
+    Public Sub NuevoProveedor(ByVal TxtNombre,
+                         ByVal TxtDomicilio,
+                         ByVal CbLocalidad,
+                         ByVal CbProvincia,
+                         ByVal TxtTelefono,
+                         ByVal TxtCuit,
+                         ByVal CbEstado,
+                         ByVal TxtObservaciones,
+                         ByVal TxtRazonSocial)
+
+        Dim x As New dtlClientes
+        x.NuevoProveedor(TxtNombre,
+                         TxtDomicilio,
+                         CbLocalidad,
+                         CbProvincia,
+                         TxtTelefono,
+                         TxtCuit,
+                         CbEstado,
+                         TxtObservaciones,
+                         TxtRazonSocial)
+
+
+    End Sub
+
     Public Function ExisteCliente(ByVal idcliente As Integer) As Boolean
         Dim x As New dtlClientes
         Dim clientes As New DataTable

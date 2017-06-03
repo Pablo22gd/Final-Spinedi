@@ -18,3 +18,12 @@ C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FormIngreso
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmIngresarNuevoCliente.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.Resources.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\Stock.vbproj.GenerateResource.Cache
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FmrBajaProveedor.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmBajaCliente.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmBajaProducto.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmLogin.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmModificarCliente.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmModificarProducto.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmModificarProveedor.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmNuevoProducto.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Release\PruebaCapas.FrmNuevoProveedor.resources

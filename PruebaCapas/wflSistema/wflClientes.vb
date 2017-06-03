@@ -22,6 +22,31 @@ Public Class wflClientes
 
     End Sub
 
+    Public Sub NuevoProveedor(
+                         ByVal TxtNombre,
+                         ByVal TxtDomicilio,
+                         ByVal CbLocalidad,
+                         ByVal CbProvincia,
+                         ByVal TxtTelefono,
+                         ByVal TxtCuit,
+                         ByVal CbEstado,
+                         ByVal TxtObservaciones,
+                         ByVal TxtRazonSocial)
+        Dim x As New brlClientes
+
+        x.NuevoProveedor(TxtNombre,
+                         TxtDomicilio,
+                         CbLocalidad,
+                         CbProvincia,
+                         TxtTelefono,
+                         TxtCuit,
+                         CbEstado,
+                         TxtObservaciones,
+                         TxtRazonSocial)
+
+
+    End Sub
+
     Public Sub eliminarRegistro(ByVal idcliente As Integer, ByRef strmensaje As String)
         Dim x As New brlClientes
         If x.ExisteCliente(idcliente) Then

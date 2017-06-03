@@ -18,3 +18,12 @@ D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\Prueb
 D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\dtlSistema\bin\Debug\dtlSistema.dll
 D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\dtlSistema\bin\Debug\dtlSistema.pdb
 D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\dtlSistema\bin\Debug\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\dtlSistema\bin\Debug\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\dtlSistema\bin\Debug\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\dtlSistema\bin\Debug\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.Resources.resources
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.vbproj.GenerateResource.Cache
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.vbprojResolveAssemblyReference.cache

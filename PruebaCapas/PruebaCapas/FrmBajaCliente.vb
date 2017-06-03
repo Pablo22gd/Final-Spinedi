@@ -2,14 +2,14 @@
 Public Class FrmBajaCliente
 
 
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        Dim x As New wflClientes
-        Dim strmensaje As String = ""
+    'Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+    '    Dim x As New wflClientes
+    '    Dim strmensaje As String = ""
 
-        x.eliminarCliente(idCliente, strmensaje)
-        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+    '    x.eliminarCliente(idCliente, strmensaje)
+    '    MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
-    End Sub
+    'End Sub
 
     Private Sub FrmBajaCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim x As New wflClientes

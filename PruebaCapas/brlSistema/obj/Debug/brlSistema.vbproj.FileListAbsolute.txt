@@ -24,3 +24,15 @@ D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\Prueb
 D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Debug\dtlSistema.dll
 D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Debug\dtlSistema.pdb
 D:\Diego\Diseño e implementacion de sistemas\Clases\Programacion en Capas\PruebaCapas\brlSistema\bin\Debug\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Debug\brlSistema.dll
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Debug\brlSistema.pdb
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Debug\brlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Debug\dtlSistema.dll
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Debug\dtlSistema.pdb
+C:\Final Spinedi\PruebaCapas\brlSistema\bin\Debug\dtlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Debug\brlSistema.vbprojResolveAssemblyReference.cache
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Debug\brlSistema.Resources.resources
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Debug\brlSistema.vbproj.GenerateResource.Cache
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Debug\brlSistema.dll
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Debug\brlSistema.xml
+C:\Final Spinedi\PruebaCapas\brlSistema\obj\Debug\brlSistema.pdb
