@@ -44,6 +44,33 @@ Public Class wflClientes
                          TxtObservaciones,
                          TxtRazonSocial)
 
+    End Sub
+    Public Sub NuevoCliente(
+                         ByVal TxtNombre,
+                         ByVal TxtApellido,
+                         ByVal TxtDNI,
+                         ByVal TxtDomicilio,
+                         ByVal CbSexo,
+                         ByVal DTPFechaDeNacimiento,
+                         ByVal TxtTelefono,
+                         ByVal TxtEmail,
+                         ByVal CbProvincia,
+                         ByVal CbLocalidad,
+                         ByVal CbEstado)
+
+        Dim x As New brlClientes
+
+        x.NuevoCliente(TxtNombre,
+                         TxtApellido,
+                         TxtDNI,
+                         TxtDomicilio,
+                         CbSexo,
+                         Convert.ToDateTime(DTPFechaDeNacimiento),
+                         TxtTelefono,
+                         TxtEmail,
+                         CbProvincia,
+                         CbLocalidad,
+                         CbEstado)
 
     End Sub
 

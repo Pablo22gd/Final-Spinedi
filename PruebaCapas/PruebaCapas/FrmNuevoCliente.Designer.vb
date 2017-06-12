@@ -224,6 +224,7 @@ Partial Class FrmIngresarNuevoCliente
         'CbProvincia
         '
         Me.CbProvincia.FormattingEnabled = True
+        Me.CbProvincia.Items.AddRange(New Object() {"BS AS"})
         Me.CbProvincia.Location = New System.Drawing.Point(151, 303)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(210, 21)
@@ -232,6 +233,7 @@ Partial Class FrmIngresarNuevoCliente
         'CbLocalidad
         '
         Me.CbLocalidad.FormattingEnabled = True
+        Me.CbLocalidad.Items.AddRange(New Object() {"LA PLATA"})
         Me.CbLocalidad.Location = New System.Drawing.Point(151, 336)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(210, 21)

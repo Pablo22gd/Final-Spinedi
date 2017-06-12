@@ -100,6 +100,48 @@ Public Class dtlClientes
 
 
     End Sub
+    Public Sub NuevoCliente(ByVal TxtNombre,
+                            ByVal TxtApellido,
+                            ByVal TxtDNI,
+                            ByVal TxtDomicilio,
+                            ByVal CbSexo,
+                            ByVal DTPFechaDeNacimiento,
+                            ByVal TxtTelefono,
+                            ByVal TxtEmail,
+                            ByVal CbProvincia,
+                            ByVal CbLocalidad,
+                            ByVal CbEstado)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(10) As SqlParameter
+
+        param(0) = New SqlParameter("@nombre", TxtNombre)
+        param(1) = New SqlParameter("@apellido", TxtApellido)
+        param(2) = New SqlParameter("@dni", TxtDNI)
+        param(3) = New SqlParameter("@domicilio", TxtDomicilio)
+        param(4) = New SqlParameter("@sexo", CbSexo)
+        param(5) = New SqlParameter("@fecha_de_nacimiento", DTPFechaDeNacimiento)
+        param(6) = New SqlParameter("@telefono", TxtTelefono)
+        param(7) = New SqlParameter("@email", TxtEmail)
+        param(8) = New SqlParameter("@provincia", CbProvincia)
+        param(9) = New SqlParameter("@localidad", CbLocalidad)
+        param(10) = New SqlParameter("@estado", CbEstado)
+
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "Nuevo_Cliente_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
 
     Public Sub eliminarRegistro(ByRef intidcliente As Integer)
         oConn = New SqlConnection("Server=DIENAMOVIL\SQLEXPRESS;integrated security=true;database=Segpool")

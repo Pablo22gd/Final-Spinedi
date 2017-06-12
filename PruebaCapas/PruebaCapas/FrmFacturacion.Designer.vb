@@ -27,21 +27,21 @@ Partial Class FrmFacturacion
         Me.BtnFacturar = New System.Windows.Forms.Button()
         Me.DGVSeleccionarProducto = New System.Windows.Forms.DataGridView()
         Me.GBProducto = New System.Windows.Forms.GroupBox()
-        Me.GBFacturacion = New System.Windows.Forms.GroupBox()
-        Me.BtnAceptar = New System.Windows.Forms.Button()
-        Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
-        Me.TxtCantidad = New System.Windows.Forms.TextBox()
-        Me.LblNombreProducto = New System.Windows.Forms.Label()
-        Me.LblCantidad = New System.Windows.Forms.Label()
-        Me.TxtBuscarProducto = New System.Windows.Forms.TextBox()
-        Me.LblBuscarProducto = New System.Windows.Forms.Label()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.LblTipoDeFactura = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.LblBuscarProducto = New System.Windows.Forms.Label()
+        Me.TxtBuscarProducto = New System.Windows.Forms.TextBox()
+        Me.LblCantidad = New System.Windows.Forms.Label()
+        Me.LblNombreProducto = New System.Windows.Forms.Label()
+        Me.TxtCantidad = New System.Windows.Forms.TextBox()
+        Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
+        Me.BtnAceptar = New System.Windows.Forms.Button()
+        Me.GBFacturacion = New System.Windows.Forms.GroupBox()
+        Me.LblMostrarTotal = New System.Windows.Forms.Label()
+        Me.LblTotal = New System.Windows.Forms.Label()
         Me.LblRazonSocial = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.LblTotal = New System.Windows.Forms.Label()
-        Me.LblMostrarTotal = New System.Windows.Forms.Label()
+        Me.LblTipoDeFactura = New System.Windows.Forms.Label()
+        Me.CBTipoDeFactura = New System.Windows.Forms.ComboBox()
         CType(Me.DgvGrillaFacturacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVSeleccionarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBProducto.SuspendLayout()
@@ -77,9 +77,9 @@ Partial Class FrmFacturacion
         'DGVSeleccionarProducto
         '
         Me.DGVSeleccionarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVSeleccionarProducto.Location = New System.Drawing.Point(15, 49)
+        Me.DGVSeleccionarProducto.Location = New System.Drawing.Point(15, 50)
         Me.DGVSeleccionarProducto.Name = "DGVSeleccionarProducto"
-        Me.DGVSeleccionarProducto.Size = New System.Drawing.Size(277, 131)
+        Me.DGVSeleccionarProducto.Size = New System.Drawing.Size(277, 119)
         Me.DGVSeleccionarProducto.TabIndex = 30
         '
         'GBProducto
@@ -100,69 +100,14 @@ Partial Class FrmFacturacion
         Me.GBProducto.TabStop = False
         Me.GBProducto.Text = "Seleccinar el producto que desea adquirir"
         '
-        'GBFacturacion
+        'BtnBuscar
         '
-        Me.GBFacturacion.Controls.Add(Me.LblMostrarTotal)
-        Me.GBFacturacion.Controls.Add(Me.LblTotal)
-        Me.GBFacturacion.Controls.Add(Me.LblRazonSocial)
-        Me.GBFacturacion.Controls.Add(Me.TextBox5)
-        Me.GBFacturacion.Controls.Add(Me.LblTipoDeFactura)
-        Me.GBFacturacion.Controls.Add(Me.TextBox4)
-        Me.GBFacturacion.Controls.Add(Me.DgvGrillaFacturacion)
-        Me.GBFacturacion.Location = New System.Drawing.Point(398, 29)
-        Me.GBFacturacion.Name = "GBFacturacion"
-        Me.GBFacturacion.Size = New System.Drawing.Size(548, 312)
-        Me.GBFacturacion.TabIndex = 32
-        Me.GBFacturacion.TabStop = False
-        Me.GBFacturacion.Text = "Facturacion"
-        '
-        'BtnAceptar
-        '
-        Me.BtnAceptar.Location = New System.Drawing.Point(217, 249)
-        Me.BtnAceptar.Name = "BtnAceptar"
-        Me.BtnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAceptar.TabIndex = 31
-        Me.BtnAceptar.Text = "Aceptar"
-        Me.BtnAceptar.UseVisualStyleBackColor = True
-        '
-        'TxtNombreProducto
-        '
-        Me.TxtNombreProducto.Location = New System.Drawing.Point(104, 186)
-        Me.TxtNombreProducto.Name = "TxtNombreProducto"
-        Me.TxtNombreProducto.Size = New System.Drawing.Size(100, 20)
-        Me.TxtNombreProducto.TabIndex = 32
-        '
-        'TxtCantidad
-        '
-        Me.TxtCantidad.Location = New System.Drawing.Point(104, 212)
-        Me.TxtCantidad.Name = "TxtCantidad"
-        Me.TxtCantidad.Size = New System.Drawing.Size(100, 20)
-        Me.TxtCantidad.TabIndex = 33
-        '
-        'LblNombreProducto
-        '
-        Me.LblNombreProducto.AutoSize = True
-        Me.LblNombreProducto.Location = New System.Drawing.Point(7, 186)
-        Me.LblNombreProducto.Name = "LblNombreProducto"
-        Me.LblNombreProducto.Size = New System.Drawing.Size(89, 13)
-        Me.LblNombreProducto.TabIndex = 34
-        Me.LblNombreProducto.Text = "Nombre producto"
-        '
-        'LblCantidad
-        '
-        Me.LblCantidad.AutoSize = True
-        Me.LblCantidad.Location = New System.Drawing.Point(6, 212)
-        Me.LblCantidad.Name = "LblCantidad"
-        Me.LblCantidad.Size = New System.Drawing.Size(49, 13)
-        Me.LblCantidad.TabIndex = 35
-        Me.LblCantidad.Text = "Cantidad"
-        '
-        'TxtBuscarProducto
-        '
-        Me.TxtBuscarProducto.Location = New System.Drawing.Point(113, 23)
-        Me.TxtBuscarProducto.Name = "TxtBuscarProducto"
-        Me.TxtBuscarProducto.Size = New System.Drawing.Size(100, 20)
-        Me.TxtBuscarProducto.TabIndex = 36
+        Me.BtnBuscar.Location = New System.Drawing.Point(228, 21)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscar.TabIndex = 38
+        Me.BtnBuscar.Text = "Buscar"
+        Me.BtnBuscar.UseVisualStyleBackColor = True
         '
         'LblBuscarProducto
         '
@@ -173,30 +118,87 @@ Partial Class FrmFacturacion
         Me.LblBuscarProducto.TabIndex = 37
         Me.LblBuscarProducto.Text = "Buscar producto"
         '
-        'BtnBuscar
+        'TxtBuscarProducto
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(228, 21)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBuscar.TabIndex = 38
-        Me.BtnBuscar.Text = "Buscar"
-        Me.BtnBuscar.UseVisualStyleBackColor = True
+        Me.TxtBuscarProducto.Location = New System.Drawing.Point(113, 23)
+        Me.TxtBuscarProducto.Name = "TxtBuscarProducto"
+        Me.TxtBuscarProducto.Size = New System.Drawing.Size(100, 20)
+        Me.TxtBuscarProducto.TabIndex = 36
         '
-        'LblTipoDeFactura
+        'LblCantidad
         '
-        Me.LblTipoDeFactura.AutoSize = True
-        Me.LblTipoDeFactura.Location = New System.Drawing.Point(49, 238)
-        Me.LblTipoDeFactura.Name = "LblTipoDeFactura"
-        Me.LblTipoDeFactura.Size = New System.Drawing.Size(79, 13)
-        Me.LblTipoDeFactura.TabIndex = 36
-        Me.LblTipoDeFactura.Text = "Tipo de factura"
+        Me.LblCantidad.AutoSize = True
+        Me.LblCantidad.Location = New System.Drawing.Point(6, 212)
+        Me.LblCantidad.Name = "LblCantidad"
+        Me.LblCantidad.Size = New System.Drawing.Size(49, 13)
+        Me.LblCantidad.TabIndex = 35
+        Me.LblCantidad.Text = "Cantidad"
         '
-        'TextBox4
+        'LblNombreProducto
         '
-        Me.TextBox4.Location = New System.Drawing.Point(146, 238)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 35
+        Me.LblNombreProducto.AutoSize = True
+        Me.LblNombreProducto.Location = New System.Drawing.Point(7, 186)
+        Me.LblNombreProducto.Name = "LblNombreProducto"
+        Me.LblNombreProducto.Size = New System.Drawing.Size(89, 13)
+        Me.LblNombreProducto.TabIndex = 34
+        Me.LblNombreProducto.Text = "Nombre producto"
+        '
+        'TxtCantidad
+        '
+        Me.TxtCantidad.Location = New System.Drawing.Point(104, 212)
+        Me.TxtCantidad.Name = "TxtCantidad"
+        Me.TxtCantidad.Size = New System.Drawing.Size(100, 20)
+        Me.TxtCantidad.TabIndex = 33
+        '
+        'TxtNombreProducto
+        '
+        Me.TxtNombreProducto.Location = New System.Drawing.Point(104, 186)
+        Me.TxtNombreProducto.Name = "TxtNombreProducto"
+        Me.TxtNombreProducto.Size = New System.Drawing.Size(100, 20)
+        Me.TxtNombreProducto.TabIndex = 32
+        '
+        'BtnAceptar
+        '
+        Me.BtnAceptar.Location = New System.Drawing.Point(217, 249)
+        Me.BtnAceptar.Name = "BtnAceptar"
+        Me.BtnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnAceptar.TabIndex = 31
+        Me.BtnAceptar.Text = "Aceptar"
+        Me.BtnAceptar.UseVisualStyleBackColor = True
+        '
+        'GBFacturacion
+        '
+        Me.GBFacturacion.Controls.Add(Me.CBTipoDeFactura)
+        Me.GBFacturacion.Controls.Add(Me.LblMostrarTotal)
+        Me.GBFacturacion.Controls.Add(Me.LblTotal)
+        Me.GBFacturacion.Controls.Add(Me.LblRazonSocial)
+        Me.GBFacturacion.Controls.Add(Me.TextBox5)
+        Me.GBFacturacion.Controls.Add(Me.LblTipoDeFactura)
+        Me.GBFacturacion.Controls.Add(Me.DgvGrillaFacturacion)
+        Me.GBFacturacion.Location = New System.Drawing.Point(398, 29)
+        Me.GBFacturacion.Name = "GBFacturacion"
+        Me.GBFacturacion.Size = New System.Drawing.Size(548, 312)
+        Me.GBFacturacion.TabIndex = 32
+        Me.GBFacturacion.TabStop = False
+        Me.GBFacturacion.Text = "Facturacion"
+        '
+        'LblMostrarTotal
+        '
+        Me.LblMostrarTotal.AutoSize = True
+        Me.LblMostrarTotal.Location = New System.Drawing.Point(388, 182)
+        Me.LblMostrarTotal.Name = "LblMostrarTotal"
+        Me.LblMostrarTotal.Size = New System.Drawing.Size(16, 13)
+        Me.LblMostrarTotal.TabIndex = 40
+        Me.LblMostrarTotal.Text = "..."
+        '
+        'LblTotal
+        '
+        Me.LblTotal.AutoSize = True
+        Me.LblTotal.Location = New System.Drawing.Point(349, 182)
+        Me.LblTotal.Name = "LblTotal"
+        Me.LblTotal.Size = New System.Drawing.Size(37, 13)
+        Me.LblTotal.TabIndex = 39
+        Me.LblTotal.Text = "Total: "
         '
         'LblRazonSocial
         '
@@ -211,26 +213,26 @@ Partial Class FrmFacturacion
         '
         Me.TextBox5.Location = New System.Drawing.Point(146, 273)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(121, 20)
         Me.TextBox5.TabIndex = 37
         '
-        'LblTotal
+        'LblTipoDeFactura
         '
-        Me.LblTotal.AutoSize = True
-        Me.LblTotal.Location = New System.Drawing.Point(349, 182)
-        Me.LblTotal.Name = "LblTotal"
-        Me.LblTotal.Size = New System.Drawing.Size(37, 13)
-        Me.LblTotal.TabIndex = 39
-        Me.LblTotal.Text = "Total: "
+        Me.LblTipoDeFactura.AutoSize = True
+        Me.LblTipoDeFactura.Location = New System.Drawing.Point(49, 238)
+        Me.LblTipoDeFactura.Name = "LblTipoDeFactura"
+        Me.LblTipoDeFactura.Size = New System.Drawing.Size(79, 13)
+        Me.LblTipoDeFactura.TabIndex = 36
+        Me.LblTipoDeFactura.Text = "Tipo de factura"
         '
-        'LblMostrarTotal
+        'CBTipoDeFactura
         '
-        Me.LblMostrarTotal.AutoSize = True
-        Me.LblMostrarTotal.Location = New System.Drawing.Point(388, 182)
-        Me.LblMostrarTotal.Name = "LblMostrarTotal"
-        Me.LblMostrarTotal.Size = New System.Drawing.Size(16, 13)
-        Me.LblMostrarTotal.TabIndex = 40
-        Me.LblMostrarTotal.Text = "..."
+        Me.CBTipoDeFactura.FormattingEnabled = True
+        Me.CBTipoDeFactura.Items.AddRange(New Object() {"Factura A", "Factura B", "Factura C"})
+        Me.CBTipoDeFactura.Location = New System.Drawing.Point(146, 235)
+        Me.CBTipoDeFactura.Name = "CBTipoDeFactura"
+        Me.CBTipoDeFactura.Size = New System.Drawing.Size(121, 21)
+        Me.CBTipoDeFactura.TabIndex = 41
         '
         'FrmFacturacion
         '
@@ -271,6 +273,6 @@ Partial Class FrmFacturacion
     Friend WithEvents LblTotal As Label
     Friend WithEvents LblRazonSocial As Label
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
     Protected WithEvents LblTipoDeFactura As Label
+    Friend WithEvents CBTipoDeFactura As ComboBox
 End Class
