@@ -11,35 +11,38 @@ Public Class dtlClientes
         oConn.Open()
         Dim table As New DataTable
         Dim Adp As New SqlDataAdapter()
+
+
         Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
         Adp.SelectCommand.Connection = oConn 'Conexión
         Adp.SelectCommand.CommandText = "sp_obtenerRegistro"
         Adp.SelectCommand.CommandType = CommandType.StoredProcedure
-        Adp.SelectCommand.Parameters.Add("@idcliente", SqlDbType.Int, 4)
-        Adp.SelectCommand.Parameters("@idcliente").Value = idcliente
+
         Adp.Fill(table)
         clientes = table
 
 
     End Sub
 
-    Public Sub obtenerCliente(ByRef cbFiltro As String, ByRef txtBuscar As String, ByRef clientes As DataTable)
-        oConn = New SqlConnection("Data Source=192.168.5.82\\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
-        If oConn.State = 1 Then oConn.Close()
-        oConn.Open()
-        Dim table As New DataTable
-        Dim Adp As New SqlDataAdapter()
-        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
-        Adp.SelectCommand.Connection = oConn 'Conexión
-        Adp.SelectCommand.CommandText = "obtenerCliente_q_sp"
-        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
-        Adp.SelectCommand.Parameters("@filtro").Value = cbFiltro
-        Adp.SelectCommand.Parameters("@buscar").Value = txtBuscar
-        Adp.Fill(table)
-        clientes = table
+    'Public Sub obtenerCliente(ByRef cbFiltro As String, ByRef txtBuscar As String, ByRef clientes As DataTable)
+    '    oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+    '    If oConn.State = 1 Then oConn.Close()
+    '    oConn.Open()
+    '    Dim table As New DataTable
+    '    Dim Adp As New SqlDataAdapter()
+    '    Dim param(1) As SqlParameter
+
+    '    Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+    '    Adp.SelectCommand.Connection = oConn 'Conexión
+    '    Adp.SelectCommand.CommandText = "obtener_cliente_q_sp"
+    '    Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+    '    param(0) = New SqlParameter("@filtro", cbFiltro)
+    '    param(1) = New SqlParameter("@buscar", txtBuscar)
+    '    Adp.Fill(table)
+    '    clientes = table
 
 
-    End Sub
+    'End Sub
     Public Sub insertarRegistro(ByRef intidcliente As Integer, ByRef strrazonSocial As String)
         oConn = New SqlConnection("Server=DIENAMOVIL\SQLEXPRESS;integrated security=true;database=Segpool")
         If oConn.State = 1 Then oConn.Close()
@@ -100,6 +103,7 @@ Public Class dtlClientes
 
 
     End Sub
+
     Public Sub NuevoCliente(ByVal TxtNombre,
                             ByVal TxtApellido,
                             ByVal TxtDNI,
@@ -133,6 +137,42 @@ Public Class dtlClientes
 
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "Nuevo_Cliente_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub NuevoProducto(ByVal TxtNombre,
+                         ByVal TxtMarca,
+                         ByVal TxtDetalle,
+                         ByVal TxtCantidad,
+                         ByVal CbEstado,
+                         ByVal TxtProveedor,
+                         ByVal TxtObservaciones)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(6) As SqlParameter
+
+        param(0) = New SqlParameter("@nombre", TxtNombre)
+        param(1) = New SqlParameter("@marca", TxtMarca)
+        param(2) = New SqlParameter("@detalle", TxtDetalle)
+        param(3) = New SqlParameter("@cantidad", TxtCantidad)
+        param(4) = New SqlParameter("@estado", CbEstado)
+        param(5) = New SqlParameter("@proveedor", TxtProveedor)
+        param(6) = New SqlParameter("@observaciones", TxtObservaciones)
+
+
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "Nuevo_Producto_i_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 
@@ -187,4 +227,28 @@ Public Class dtlClientes
 
 
     End Sub
+
+
+    'Public Shared Function obtenerCliente(filtro, buscar) As DataTable
+    '    Try
+
+    '        Dim cmd As New SqlCommand("obtener_cliente_q_sp", New SqlConnection("Data Source=192.168.5.82\\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;"))
+
+    '        cmd.CommandType = CommandType.StoredProcedure
+
+    '        Dim da As New SqlDataAdapter(cmd)
+
+    '        Dim cliente As New DataTable()
+
+    '        da.Fill(dt)
+
+
+    '        Return cliente
+    '    Catch ex As Exception
+    '        Throw ex
+    '    End Try
+
+    'End Function
+
+
 End Class

@@ -31,6 +31,8 @@ Partial Class FrmBajaCliente
         Me.LblBajaCliente = New System.Windows.Forms.Label()
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DGVGrillaBajaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBajaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -112,11 +114,29 @@ Partial Class FrmBajaCliente
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(283, 191)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 9
+        Me.btnBuscar.Text = "Button1"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(427, 167)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 10
+        '
         'FrmBajaCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1022, 395)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.LblBajaCliente)
@@ -145,4 +165,6 @@ Partial Class FrmBajaCliente
     Friend WithEvents LblBajaCliente As Label
     Friend WithEvents BtnVolver As Button
     Friend WithEvents BtnEliminar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class

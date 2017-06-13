@@ -7,11 +7,11 @@ Public Class brlClientes
 
     End Sub
 
-    Public Sub obtenerCliente(ByVal cbFiltro As String, ByVal txtbuscar As String, ByRef clientes As DataTable)
-        Dim x As New dtlClientes
-        x.obtenerCliente(cbFiltro, txtbuscar, clientes)
+    'Public Sub obtenerCliente(ByVal cbFiltro As String, ByVal txtbuscar As String, ByRef cliente As DataTable)
+    '    Dim x As New dtlClientes
+    '    x.obtenerCliente(cbFiltro, txtbuscar, cliente)
 
-    End Sub
+    'End Sub
 
     Public Sub insertarRegistro(ByVal idcliente As Integer, ByRef strrazonsocial As String)
         Dim x As New dtlClientes
@@ -67,6 +67,27 @@ Public Class brlClientes
                          CbProvincia,
                          CbLocalidad,
                          CbEstado)
+
+
+    End Sub
+
+    Public Sub NuevoProducto(ByVal TxtNombre,
+                            ByVal TxtMarca,
+                            ByVal TxtDetalle,
+                            ByVal TxtCantidad,
+                            ByVal TxtEstado,
+                            ByVal TxtProveedor,
+                            ByVal TxtObservaciones)
+
+
+        Dim x As New dtlClientes
+        x.NuevoProducto(TxtNombre,
+                         TxtMarca,
+                         TxtDetalle,
+                         TxtCantidad,
+                         TxtEstado,
+                         TxtProveedor,
+                         TxtObservaciones)
 
 
     End Sub
