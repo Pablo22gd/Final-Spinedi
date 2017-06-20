@@ -7,11 +7,28 @@ Public Class brlClientes
 
     End Sub
 
-    'Public Sub obtenerCliente(ByVal cbFiltro As String, ByVal txtbuscar As String, ByRef cliente As DataTable)
-    '    Dim x As New dtlClientes
-    '    x.obtenerCliente(cbFiltro, txtbuscar, cliente)
+    Public Sub obtenerGrillaCliente(ByVal cbFiltro As String, ByVal txtbuscar As String, ByRef cliente As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaCliente(cbFiltro, txtbuscar, cliente)
 
-    'End Sub
+    End Sub
+    Public Sub obtenerGrillaProductos(ByVal cbFiltrar As String, ByVal txtingresarDato As String, ByRef producto As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaProductos(cbFiltrar, txtingresarDato, producto)
+
+    End Sub
+
+    Public Sub obtenerGrillaModCliente(ByRef Cliente As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaModCliente(Cliente)
+
+    End Sub
+
+    Public Sub obtenerGrillaProveedores(ByVal cbFiltrar As String, ByVal txtingresarDato As String, ByRef proveedor As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaProveedores(cbFiltrar, txtingresarDato, proveedor)
+
+    End Sub
 
     Public Sub insertarRegistro(ByVal idcliente As Integer, ByRef strrazonsocial As String)
         Dim x As New dtlClientes

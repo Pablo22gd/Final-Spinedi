@@ -24,25 +24,81 @@ Public Class dtlClientes
 
     End Sub
 
-    'Public Sub obtenerCliente(ByRef cbFiltro As String, ByRef txtBuscar As String, ByRef clientes As DataTable)
-    '    oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
-    '    If oConn.State = 1 Then oConn.Close()
-    '    oConn.Open()
-    '    Dim table As New DataTable
-    '    Dim Adp As New SqlDataAdapter()
-    '    Dim param(1) As SqlParameter
-
-    '    Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
-    '    Adp.SelectCommand.Connection = oConn 'Conexión
-    '    Adp.SelectCommand.CommandText = "obtener_cliente_q_sp"
-    '    Adp.SelectCommand.CommandType = CommandType.StoredProcedure
-    '    param(0) = New SqlParameter("@filtro", cbFiltro)
-    '    param(1) = New SqlParameter("@buscar", txtBuscar)
-    '    Adp.Fill(table)
-    '    clientes = table
+    Public Sub obtenerGrillaModCliente(ByRef Clientes As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
 
 
-    'End Sub
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenercliente"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        Clientes = table
+
+
+    End Sub
+
+    Public Sub obtenerGrillaCliente(ByRef cbFiltro As String, ByVal txtBuscar As String, ByRef clientes As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenercliente"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        clientes = table
+
+
+    End Sub
+
+    Public Sub obtenerGrillaProductos(ByRef cbFiltrar As String, ByVal txtingresarDato As String, ByRef producto As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerProducto_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        producto = table
+
+
+    End Sub
+    Public Sub obtenerGrillaProveedores(ByRef cbFiltrar As String, ByVal txtingresarDato As String, ByRef proveedor As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerProveedor_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        proveedor = table
+
+
+    End Sub
+
     Public Sub insertarRegistro(ByRef intidcliente As Integer, ByRef strrazonSocial As String)
         oConn = New SqlConnection("Server=DIENAMOVIL\SQLEXPRESS;integrated security=true;database=Segpool")
         If oConn.State = 1 Then oConn.Close()

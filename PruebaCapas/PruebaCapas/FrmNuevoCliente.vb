@@ -22,4 +22,14 @@ Public Class FrmIngresarNuevoCliente
         MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
     End Sub
+
+    Private Sub CbProvincia_MouseClick(sender As Object, e As MouseEventArgs) Handles CbProvincia.MouseClick
+
+        'Dim x As New wflClientes
+
+
+        'x.obtenerProvincia()
+
+
+    End Sub
 End Class

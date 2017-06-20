@@ -20,8 +20,8 @@ Public Class FrmBajaCliente
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
 
-        Dim x As New wflClientes
-        Dim strmensaje As String = ""
+        'Dim x As New wflClientes
+        'Dim strmensaje As String = ""
 
         'x.eliminarCliente(txtIdCliente.Text, strmensaje)
         'MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
@@ -30,23 +30,25 @@ Public Class FrmBajaCliente
 
     End Sub
 
-    'Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
-    '    Dim x As New wflClientes
-    '    Dim dt As New DataTable
 
-    '    Dim strmensaje As String = ""
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
-    '    x.buscarCliente(CBFiltro.Text, TxtBuscar.Text, dt)
+        Dim x As New wflClientes
+        Dim dt As New DataTable
 
-    '    If dt.Rows.Count > 0 Then
-    '        For Each MiDataRow As DataRow In dt.Rows
-    '            Me.TextBox1.Text = MiDataRow(1).ToString
-    '        Next
+        Dim strmensaje As String = ""
 
-    '    Else
-    '        MsgBox("El cliente no existe en la base de datos", vbInformation + vbOKOnly, "Aviso al operador")
-    '    End If
 
-    'End Sub
+        x.obtenerGrillaCliente(CBFiltro.Text, TxtBuscar.Text, dt)
+
+        DGVGrillaBajaCliente.DataSource = dt
+    End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+
+    End Sub
+
+
+
 End Class
