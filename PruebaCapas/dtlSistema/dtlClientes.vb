@@ -24,6 +24,8 @@ Public Class dtlClientes
 
     End Sub
 
+
+
     Public Sub obtenerGrillaModCliente(ByRef Clientes As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         If oConn.State = 1 Then oConn.Close()
@@ -43,7 +45,44 @@ Public Class dtlClientes
 
     End Sub
 
-    Public Sub obtenerGrillaCliente(ByRef cbFiltro As String, ByVal txtBuscar As String, ByRef clientes As DataTable)
+    Public Sub obtenerGrillaModProveedor(ByRef Clientes As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerproveedor_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        Clientes = table
+
+
+    End Sub
+
+    Public Sub obtenerGrillaModProducto(ByRef Clientes As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerProducto_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        Clientes = table
+
+
+    End Sub
+    Public Sub obtenerGrillaCliente(ByRef clientes As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         If oConn.State = 1 Then oConn.Close()
         oConn.Open()
@@ -80,7 +119,7 @@ Public Class dtlClientes
 
 
     End Sub
-    Public Sub obtenerGrillaProveedores(ByRef cbFiltrar As String, ByVal txtingresarDato As String, ByRef proveedor As DataTable)
+    Public Sub obtenerGrillaProveedores(ByRef proveedor As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         If oConn.State = 1 Then oConn.Close()
         oConn.Open()
@@ -261,15 +300,36 @@ Public Class dtlClientes
 
     End Sub
 
-
-    Public Sub eliminarCliente(ByRef intidcliente As Integer)
-        oConn = New SqlConnection("Data Source=192.168.5.82\\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+    Public Sub eliminarProveedor(ByRef idProveedor As Integer)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         If oConn.State = 1 Then oConn.Close()
         oConn.Open()
         Dim cmd As New SqlCommand
         Dim param(0) As SqlParameter
 
-        param(0) = New SqlParameter("@idcliente", intidcliente)
+        param(0) = New SqlParameter("@id_proveedor", idProveedor)
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "eliminarProveedor_d_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub eliminarCliente(ByRef idCliente As Integer)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(0) As SqlParameter
+
+        param(0) = New SqlParameter("@idcliente", idCliente)
 
 
         cmd.CommandType = CommandType.StoredProcedure
@@ -285,26 +345,9 @@ Public Class dtlClientes
     End Sub
 
 
-    'Public Shared Function obtenerCliente(filtro, buscar) As DataTable
-    '    Try
-
-    '        Dim cmd As New SqlCommand("obtener_cliente_q_sp", New SqlConnection("Data Source=192.168.5.82\\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;"))
-
-    '        cmd.CommandType = CommandType.StoredProcedure
-
-    '        Dim da As New SqlDataAdapter(cmd)
-
-    '        Dim cliente As New DataTable()
-
-    '        da.Fill(dt)
 
 
-    '        Return cliente
-    '    Catch ex As Exception
-    '        Throw ex
-    '    End Try
 
-    'End Function
 
 
 End Class

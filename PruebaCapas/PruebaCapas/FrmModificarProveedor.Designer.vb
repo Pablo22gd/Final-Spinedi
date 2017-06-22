@@ -23,8 +23,8 @@ Partial Class FrmModificarProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PictureModificarCliente = New System.Windows.Forms.PictureBox()
-        Me.DGVGrillaModificarCliente = New System.Windows.Forms.DataGridView()
-        Me.LblModificarCliente = New System.Windows.Forms.Label()
+        Me.DGVGrillaModificarProveedor = New System.Windows.Forms.DataGridView()
+        Me.LblModificarProveedor = New System.Windows.Forms.Label()
         Me.CbEstado = New System.Windows.Forms.ComboBox()
         Me.CbLocalidad = New System.Windows.Forms.ComboBox()
         Me.CbProvincia = New System.Windows.Forms.ComboBox()
@@ -48,7 +48,7 @@ Partial Class FrmModificarProveedor
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         CType(Me.PictureModificarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGVGrillaModificarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVGrillaModificarProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureModificarCliente
@@ -59,23 +59,23 @@ Partial Class FrmModificarProveedor
         Me.PictureModificarCliente.TabIndex = 80
         Me.PictureModificarCliente.TabStop = False
         '
-        'DGVGrillaModificarCliente
+        'DGVGrillaModificarProveedor
         '
-        Me.DGVGrillaModificarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVGrillaModificarCliente.Location = New System.Drawing.Point(400, 279)
-        Me.DGVGrillaModificarCliente.Name = "DGVGrillaModificarCliente"
-        Me.DGVGrillaModificarCliente.Size = New System.Drawing.Size(580, 108)
-        Me.DGVGrillaModificarCliente.TabIndex = 79
+        Me.DGVGrillaModificarProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVGrillaModificarProveedor.Location = New System.Drawing.Point(400, 279)
+        Me.DGVGrillaModificarProveedor.Name = "DGVGrillaModificarProveedor"
+        Me.DGVGrillaModificarProveedor.Size = New System.Drawing.Size(580, 108)
+        Me.DGVGrillaModificarProveedor.TabIndex = 79
         '
-        'LblModificarCliente
+        'LblModificarProveedor
         '
-        Me.LblModificarCliente.AutoSize = True
-        Me.LblModificarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificarCliente.Location = New System.Drawing.Point(626, 89)
-        Me.LblModificarCliente.Name = "LblModificarCliente"
-        Me.LblModificarCliente.Size = New System.Drawing.Size(135, 18)
-        Me.LblModificarCliente.TabIndex = 78
-        Me.LblModificarCliente.Text = "Modificar Cliente"
+        Me.LblModificarProveedor.AutoSize = True
+        Me.LblModificarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificarProveedor.Location = New System.Drawing.Point(626, 89)
+        Me.LblModificarProveedor.Name = "LblModificarProveedor"
+        Me.LblModificarProveedor.Size = New System.Drawing.Size(161, 18)
+        Me.LblModificarProveedor.TabIndex = 78
+        Me.LblModificarProveedor.Text = "Modificar Proveedor"
         '
         'CbEstado
         '
@@ -265,8 +265,8 @@ Partial Class FrmModificarProveedor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1030, 523)
         Me.Controls.Add(Me.PictureModificarCliente)
-        Me.Controls.Add(Me.DGVGrillaModificarCliente)
-        Me.Controls.Add(Me.LblModificarCliente)
+        Me.Controls.Add(Me.DGVGrillaModificarProveedor)
+        Me.Controls.Add(Me.LblModificarProveedor)
         Me.Controls.Add(Me.CbEstado)
         Me.Controls.Add(Me.CbLocalidad)
         Me.Controls.Add(Me.CbProvincia)
@@ -292,15 +292,15 @@ Partial Class FrmModificarProveedor
         Me.Name = "FrmModificarProveedor"
         Me.Text = "Asistente para modificar proveedor"
         CType(Me.PictureModificarCliente, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGVGrillaModificarCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVGrillaModificarProveedor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents PictureModificarCliente As PictureBox
-    Friend WithEvents DGVGrillaModificarCliente As DataGridView
-    Friend WithEvents LblModificarCliente As Label
+    Friend WithEvents DGVGrillaModificarProveedor As DataGridView
+    Friend WithEvents LblModificarProveedor As Label
     Friend WithEvents CbEstado As ComboBox
     Friend WithEvents CbLocalidad As ComboBox
     Friend WithEvents CbProvincia As ComboBox

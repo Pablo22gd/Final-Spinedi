@@ -4,9 +4,9 @@ Public Class wflClientes
         Dim x As New brlClientes
         x.obtenerRegistro(idcliente, clientes)
     End Sub
-    Public Sub obtenerGrillaCliente(ByVal cbFiltro As String, ByVal txtBuscar As String, ByRef clientes As DataTable)
+    Public Sub obtenerGrillaCliente(ByRef clientes As DataTable)
         Dim x As New brlClientes
-        x.obtenerGrillaCliente(cbFiltro, txtBuscar, clientes)
+        x.obtenerGrillaCliente(clientes)
 
     End Sub
 
@@ -15,9 +15,9 @@ Public Class wflClientes
         x.obtenerGrillaProductos(cbFiltrar, txtIngresarDato, producto)
 
     End Sub
-    Public Sub obtenerGrillaProveedores(ByVal cbFiltrar As String, ByVal txtIngresarDato As String, ByRef proveedor As DataTable)
+    Public Sub obtenerGrillaProveedores(ByRef proveedor As DataTable)
         Dim x As New brlClientes
-        x.obtenerGrillaProveedores(cbFiltrar, txtIngresarDato, proveedor)
+        x.obtenerGrillaProveedores(proveedor)
 
     End Sub
 
@@ -27,6 +27,17 @@ Public Class wflClientes
 
     End Sub
 
+    Public Sub obtenerGrillaModProveedor(ByRef Cliente As DataTable)
+        Dim x As New brlClientes
+        x.obtenerGrillaModProveedor(Cliente)
+
+    End Sub
+
+    Public Sub obtenerGrillaModProducto(ByRef Cliente As DataTable)
+        Dim x As New brlClientes
+        x.obtenerGrillaModProducto(Cliente)
+
+    End Sub
     Public Sub insertarRegistro(ByVal idcliente As Integer, ByRef strrazonsocial As String, ByRef strmensaje As String)
         Dim x As New brlClientes
 
@@ -110,6 +121,17 @@ Public Class wflClientes
 
     End Sub
 
+
+    Public Sub eliminarProveedor(ByVal idProveedor As Integer)
+        Dim x As New brlClientes
+        x.eliminarProveedor(idProveedor)
+    End Sub
+
+    Public Sub eliminarCliente(ByVal idCliente As Integer)
+        Dim x As New brlClientes
+        x.eliminarCliente(idCliente)
+    End Sub
+
     Public Sub eliminarRegistro(ByVal idcliente As Integer, ByRef strmensaje As String)
         Dim x As New brlClientes
         If x.ExisteCliente(idcliente) Then
@@ -127,14 +149,6 @@ Public Class wflClientes
     ' y aca traerlas y trabajarlas.
 
 
-    Public Sub eliminarCliente(ByVal idcliente As Integer, ByRef strmensaje As String)
-        Dim x As New brlClientes
-        If x.ExisteCliente(idcliente) Then
-            x.eliminarCliente(idcliente)
-            strmensaje = "El cliente se eliminó con exito"
-        Else
-            strmensaje = "El cliente no existe en la base"
-        End If
-    End Sub
+
 
 End Class

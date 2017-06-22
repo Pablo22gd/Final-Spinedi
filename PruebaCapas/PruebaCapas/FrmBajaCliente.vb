@@ -2,16 +2,17 @@
 Public Class FrmBajaCliente
 
 
-    'Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-    '    Dim x As New wflClientes
-    '    Dim strmensaje As String = ""
-
-    '    x.eliminarCliente(idCliente, strmensaje)
-    '    MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
-
-    'End Sub
-
     Private Sub FrmBajaCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+            Dim strmensaje As String = ""
+
+
+        x.obtenerGrillaCliente(dt)
+
+        DGVGrillaBajaCliente.DataSource = dt
 
 
 
@@ -19,14 +20,26 @@ Public Class FrmBajaCliente
     End Sub
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        If (DGVGrillaBajaCliente.SelectedRows.Count <> 0) Then
 
-        'Dim x As New wflClientes
-        'Dim strmensaje As String = ""
+            Dim modSeleccion As String = 0
 
-        'x.eliminarCliente(txtIdCliente.Text, strmensaje)
-        'MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
-        'txtIdCliente.Text = ""
-        'txtrazonsocial.Text = ""
+            modSeleccion = (DGVGrillaBajaCliente(0, DGVGrillaBajaCliente.CurrentCell.RowIndex).Value.ToString())
+
+            Dim x As New wflClientes
+
+            Dim strmensaje As String = ""
+
+
+            x.eliminarCliente(modSeleccion)
+
+            Dim dt As New DataTable
+
+            x.obtenerGrillaCliente(dt)
+
+            DGVGrillaBajaCliente.DataSource = dt
+
+        End If
 
     End Sub
 
@@ -34,21 +47,14 @@ Public Class FrmBajaCliente
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
-        Dim x As New wflClientes
-        Dim dt As New DataTable
 
-        Dim strmensaje As String = ""
-
-
-        x.obtenerGrillaCliente(CBFiltro.Text, TxtBuscar.Text, dt)
-
-        DGVGrillaBajaCliente.DataSource = dt
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
 
     End Sub
 
-
-
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        Me.Close()
+    End Sub
 End Class

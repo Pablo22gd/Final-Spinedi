@@ -7,9 +7,20 @@ Public Class brlClientes
 
     End Sub
 
-    Public Sub obtenerGrillaCliente(ByVal cbFiltro As String, ByVal txtbuscar As String, ByRef cliente As DataTable)
+    Public Sub eliminarProveedor(ByVal idProveedor As Integer)
         Dim x As New dtlClientes
-        x.obtenerGrillaCliente(cbFiltro, txtbuscar, cliente)
+        x.eliminarProveedor(idProveedor)
+
+    End Sub
+
+    Public Sub eliminarCliente(ByVal idCliente As Integer)
+        Dim x As New dtlClientes
+        x.eliminarCliente(idCliente)
+
+    End Sub
+    Public Sub obtenerGrillaCliente(ByRef cliente As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaCliente(cliente)
 
     End Sub
     Public Sub obtenerGrillaProductos(ByVal cbFiltrar As String, ByVal txtingresarDato As String, ByRef producto As DataTable)
@@ -24,9 +35,20 @@ Public Class brlClientes
 
     End Sub
 
-    Public Sub obtenerGrillaProveedores(ByVal cbFiltrar As String, ByVal txtingresarDato As String, ByRef proveedor As DataTable)
+    Public Sub obtenerGrillaModProveedor(ByRef Cliente As DataTable)
         Dim x As New dtlClientes
-        x.obtenerGrillaProveedores(cbFiltrar, txtingresarDato, proveedor)
+        x.obtenerGrillaModProveedor(Cliente)
+
+    End Sub
+
+    Public Sub obtenerGrillaModProducto(ByRef Cliente As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaModProducto(Cliente)
+
+    End Sub
+    Public Sub obtenerGrillaProveedores(ByRef proveedor As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaProveedores(proveedor)
 
     End Sub
 
@@ -126,9 +148,5 @@ Public Class brlClientes
         x.eliminarRegistro(idcliente)
     End Sub
 
-    Public Sub eliminarCliente(ByVal idcliente As Integer)
-        Dim x As New dtlClientes
-        x.eliminarCliente(idcliente)
-    End Sub
 
 End Class

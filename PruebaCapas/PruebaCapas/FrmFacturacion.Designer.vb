@@ -36,12 +36,12 @@ Partial Class FrmFacturacion
         Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.GBFacturacion = New System.Windows.Forms.GroupBox()
+        Me.CBTipoDeFactura = New System.Windows.Forms.ComboBox()
         Me.LblMostrarTotal = New System.Windows.Forms.Label()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.LblRazonSocial = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.LblTipoDeFactura = New System.Windows.Forms.Label()
-        Me.CBTipoDeFactura = New System.Windows.Forms.ComboBox()
         CType(Me.DgvGrillaFacturacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVSeleccionarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBProducto.SuspendLayout()
@@ -182,6 +182,15 @@ Partial Class FrmFacturacion
         Me.GBFacturacion.TabStop = False
         Me.GBFacturacion.Text = "Facturacion"
         '
+        'CBTipoDeFactura
+        '
+        Me.CBTipoDeFactura.FormattingEnabled = True
+        Me.CBTipoDeFactura.Items.AddRange(New Object() {"Factura A", "Factura B", "Factura C"})
+        Me.CBTipoDeFactura.Location = New System.Drawing.Point(146, 235)
+        Me.CBTipoDeFactura.Name = "CBTipoDeFactura"
+        Me.CBTipoDeFactura.Size = New System.Drawing.Size(121, 21)
+        Me.CBTipoDeFactura.TabIndex = 41
+        '
         'LblMostrarTotal
         '
         Me.LblMostrarTotal.AutoSize = True
@@ -224,15 +233,6 @@ Partial Class FrmFacturacion
         Me.LblTipoDeFactura.Size = New System.Drawing.Size(79, 13)
         Me.LblTipoDeFactura.TabIndex = 36
         Me.LblTipoDeFactura.Text = "Tipo de factura"
-        '
-        'CBTipoDeFactura
-        '
-        Me.CBTipoDeFactura.FormattingEnabled = True
-        Me.CBTipoDeFactura.Items.AddRange(New Object() {"Factura A", "Factura B", "Factura C"})
-        Me.CBTipoDeFactura.Location = New System.Drawing.Point(146, 235)
-        Me.CBTipoDeFactura.Name = "CBTipoDeFactura"
-        Me.CBTipoDeFactura.Size = New System.Drawing.Size(121, 21)
-        Me.CBTipoDeFactura.TabIndex = 41
         '
         'FrmFacturacion
         '
