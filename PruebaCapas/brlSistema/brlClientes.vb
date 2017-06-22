@@ -18,14 +18,20 @@ Public Class brlClientes
         x.eliminarCliente(idCliente)
 
     End Sub
+
+    Public Sub eliminarProducto(ByVal idProducto As Integer)
+        Dim x As New dtlClientes
+        x.eliminarCliente(idProducto)
+
+    End Sub
     Public Sub obtenerGrillaCliente(ByRef cliente As DataTable)
         Dim x As New dtlClientes
         x.obtenerGrillaCliente(cliente)
 
     End Sub
-    Public Sub obtenerGrillaProductos(ByVal cbFiltrar As String, ByVal txtingresarDato As String, ByRef producto As DataTable)
+    Public Sub obtenerGrillaProductos(producto As DataTable)
         Dim x As New dtlClientes
-        x.obtenerGrillaProductos(cbFiltrar, txtingresarDato, producto)
+        x.obtenerGrillaProductos(producto)
 
     End Sub
 

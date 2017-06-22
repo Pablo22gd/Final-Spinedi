@@ -10,9 +10,9 @@ Public Class wflClientes
 
     End Sub
 
-    Public Sub obtenerGrillaProductos(ByVal cbFiltrar As String, ByVal txtIngresarDato As String, ByRef producto As DataTable)
+    Public Sub obtenerGrillaProductos(producto As DataTable)
         Dim x As New brlClientes
-        x.obtenerGrillaProductos(cbFiltrar, txtIngresarDato, producto)
+        x.obtenerGrillaProductos(producto)
 
     End Sub
     Public Sub obtenerGrillaProveedores(ByRef proveedor As DataTable)
@@ -125,6 +125,11 @@ Public Class wflClientes
     Public Sub eliminarProveedor(ByVal idProveedor As Integer)
         Dim x As New brlClientes
         x.eliminarProveedor(idProveedor)
+    End Sub
+
+    Public Sub eliminarProducto(ByVal idProducto As Integer)
+        Dim x As New brlClientes
+        x.eliminarProducto(idProducto)
     End Sub
 
     Public Sub eliminarCliente(ByVal idCliente As Integer)

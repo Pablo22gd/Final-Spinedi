@@ -101,7 +101,7 @@ Public Class dtlClientes
 
     End Sub
 
-    Public Sub obtenerGrillaProductos(ByRef cbFiltrar As String, ByVal txtingresarDato As String, ByRef producto As DataTable)
+    Public Sub obtenerGrillaProductos(ByRef producto As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         If oConn.State = 1 Then oConn.Close()
         oConn.Open()
@@ -312,6 +312,28 @@ Public Class dtlClientes
 
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "eliminarProveedor_d_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub eliminarProducto(ByRef idProducto As Integer)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(0) As SqlParameter
+
+        param(0) = New SqlParameter("@id_producto", idProducto)
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "eliminarProducto_d_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 
