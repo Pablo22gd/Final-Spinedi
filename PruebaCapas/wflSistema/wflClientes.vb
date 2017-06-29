@@ -1,9 +1,21 @@
 ﻿Imports brlSistema
 Public Class wflClientes
-    Public Sub obtenerRegistro(ByVal idcliente As Integer, ByRef clientes As DataTable)
+    Public Sub ObtenerProvincia(ByRef provincia As DataTable)
+        Dim x As New brlClientes
+        x.ObtenerProvincia(provincia)
+    End Sub
+
+
+    Public Sub ObtenerLocalidad(ByRef localidad As DataTable)
+            Dim x As New brlClientes
+            x.ObtenerLocalidad(localidad)
+        End Sub
+
+        Public Sub obtenerRegistro(ByVal idcliente As Integer, ByRef clientes As DataTable)
         Dim x As New brlClientes
         x.obtenerRegistro(idcliente, clientes)
     End Sub
+
     Public Sub obtenerGrillaCliente(ByRef clientes As DataTable)
         Dim x As New brlClientes
         x.obtenerGrillaCliente(clientes)
@@ -146,14 +158,9 @@ Public Class wflClientes
             strmensaje = "El cliente no existe en la base"
         End If
     End Sub
-    'En las wFL generalmente van procesos complejos que invlucran
-    ' llamados a las otras capas. 
-    ' Ejemplo Procesar Consumos Cliente
-    ' En ese caso debere tener en la dtl un una dtl de facturas
-    ' Una brl de facturas
-    ' y aca traerlas y trabajarlas.
 
 
 
 
-End Class
+
+    End Class

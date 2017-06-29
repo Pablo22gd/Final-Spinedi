@@ -24,6 +24,44 @@ Public Class dtlClientes
 
     End Sub
 
+    Public Sub ObtenerProvincia(ByRef provincia As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerProvincia_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        provincia = table
+
+
+    End Sub
+
+    Public Sub ObtenerLocalidad(ByRef localidad As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerLocalidadCorrespondiente_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        localidad = table
+
+
+    End Sub
+
 
 
     Public Sub obtenerGrillaModCliente(ByRef Clientes As DataTable)

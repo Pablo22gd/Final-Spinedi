@@ -3,7 +3,7 @@ Public Class FrmIngresarNuevoCliente
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
 
         Dim x As New wflClientes
-        Dim strmensaje As String = "El cliente se cargo con exito"
+
 
         x.NuevoCliente(
                          TxtNombre.Text,
@@ -19,21 +19,39 @@ Public Class FrmIngresarNuevoCliente
                          CbEstado.Text
                          )
 
-        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
 
     End Sub
 
     Private Sub CbProvincia_MouseClick(sender As Object, e As MouseEventArgs) Handles CbProvincia.MouseClick
 
-        'Dim x As New wflClientes
 
+        Dim x As New wflClientes
+        Dim dt As New DataTable
 
-        'x.obtenerProvincia()
+        x.ObtenerProvincia(
+                        dt
+                         )
+
 
 
     End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         Me.Close()
+    End Sub
+
+    Private Sub CbProvincia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbProvincia.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub CbLocalidad_MouseClick(sender As Object, e As MouseEventArgs) Handles CbLocalidad.MouseClick
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+        x.ObtenerLocalidad(
+                        dt
+                         )
+
     End Sub
 End Class

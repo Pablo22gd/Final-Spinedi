@@ -138,7 +138,7 @@ Partial Class FrmNuevoProducto
         Me.BtnVolver.Location = New System.Drawing.Point(472, 407)
         Me.BtnVolver.Name = "BtnVolver"
         Me.BtnVolver.Size = New System.Drawing.Size(75, 23)
-        Me.BtnVolver.TabIndex = 12
+        Me.BtnVolver.TabIndex = 8
         Me.BtnVolver.Text = "Volver"
         Me.BtnVolver.UseVisualStyleBackColor = True
         '
@@ -147,53 +147,58 @@ Partial Class FrmNuevoProducto
         Me.BtnAceptar.Location = New System.Drawing.Point(719, 407)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAceptar.TabIndex = 13
+        Me.BtnAceptar.TabIndex = 7
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = True
         '
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(118, 113)
+        Me.TxtNombre.MaxLength = 30
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(178, 20)
-        Me.TxtNombre.TabIndex = 14
+        Me.TxtNombre.TabIndex = 0
         '
         'TxtProveedor
         '
         Me.TxtProveedor.Location = New System.Drawing.Point(118, 248)
         Me.TxtProveedor.Name = "TxtProveedor"
         Me.TxtProveedor.Size = New System.Drawing.Size(178, 20)
-        Me.TxtProveedor.TabIndex = 15
+        Me.TxtProveedor.TabIndex = 5
         '
         'TxtObservaciones
         '
         Me.TxtObservaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservaciones.Location = New System.Drawing.Point(118, 287)
+        Me.TxtObservaciones.MaxLength = 100
         Me.TxtObservaciones.Multiline = True
         Me.TxtObservaciones.Name = "TxtObservaciones"
         Me.TxtObservaciones.Size = New System.Drawing.Size(178, 89)
-        Me.TxtObservaciones.TabIndex = 16
+        Me.TxtObservaciones.TabIndex = 6
         '
         'TxtCantidad
         '
         Me.TxtCantidad.Location = New System.Drawing.Point(118, 195)
+        Me.TxtCantidad.MaxLength = 6
         Me.TxtCantidad.Name = "TxtCantidad"
         Me.TxtCantidad.Size = New System.Drawing.Size(178, 20)
-        Me.TxtCantidad.TabIndex = 18
+        Me.TxtCantidad.TabIndex = 3
         '
         'TxtDetalle
         '
         Me.TxtDetalle.Location = New System.Drawing.Point(118, 169)
+        Me.TxtDetalle.MaxLength = 30
         Me.TxtDetalle.Name = "TxtDetalle"
         Me.TxtDetalle.Size = New System.Drawing.Size(178, 20)
-        Me.TxtDetalle.TabIndex = 19
+        Me.TxtDetalle.TabIndex = 2
         '
         'TxtMarca
         '
         Me.TxtMarca.Location = New System.Drawing.Point(118, 143)
+        Me.TxtMarca.MaxLength = 30
         Me.TxtMarca.Name = "TxtMarca"
         Me.TxtMarca.Size = New System.Drawing.Size(178, 20)
-        Me.TxtMarca.TabIndex = 20
+        Me.TxtMarca.TabIndex = 1
         '
         'CBEstado
         '
@@ -202,7 +207,7 @@ Partial Class FrmNuevoProducto
         Me.CBEstado.Location = New System.Drawing.Point(118, 221)
         Me.CBEstado.Name = "CBEstado"
         Me.CBEstado.Size = New System.Drawing.Size(178, 21)
-        Me.CBEstado.TabIndex = 21
+        Me.CBEstado.TabIndex = 4
         '
         'FrmNuevoProducto
         '

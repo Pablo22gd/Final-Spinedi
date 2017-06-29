@@ -7,6 +7,18 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub ObtenerProvincia(ByRef provincia As DataTable)
+        Dim x As New dtlClientes
+        x.ObtenerProvincia(provincia)
+
+    End Sub
+
+    Public Sub ObtenerLocalidad(ByRef localidad As DataTable)
+        Dim x As New dtlClientes
+        x.ObtenerLocalidad(localidad)
+
+    End Sub
+
     Public Sub eliminarProveedor(ByVal idProveedor As Integer)
         Dim x As New dtlClientes
         x.eliminarProveedor(idProveedor)
@@ -101,7 +113,74 @@ Public Class brlClientes
 
 
         Dim x As New dtlClientes
-        x.NuevoCliente(TxtNombre,
+        If (TxtNombre = "") Then
+
+            MsgBox("Ingrese el nombre")
+
+        Else
+
+
+            If (TxtApellido = "") Then
+
+                MsgBox("Ingrese el apellido")
+
+            Else
+
+                If (TxtDNI = "") Then
+
+                    MsgBox("Ingrese el dni")
+
+                Else
+
+                    If (TxtDomicilio = "") Then
+
+                        MsgBox("Ingrese el domicilio")
+
+                    Else
+
+                        If (CbSexo = "") Then
+
+                            MsgBox("Ingrese el sexo")
+
+                        Else
+
+
+                            If (DTPFechaDeNacimiento = "") Then
+
+                                MsgBox("Ingrese la fecha de nacimiento")
+
+                            Else
+
+                                If (TxtTelefono = "") Then
+
+                                    MsgBox("Ingrese el telefono")
+
+                                Else
+
+                                    If (TxtEmail = "") Then
+
+                                        MsgBox("Ingrese el email")
+
+                                    Else
+
+                                        If (CbProvincia = "") Then
+
+                                            MsgBox("Ingrese la provincia")
+
+                                        Else
+
+                                            If (CbLocalidad = "") Then
+
+                                                MsgBox("Ingrese la localidad")
+
+                                            Else
+
+                                                If (CbEstado = "") Then
+
+                                                    MsgBox("Ingrese el estado")
+
+                                                Else
+                                                    x.NuevoCliente(TxtNombre,
                          TxtApellido,
                          TxtDNI,
                          TxtDomicilio,
@@ -112,6 +191,26 @@ Public Class brlClientes
                          CbProvincia,
                          CbLocalidad,
                          CbEstado)
+
+
+
+                                                End If
+                                            End If
+                                        End If
+
+                                    End If
+                                End If
+
+                            End If
+                        End If
+
+                    End If
+
+                End If
+
+            End If
+
+            End If
 
 
     End Sub

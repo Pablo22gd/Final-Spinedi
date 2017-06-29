@@ -62,23 +62,25 @@ Partial Class FrmNuevoProveedor
         'TxtCuit
         '
         Me.TxtCuit.Location = New System.Drawing.Point(266, 274)
+        Me.TxtCuit.MaxLength = 13
         Me.TxtCuit.Name = "TxtCuit"
         Me.TxtCuit.Size = New System.Drawing.Size(200, 20)
-        Me.TxtCuit.TabIndex = 99
+        Me.TxtCuit.TabIndex = 5
         '
         'TxtRazonSocial
         '
         Me.TxtRazonSocial.Location = New System.Drawing.Point(266, 441)
+        Me.TxtRazonSocial.MaxLength = 30
         Me.TxtRazonSocial.Name = "TxtRazonSocial"
         Me.TxtRazonSocial.Size = New System.Drawing.Size(200, 20)
-        Me.TxtRazonSocial.TabIndex = 98
+        Me.TxtRazonSocial.TabIndex = 11
         '
         'NUDCantidad
         '
         Me.NUDCantidad.Location = New System.Drawing.Point(266, 413)
         Me.NUDCantidad.Name = "NUDCantidad"
         Me.NUDCantidad.Size = New System.Drawing.Size(200, 20)
-        Me.NUDCantidad.TabIndex = 97
+        Me.NUDCantidad.TabIndex = 10
         '
         'LblRazonSocial
         '
@@ -137,17 +139,18 @@ Partial Class FrmNuevoProveedor
         'TxtObservaciones
         '
         Me.TxtObservaciones.Location = New System.Drawing.Point(266, 475)
+        Me.TxtObservaciones.MaxLength = 50
         Me.TxtObservaciones.Multiline = True
         Me.TxtObservaciones.Name = "TxtObservaciones"
         Me.TxtObservaciones.Size = New System.Drawing.Size(200, 86)
-        Me.TxtObservaciones.TabIndex = 90
+        Me.TxtObservaciones.TabIndex = 12
         '
         'NUDProducto
         '
         Me.NUDProducto.Location = New System.Drawing.Point(266, 298)
         Me.NUDProducto.Name = "NUDProducto"
         Me.NUDProducto.Size = New System.Drawing.Size(200, 20)
-        Me.NUDProducto.TabIndex = 89
+        Me.NUDProducto.TabIndex = 6
         '
         'LblNuevoProveedor
         '
@@ -174,7 +177,7 @@ Partial Class FrmNuevoProveedor
         Me.CbEstado.Location = New System.Drawing.Point(266, 324)
         Me.CbEstado.Name = "CbEstado"
         Me.CbEstado.Size = New System.Drawing.Size(200, 21)
-        Me.CbEstado.TabIndex = 86
+        Me.CbEstado.TabIndex = 7
         '
         'CbProvincia
         '
@@ -183,21 +186,23 @@ Partial Class FrmNuevoProveedor
         Me.CbProvincia.Location = New System.Drawing.Point(266, 223)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(200, 21)
-        Me.CbProvincia.TabIndex = 85
+        Me.CbProvincia.TabIndex = 3
         '
         'TxtDomicilio
         '
         Me.TxtDomicilio.Location = New System.Drawing.Point(266, 166)
+        Me.TxtDomicilio.MaxLength = 30
         Me.TxtDomicilio.Name = "TxtDomicilio"
         Me.TxtDomicilio.Size = New System.Drawing.Size(200, 20)
-        Me.TxtDomicilio.TabIndex = 83
+        Me.TxtDomicilio.TabIndex = 1
         '
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(266, 62)
+        Me.TxtNombre.MaxLength = 30
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(200, 20)
-        Me.TxtNombre.TabIndex = 81
+        Me.TxtNombre.TabIndex = 0
         '
         'LblEstado
         '
@@ -267,7 +272,7 @@ Partial Class FrmNuevoProveedor
         Me.BtnVolver.Location = New System.Drawing.Point(607, 413)
         Me.BtnVolver.Name = "BtnVolver"
         Me.BtnVolver.Size = New System.Drawing.Size(75, 23)
-        Me.BtnVolver.TabIndex = 73
+        Me.BtnVolver.TabIndex = 14
         Me.BtnVolver.Text = "Volver"
         Me.BtnVolver.UseVisualStyleBackColor = True
         '
@@ -276,30 +281,33 @@ Partial Class FrmNuevoProveedor
         Me.BtnAgregar.Location = New System.Drawing.Point(803, 410)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 72
+        Me.BtnAgregar.TabIndex = 13
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'TxtTelefono
         '
         Me.TxtTelefono.Location = New System.Drawing.Point(266, 251)
+        Me.TxtTelefono.MaxLength = 20
         Me.TxtTelefono.Name = "TxtTelefono"
         Me.TxtTelefono.Size = New System.Drawing.Size(200, 20)
-        Me.TxtTelefono.TabIndex = 100
+        Me.TxtTelefono.TabIndex = 4
         '
         'TxtPrecioCompra
         '
         Me.TxtPrecioCompra.Location = New System.Drawing.Point(266, 354)
+        Me.TxtPrecioCompra.MaxLength = 6
         Me.TxtPrecioCompra.Name = "TxtPrecioCompra"
         Me.TxtPrecioCompra.Size = New System.Drawing.Size(200, 20)
-        Me.TxtPrecioCompra.TabIndex = 101
+        Me.TxtPrecioCompra.TabIndex = 8
         '
         'TxtPrecioVenta
         '
         Me.TxtPrecioVenta.Location = New System.Drawing.Point(266, 383)
+        Me.TxtPrecioVenta.MaxLength = 6
         Me.TxtPrecioVenta.Name = "TxtPrecioVenta"
         Me.TxtPrecioVenta.Size = New System.Drawing.Size(200, 20)
-        Me.TxtPrecioVenta.TabIndex = 102
+        Me.TxtPrecioVenta.TabIndex = 9
         '
         'CbLocalidad
         '
@@ -308,7 +316,7 @@ Partial Class FrmNuevoProveedor
         Me.CbLocalidad.Location = New System.Drawing.Point(266, 192)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(200, 21)
-        Me.CbLocalidad.TabIndex = 105
+        Me.CbLocalidad.TabIndex = 2
         '
         'DGVNuevoProveedor
         '

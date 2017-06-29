@@ -120,45 +120,51 @@ Partial Class FrmIngresarNuevoCliente
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(151, 79)
+        Me.TxtNombre.MaxLength = 30
         Me.TxtNombre.Multiline = True
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(210, 20)
-        Me.TxtNombre.TabIndex = 7
+        Me.TxtNombre.TabIndex = 0
         '
         'TxtApellido
         '
         Me.TxtApellido.Location = New System.Drawing.Point(151, 105)
+        Me.TxtApellido.MaxLength = 30
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(210, 20)
-        Me.TxtApellido.TabIndex = 8
+        Me.TxtApellido.TabIndex = 1
         '
         'TxtDNI
         '
         Me.TxtDNI.Location = New System.Drawing.Point(151, 130)
+        Me.TxtDNI.MaxLength = 8
         Me.TxtDNI.Name = "TxtDNI"
         Me.TxtDNI.Size = New System.Drawing.Size(210, 20)
-        Me.TxtDNI.TabIndex = 9
+        Me.TxtDNI.TabIndex = 2
         '
         'TxtDomicilio
         '
         Me.TxtDomicilio.Location = New System.Drawing.Point(151, 159)
+        Me.TxtDomicilio.MaxLength = 50
         Me.TxtDomicilio.Name = "TxtDomicilio"
         Me.TxtDomicilio.Size = New System.Drawing.Size(210, 20)
-        Me.TxtDomicilio.TabIndex = 10
+        Me.TxtDomicilio.TabIndex = 3
         '
         'TxtTelefono
         '
         Me.TxtTelefono.Location = New System.Drawing.Point(151, 245)
+        Me.TxtTelefono.MaxLength = 20
         Me.TxtTelefono.Name = "TxtTelefono"
         Me.TxtTelefono.Size = New System.Drawing.Size(210, 20)
-        Me.TxtTelefono.TabIndex = 13
+        Me.TxtTelefono.TabIndex = 6
         '
         'TxtEmail
         '
         Me.TxtEmail.Location = New System.Drawing.Point(151, 271)
+        Me.TxtEmail.MaxLength = 50
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(210, 20)
-        Me.TxtEmail.TabIndex = 14
+        Me.TxtEmail.TabIndex = 7
         '
         'LblFechaDeNacimiento
         '
@@ -176,7 +182,7 @@ Partial Class FrmIngresarNuevoCliente
         Me.CbSexo.Location = New System.Drawing.Point(151, 186)
         Me.CbSexo.Name = "CbSexo"
         Me.CbSexo.Size = New System.Drawing.Size(210, 21)
-        Me.CbSexo.TabIndex = 16
+        Me.CbSexo.TabIndex = 4
         '
         'LblTelefono
         '
@@ -192,7 +198,7 @@ Partial Class FrmIngresarNuevoCliente
         Me.DTPFechaDeNacimiento.Location = New System.Drawing.Point(151, 214)
         Me.DTPFechaDeNacimiento.Name = "DTPFechaDeNacimiento"
         Me.DTPFechaDeNacimiento.Size = New System.Drawing.Size(210, 20)
-        Me.DTPFechaDeNacimiento.TabIndex = 18
+        Me.DTPFechaDeNacimiento.TabIndex = 5
         '
         'LblEmail
         '
@@ -228,7 +234,7 @@ Partial Class FrmIngresarNuevoCliente
         Me.CbProvincia.Location = New System.Drawing.Point(151, 303)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(210, 21)
-        Me.CbProvincia.TabIndex = 23
+        Me.CbProvincia.TabIndex = 8
         '
         'CbLocalidad
         '
@@ -237,7 +243,7 @@ Partial Class FrmIngresarNuevoCliente
         Me.CbLocalidad.Location = New System.Drawing.Point(151, 336)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(210, 21)
-        Me.CbLocalidad.TabIndex = 24
+        Me.CbLocalidad.TabIndex = 9
         '
         'LblEstado
         '
@@ -255,14 +261,14 @@ Partial Class FrmIngresarNuevoCliente
         Me.CbEstado.Location = New System.Drawing.Point(151, 368)
         Me.CbEstado.Name = "CbEstado"
         Me.CbEstado.Size = New System.Drawing.Size(210, 21)
-        Me.CbEstado.TabIndex = 27
+        Me.CbEstado.TabIndex = 10
         '
         'BtnVolver
         '
         Me.BtnVolver.Location = New System.Drawing.Point(583, 316)
         Me.BtnVolver.Name = "BtnVolver"
         Me.BtnVolver.Size = New System.Drawing.Size(75, 23)
-        Me.BtnVolver.TabIndex = 28
+        Me.BtnVolver.TabIndex = 12
         Me.BtnVolver.Text = "Volver"
         Me.BtnVolver.UseVisualStyleBackColor = True
         '
@@ -271,7 +277,7 @@ Partial Class FrmIngresarNuevoCliente
         Me.BtnAgregar.Location = New System.Drawing.Point(670, 316)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 29
+        Me.BtnAgregar.TabIndex = 11
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
