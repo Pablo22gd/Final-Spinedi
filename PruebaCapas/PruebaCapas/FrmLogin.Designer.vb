@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.Lblpassword = New System.Windows.Forms.Label()
         Me.PictureLoguin = New System.Windows.Forms.PictureBox()
@@ -52,9 +53,11 @@ Partial Class FrmLogin
         '
         'PictureLoguin
         '
+        Me.PictureLoguin.Image = CType(resources.GetObject("PictureLoguin.Image"), System.Drawing.Image)
         Me.PictureLoguin.Location = New System.Drawing.Point(410, 88)
         Me.PictureLoguin.Name = "PictureLoguin"
         Me.PictureLoguin.Size = New System.Drawing.Size(213, 171)
+        Me.PictureLoguin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureLoguin.TabIndex = 2
         Me.PictureLoguin.TabStop = False
         '

@@ -43,7 +43,15 @@ Public Class FmrBajaProveedor
     End Sub
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim x As New wflClientes
+        Dim dt As New DataTable
 
+        Dim strmensaje As String = ""
+
+
+        x.obtenerGrillaProveedoresFiltrada(TxtIngresarDato.Text, dt)
+
+        DGVBjaProveedor.DataSource = dt
     End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click

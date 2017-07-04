@@ -176,6 +176,45 @@ Public Class dtlClientes
 
     End Sub
 
+    Public Sub obtenerGrillaProveedoresFiltrada(ByVal buscar As String, ByRef proveedor As DataTable)
+
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+        Dim param(0) As SqlParameter
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+
+
+
+        param(0) = New SqlParameter("@buscar", buscar)
+
+        Adp.SelectCommand.CommandText = "obtenerProveedor_q_sp"
+
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        proveedor = table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    End Sub
+
     Public Sub insertarRegistro(ByRef intidcliente As Integer, ByRef strrazonSocial As String)
         oConn = New SqlConnection("Server=DIENAMOVIL\SQLEXPRESS;integrated security=true;database=Segpool")
         If oConn.State = 1 Then oConn.Close()

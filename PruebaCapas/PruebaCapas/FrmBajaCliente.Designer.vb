@@ -22,6 +22,7 @@ Partial Class FrmBajaCliente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBajaCliente))
         Me.LblFiltrarPor = New System.Windows.Forms.Label()
         Me.LblBuscar = New System.Windows.Forms.Label()
         Me.DGVGrillaBajaCliente = New System.Windows.Forms.DataGridView()
@@ -60,14 +61,17 @@ Partial Class FrmBajaCliente
         Me.DGVGrillaBajaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVGrillaBajaCliente.Location = New System.Drawing.Point(377, 233)
         Me.DGVGrillaBajaCliente.Name = "DGVGrillaBajaCliente"
+        Me.DGVGrillaBajaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVGrillaBajaCliente.Size = New System.Drawing.Size(608, 94)
         Me.DGVGrillaBajaCliente.TabIndex = 2
         '
         'PictureBajaCliente
         '
-        Me.PictureBajaCliente.Location = New System.Drawing.Point(585, 85)
+        Me.PictureBajaCliente.Image = CType(resources.GetObject("PictureBajaCliente.Image"), System.Drawing.Image)
+        Me.PictureBajaCliente.Location = New System.Drawing.Point(575, 72)
         Me.PictureBajaCliente.Name = "PictureBajaCliente"
-        Me.PictureBajaCliente.Size = New System.Drawing.Size(209, 103)
+        Me.PictureBajaCliente.Size = New System.Drawing.Size(241, 142)
+        Me.PictureBajaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBajaCliente.TabIndex = 3
         Me.PictureBajaCliente.TabStop = False
         '

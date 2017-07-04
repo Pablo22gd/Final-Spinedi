@@ -14,7 +14,7 @@ Public Class FrmNuevoProducto
 
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         Dim x As New wflClientes
-        Dim strmensaje As String = "El producto se cargo con exito"
+
 
         x.NuevoProducto(
                          TxtNombre.Text,
@@ -26,11 +26,24 @@ Public Class FrmNuevoProducto
                          TxtObservaciones.Text
                                                )
 
-        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+        TxtNombre.Text = ""
+        TxtMarca.Text = ""
+        TxtDetalle.Text = ""
+        TxtCantidad.Text = ""
+        CBEstado.Text = ""
+        TxtProveedor.Text = ""
+        TxtObservaciones.Text = ""
+
 
     End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         Me.Close()
+    End Sub
+
+    Private Sub TxtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCantidad.KeyPress
+
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+
     End Sub
 End Class

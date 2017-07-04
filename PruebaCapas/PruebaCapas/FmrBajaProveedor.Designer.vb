@@ -22,9 +22,8 @@ Partial Class FmrBajaProveedor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LblFiltrar = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FmrBajaProveedor))
         Me.LblingresarDato = New System.Windows.Forms.Label()
-        Me.Cbfiltrar = New System.Windows.Forms.ComboBox()
         Me.TxtIngresarDato = New System.Windows.Forms.TextBox()
         Me.DGVBjaProveedor = New System.Windows.Forms.DataGridView()
         Me.PictureBajaProveedor = New System.Windows.Forms.PictureBox()
@@ -36,40 +35,21 @@ Partial Class FmrBajaProveedor
         CType(Me.PictureBajaProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'LblFiltrar
-        '
-        Me.LblFiltrar.AutoSize = True
-        Me.LblFiltrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFiltrar.Location = New System.Drawing.Point(38, 109)
-        Me.LblFiltrar.Name = "LblFiltrar"
-        Me.LblFiltrar.Size = New System.Drawing.Size(41, 16)
-        Me.LblFiltrar.TabIndex = 1
-        Me.LblFiltrar.Text = "Filtrar"
-        '
         'LblingresarDato
         '
         Me.LblingresarDato.AutoSize = True
         Me.LblingresarDato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblingresarDato.Location = New System.Drawing.Point(36, 159)
+        Me.LblingresarDato.Location = New System.Drawing.Point(151, 100)
         Me.LblingresarDato.Name = "LblingresarDato"
-        Me.LblingresarDato.Size = New System.Drawing.Size(87, 16)
+        Me.LblingresarDato.Size = New System.Drawing.Size(194, 16)
         Me.LblingresarDato.TabIndex = 2
-        Me.LblingresarDato.Text = "Ingresar dato"
-        '
-        'Cbfiltrar
-        '
-        Me.Cbfiltrar.FormattingEnabled = True
-        Me.Cbfiltrar.Items.AddRange(New Object() {"codigo", "DNI", "Apellido", "Cuit"})
-        Me.Cbfiltrar.Location = New System.Drawing.Point(145, 109)
-        Me.Cbfiltrar.Name = "Cbfiltrar"
-        Me.Cbfiltrar.Size = New System.Drawing.Size(199, 21)
-        Me.Cbfiltrar.TabIndex = 3
+        Me.LblingresarDato.Text = "Ingresar nombre del proveedor"
         '
         'TxtIngresarDato
         '
-        Me.TxtIngresarDato.Location = New System.Drawing.Point(145, 159)
+        Me.TxtIngresarDato.Location = New System.Drawing.Point(147, 136)
         Me.TxtIngresarDato.Name = "TxtIngresarDato"
-        Me.TxtIngresarDato.Size = New System.Drawing.Size(199, 20)
+        Me.TxtIngresarDato.Size = New System.Drawing.Size(206, 20)
         Me.TxtIngresarDato.TabIndex = 4
         '
         'DGVBjaProveedor
@@ -77,14 +57,17 @@ Partial Class FmrBajaProveedor
         Me.DGVBjaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVBjaProveedor.Location = New System.Drawing.Point(60, 283)
         Me.DGVBjaProveedor.Name = "DGVBjaProveedor"
+        Me.DGVBjaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVBjaProveedor.Size = New System.Drawing.Size(839, 150)
         Me.DGVBjaProveedor.TabIndex = 5
         '
         'PictureBajaProveedor
         '
-        Me.PictureBajaProveedor.Location = New System.Drawing.Point(533, 72)
+        Me.PictureBajaProveedor.Image = CType(resources.GetObject("PictureBajaProveedor.Image"), System.Drawing.Image)
+        Me.PictureBajaProveedor.Location = New System.Drawing.Point(525, 72)
         Me.PictureBajaProveedor.Name = "PictureBajaProveedor"
-        Me.PictureBajaProveedor.Size = New System.Drawing.Size(225, 161)
+        Me.PictureBajaProveedor.Size = New System.Drawing.Size(231, 185)
+        Me.PictureBajaProveedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBajaProveedor.TabIndex = 6
         Me.PictureBajaProveedor.TabStop = False
         '
@@ -141,9 +124,7 @@ Partial Class FmrBajaProveedor
         Me.Controls.Add(Me.PictureBajaProveedor)
         Me.Controls.Add(Me.DGVBjaProveedor)
         Me.Controls.Add(Me.TxtIngresarDato)
-        Me.Controls.Add(Me.Cbfiltrar)
         Me.Controls.Add(Me.LblingresarDato)
-        Me.Controls.Add(Me.LblFiltrar)
         Me.Name = "FmrBajaProveedor"
         Me.Text = "Asistente para eliminar un proveedor"
         CType(Me.DGVBjaProveedor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -152,10 +133,7 @@ Partial Class FmrBajaProveedor
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents LblFiltrar As Label
     Friend WithEvents LblingresarDato As Label
-    Friend WithEvents Cbfiltrar As ComboBox
     Friend WithEvents TxtIngresarDato As TextBox
     Friend WithEvents DGVBjaProveedor As DataGridView
     Friend WithEvents PictureBajaProveedor As PictureBox

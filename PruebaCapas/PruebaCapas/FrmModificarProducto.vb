@@ -15,4 +15,8 @@ Public Class FrmModificarProducto
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         Me.Close()
     End Sub
+
+    Private Sub TxtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCantidad.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    End Sub
 End Class

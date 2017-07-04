@@ -33,6 +33,12 @@ Public Class wflClientes
 
     End Sub
 
+    Public Sub obtenerGrillaProveedoresFiltrada(ByVal TxtIngresarDato As String, ByRef proveedor As DataTable)
+        Dim x As New brlClientes
+        x.obtenerGrillaProveedoresFiltrada(TxtIngresarDato, proveedor)
+
+    End Sub
+
     Public Sub obtenerGrillaModCliente(ByRef Cliente As DataTable)
         Dim x As New brlClientes
         x.obtenerGrillaModCliente(Cliente)

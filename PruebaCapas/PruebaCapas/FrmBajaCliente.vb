@@ -57,4 +57,8 @@ Public Class FrmBajaCliente
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         Me.Close()
     End Sub
+
+    Private Sub LblBajaCliente_Click(sender As Object, e As EventArgs) Handles LblBajaCliente.Click
+
+    End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class FrmModificarProducto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModificarProducto))
         Me.CBEstado = New System.Windows.Forms.ComboBox()
         Me.TxtMarca = New System.Windows.Forms.TextBox()
         Me.TxtDetalle = New System.Windows.Forms.TextBox()
@@ -47,6 +48,7 @@ Partial Class FrmModificarProducto
         '
         'CBEstado
         '
+        Me.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBEstado.FormattingEnabled = True
         Me.CBEstado.Items.AddRange(New Object() {"Activo", "Inactivo"})
         Me.CBEstado.Location = New System.Drawing.Point(136, 235)
@@ -121,14 +123,17 @@ Partial Class FrmModificarProducto
         Me.DGVModificarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVModificarProducto.Location = New System.Drawing.Point(332, 301)
         Me.DGVModificarProducto.Name = "DGVModificarProducto"
+        Me.DGVModificarProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVModificarProducto.Size = New System.Drawing.Size(608, 89)
         Me.DGVModificarProducto.TabIndex = 31
         '
         'PictureModificarProducto
         '
-        Me.PictureModificarProducto.Location = New System.Drawing.Point(543, 71)
+        Me.PictureModificarProducto.Image = CType(resources.GetObject("PictureModificarProducto.Image"), System.Drawing.Image)
+        Me.PictureModificarProducto.Location = New System.Drawing.Point(519, 71)
         Me.PictureModificarProducto.Name = "PictureModificarProducto"
-        Me.PictureModificarProducto.Size = New System.Drawing.Size(163, 144)
+        Me.PictureModificarProducto.Size = New System.Drawing.Size(203, 180)
+        Me.PictureModificarProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureModificarProducto.TabIndex = 30
         Me.PictureModificarProducto.TabStop = False
         '

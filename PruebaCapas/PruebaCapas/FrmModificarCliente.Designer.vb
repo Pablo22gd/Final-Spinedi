@@ -22,6 +22,7 @@ Partial Class FrmModificarCliente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModificarCliente))
         Me.DGVGrillaModificarCliente = New System.Windows.Forms.DataGridView()
         Me.LblModificarCliente = New System.Windows.Forms.Label()
         Me.CbEstado = New System.Windows.Forms.ComboBox()
@@ -54,8 +55,9 @@ Partial Class FrmModificarCliente
         'DGVGrillaModificarCliente
         '
         Me.DGVGrillaModificarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVGrillaModificarCliente.Location = New System.Drawing.Point(388, 277)
+        Me.DGVGrillaModificarCliente.Location = New System.Drawing.Point(382, 278)
         Me.DGVGrillaModificarCliente.Name = "DGVGrillaModificarCliente"
+        Me.DGVGrillaModificarCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVGrillaModificarCliente.Size = New System.Drawing.Size(580, 108)
         Me.DGVGrillaModificarCliente.TabIndex = 54
         '
@@ -63,7 +65,7 @@ Partial Class FrmModificarCliente
         '
         Me.LblModificarCliente.AutoSize = True
         Me.LblModificarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificarCliente.Location = New System.Drawing.Point(614, 87)
+        Me.LblModificarCliente.Location = New System.Drawing.Point(613, 30)
         Me.LblModificarCliente.Name = "LblModificarCliente"
         Me.LblModificarCliente.Size = New System.Drawing.Size(135, 18)
         Me.LblModificarCliente.TabIndex = 53
@@ -71,74 +73,78 @@ Partial Class FrmModificarCliente
         '
         'CbEstado
         '
+        Me.CbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbEstado.FormattingEnabled = True
-        Me.CbEstado.Location = New System.Drawing.Point(150, 364)
+        Me.CbEstado.Location = New System.Drawing.Point(153, 310)
         Me.CbEstado.Name = "CbEstado"
         Me.CbEstado.Size = New System.Drawing.Size(200, 21)
         Me.CbEstado.TabIndex = 52
         '
         'CbLocalidad
         '
+        Me.CbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbLocalidad.FormattingEnabled = True
-        Me.CbLocalidad.Location = New System.Drawing.Point(150, 332)
+        Me.CbLocalidad.Location = New System.Drawing.Point(153, 278)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(200, 21)
         Me.CbLocalidad.TabIndex = 51
         '
         'CbProvincia
         '
+        Me.CbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbProvincia.FormattingEnabled = True
-        Me.CbProvincia.Location = New System.Drawing.Point(150, 305)
+        Me.CbProvincia.Location = New System.Drawing.Point(153, 251)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(200, 21)
         Me.CbProvincia.TabIndex = 50
         '
         'CbSexo
         '
+        Me.CbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbSexo.FormattingEnabled = True
-        Me.CbSexo.Location = New System.Drawing.Point(150, 220)
+        Me.CbSexo.Location = New System.Drawing.Point(153, 166)
         Me.CbSexo.Name = "CbSexo"
         Me.CbSexo.Size = New System.Drawing.Size(200, 21)
         Me.CbSexo.TabIndex = 49
         '
         'TxtEmail
         '
-        Me.TxtEmail.Location = New System.Drawing.Point(150, 247)
+        Me.TxtEmail.Location = New System.Drawing.Point(153, 193)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(200, 20)
         Me.TxtEmail.TabIndex = 48
         '
         'TxtTelefono
         '
-        Me.TxtTelefono.Location = New System.Drawing.Point(150, 194)
+        Me.TxtTelefono.Location = New System.Drawing.Point(153, 140)
         Me.TxtTelefono.Name = "TxtTelefono"
         Me.TxtTelefono.Size = New System.Drawing.Size(200, 20)
         Me.TxtTelefono.TabIndex = 47
         '
         'TxtDNI
         '
-        Me.TxtDNI.Location = New System.Drawing.Point(150, 170)
+        Me.TxtDNI.Location = New System.Drawing.Point(153, 116)
         Me.TxtDNI.Name = "TxtDNI"
         Me.TxtDNI.Size = New System.Drawing.Size(200, 20)
         Me.TxtDNI.TabIndex = 46
         '
         'TxtDomicilio
         '
-        Me.TxtDomicilio.Location = New System.Drawing.Point(150, 279)
+        Me.TxtDomicilio.Location = New System.Drawing.Point(153, 225)
         Me.TxtDomicilio.Name = "TxtDomicilio"
         Me.TxtDomicilio.Size = New System.Drawing.Size(200, 20)
         Me.TxtDomicilio.TabIndex = 45
         '
         'TxtApellido
         '
-        Me.TxtApellido.Location = New System.Drawing.Point(150, 140)
+        Me.TxtApellido.Location = New System.Drawing.Point(153, 86)
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(200, 20)
         Me.TxtApellido.TabIndex = 44
         '
         'TxtNombre
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(150, 114)
+        Me.TxtNombre.Location = New System.Drawing.Point(153, 60)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(200, 20)
         Me.TxtNombre.TabIndex = 43
@@ -146,7 +152,7 @@ Partial Class FrmModificarCliente
         'LblEstado
         '
         Me.LblEstado.AutoSize = True
-        Me.LblEstado.Location = New System.Drawing.Point(40, 367)
+        Me.LblEstado.Location = New System.Drawing.Point(43, 313)
         Me.LblEstado.Name = "LblEstado"
         Me.LblEstado.Size = New System.Drawing.Size(40, 13)
         Me.LblEstado.TabIndex = 42
@@ -155,7 +161,7 @@ Partial Class FrmModificarCliente
         'LblLocalidad
         '
         Me.LblLocalidad.AutoSize = True
-        Me.LblLocalidad.Location = New System.Drawing.Point(40, 335)
+        Me.LblLocalidad.Location = New System.Drawing.Point(43, 281)
         Me.LblLocalidad.Name = "LblLocalidad"
         Me.LblLocalidad.Size = New System.Drawing.Size(53, 13)
         Me.LblLocalidad.TabIndex = 41
@@ -164,7 +170,7 @@ Partial Class FrmModificarCliente
         'LblProvincia
         '
         Me.LblProvincia.AutoSize = True
-        Me.LblProvincia.Location = New System.Drawing.Point(40, 308)
+        Me.LblProvincia.Location = New System.Drawing.Point(43, 254)
         Me.LblProvincia.Name = "LblProvincia"
         Me.LblProvincia.Size = New System.Drawing.Size(51, 13)
         Me.LblProvincia.TabIndex = 40
@@ -173,7 +179,7 @@ Partial Class FrmModificarCliente
         'LblEmail
         '
         Me.LblEmail.AutoSize = True
-        Me.LblEmail.Location = New System.Drawing.Point(39, 251)
+        Me.LblEmail.Location = New System.Drawing.Point(42, 197)
         Me.LblEmail.Name = "LblEmail"
         Me.LblEmail.Size = New System.Drawing.Size(32, 13)
         Me.LblEmail.TabIndex = 39
@@ -182,7 +188,7 @@ Partial Class FrmModificarCliente
         'LblTelefono
         '
         Me.LblTelefono.AutoSize = True
-        Me.LblTelefono.Location = New System.Drawing.Point(38, 196)
+        Me.LblTelefono.Location = New System.Drawing.Point(41, 142)
         Me.LblTelefono.Name = "LblTelefono"
         Me.LblTelefono.Size = New System.Drawing.Size(49, 13)
         Me.LblTelefono.TabIndex = 38
@@ -191,7 +197,7 @@ Partial Class FrmModificarCliente
         'LblSexo
         '
         Me.LblSexo.AutoSize = True
-        Me.LblSexo.Location = New System.Drawing.Point(39, 223)
+        Me.LblSexo.Location = New System.Drawing.Point(42, 169)
         Me.LblSexo.Name = "LblSexo"
         Me.LblSexo.Size = New System.Drawing.Size(31, 13)
         Me.LblSexo.TabIndex = 37
@@ -200,7 +206,7 @@ Partial Class FrmModificarCliente
         'LblDNI
         '
         Me.LblDNI.AutoSize = True
-        Me.LblDNI.Location = New System.Drawing.Point(39, 173)
+        Me.LblDNI.Location = New System.Drawing.Point(42, 119)
         Me.LblDNI.Name = "LblDNI"
         Me.LblDNI.Size = New System.Drawing.Size(26, 13)
         Me.LblDNI.TabIndex = 36
@@ -209,7 +215,7 @@ Partial Class FrmModificarCliente
         'LblDomicilio
         '
         Me.LblDomicilio.AutoSize = True
-        Me.LblDomicilio.Location = New System.Drawing.Point(39, 282)
+        Me.LblDomicilio.Location = New System.Drawing.Point(42, 228)
         Me.LblDomicilio.Name = "LblDomicilio"
         Me.LblDomicilio.Size = New System.Drawing.Size(49, 13)
         Me.LblDomicilio.TabIndex = 35
@@ -218,7 +224,7 @@ Partial Class FrmModificarCliente
         'LblApellido
         '
         Me.LblApellido.AutoSize = True
-        Me.LblApellido.Location = New System.Drawing.Point(39, 147)
+        Me.LblApellido.Location = New System.Drawing.Point(42, 93)
         Me.LblApellido.Name = "LblApellido"
         Me.LblApellido.Size = New System.Drawing.Size(44, 13)
         Me.LblApellido.TabIndex = 34
@@ -227,7 +233,7 @@ Partial Class FrmModificarCliente
         'LblNombre
         '
         Me.LblNombre.AutoSize = True
-        Me.LblNombre.Location = New System.Drawing.Point(39, 121)
+        Me.LblNombre.Location = New System.Drawing.Point(42, 67)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(44, 13)
         Me.LblNombre.TabIndex = 33
@@ -244,7 +250,7 @@ Partial Class FrmModificarCliente
         '
         'BtnModificar
         '
-        Me.BtnModificar.Location = New System.Drawing.Point(509, 408)
+        Me.BtnModificar.Location = New System.Drawing.Point(512, 408)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(75, 23)
         Me.BtnModificar.TabIndex = 31
@@ -253,9 +259,11 @@ Partial Class FrmModificarCliente
         '
         'PictureModificarCliente
         '
-        Me.PictureModificarCliente.Location = New System.Drawing.Point(584, 121)
+        Me.PictureModificarCliente.Image = CType(resources.GetObject("PictureModificarCliente.Image"), System.Drawing.Image)
+        Me.PictureModificarCliente.Location = New System.Drawing.Point(547, 60)
         Me.PictureModificarCliente.Name = "PictureModificarCliente"
-        Me.PictureModificarCliente.Size = New System.Drawing.Size(204, 131)
+        Me.PictureModificarCliente.Size = New System.Drawing.Size(251, 177)
+        Me.PictureModificarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureModificarCliente.TabIndex = 55
         Me.PictureModificarCliente.TabStop = False
         '

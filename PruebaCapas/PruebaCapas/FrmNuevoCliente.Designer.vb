@@ -177,6 +177,7 @@ Partial Class FrmIngresarNuevoCliente
         '
         'CbSexo
         '
+        Me.CbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbSexo.FormattingEnabled = True
         Me.CbSexo.Items.AddRange(New Object() {"Masculino ", "Femenino"})
         Me.CbSexo.Location = New System.Drawing.Point(151, 186)
@@ -229,6 +230,7 @@ Partial Class FrmIngresarNuevoCliente
         '
         'CbProvincia
         '
+        Me.CbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbProvincia.FormattingEnabled = True
         Me.CbProvincia.Items.AddRange(New Object() {"BS AS"})
         Me.CbProvincia.Location = New System.Drawing.Point(151, 303)
@@ -238,6 +240,7 @@ Partial Class FrmIngresarNuevoCliente
         '
         'CbLocalidad
         '
+        Me.CbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbLocalidad.FormattingEnabled = True
         Me.CbLocalidad.Items.AddRange(New Object() {"LA PLATA"})
         Me.CbLocalidad.Location = New System.Drawing.Point(151, 336)
@@ -256,6 +259,7 @@ Partial Class FrmIngresarNuevoCliente
         '
         'CbEstado
         '
+        Me.CbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbEstado.FormattingEnabled = True
         Me.CbEstado.Items.AddRange(New Object() {"Activo", "Inactivo"})
         Me.CbEstado.Location = New System.Drawing.Point(151, 368)

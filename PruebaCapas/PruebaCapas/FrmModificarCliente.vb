@@ -19,4 +19,12 @@ Public Class FrmModificarCliente
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
 
     End Sub
+
+    Private Sub TxtDNI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtDNI.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    End Sub
+
+    Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    End Sub
 End Class

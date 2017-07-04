@@ -22,6 +22,7 @@ Partial Class FrmBajaProducto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBajaProducto))
         Me.LblFiltrar = New System.Windows.Forms.Label()
         Me.LblIngresarDato = New System.Windows.Forms.Label()
         Me.PictureBajaProducto = New System.Windows.Forms.PictureBox()
@@ -56,9 +57,11 @@ Partial Class FrmBajaProducto
         '
         'PictureBajaProducto
         '
-        Me.PictureBajaProducto.Location = New System.Drawing.Point(531, 72)
+        Me.PictureBajaProducto.Image = CType(resources.GetObject("PictureBajaProducto.Image"), System.Drawing.Image)
+        Me.PictureBajaProducto.Location = New System.Drawing.Point(516, 58)
         Me.PictureBajaProducto.Name = "PictureBajaProducto"
-        Me.PictureBajaProducto.Size = New System.Drawing.Size(197, 125)
+        Me.PictureBajaProducto.Size = New System.Drawing.Size(218, 167)
+        Me.PictureBajaProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBajaProducto.TabIndex = 2
         Me.PictureBajaProducto.TabStop = False
         '
@@ -119,6 +122,7 @@ Partial Class FrmBajaProducto
         Me.DGVBajaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVBajaProducto.Location = New System.Drawing.Point(42, 256)
         Me.DGVBajaProducto.Name = "DGVBajaProducto"
+        Me.DGVBajaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVBajaProducto.Size = New System.Drawing.Size(812, 150)
         Me.DGVBajaProducto.TabIndex = 9
         '

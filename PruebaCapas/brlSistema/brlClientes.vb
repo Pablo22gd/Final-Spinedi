@@ -25,6 +25,8 @@ Public Class brlClientes
 
     End Sub
 
+
+
     Public Sub eliminarCliente(ByVal idCliente As Integer)
         Dim x As New dtlClientes
         x.eliminarCliente(idCliente)
@@ -59,6 +61,8 @@ Public Class brlClientes
 
     End Sub
 
+
+
     Public Sub obtenerGrillaModProducto(ByRef Cliente As DataTable)
         Dim x As New dtlClientes
         x.obtenerGrillaModProducto(Cliente)
@@ -67,6 +71,12 @@ Public Class brlClientes
     Public Sub obtenerGrillaProveedores(ByRef proveedor As DataTable)
         Dim x As New dtlClientes
         x.obtenerGrillaProveedores(proveedor)
+
+    End Sub
+
+    Public Sub obtenerGrillaProveedoresFiltrada(ByVal buscar As String, ByRef proveedor As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaProveedoresFiltrada(buscar, proveedor)
 
     End Sub
 
@@ -85,8 +95,58 @@ Public Class brlClientes
                          ByVal TxtObservaciones,
                          ByVal TxtRazonSocial)
 
+
         Dim x As New dtlClientes
-        x.NuevoProveedor(TxtNombre,
+        If (TxtNombre = "") Then
+
+            MsgBox("Ingrese el nombre")
+
+        Else
+
+
+            If (TxtDomicilio = "") Then
+
+                MsgBox("Ingrese el domicilio")
+
+            Else
+
+                If (CbLocalidad = "") Then
+
+                    MsgBox("Ingrese la localidad")
+
+                Else
+
+                    If (CbProvincia = "") Then
+
+                        MsgBox("Ingrese la provincia")
+
+                    Else
+
+                        If (TxtTelefono = "") Then
+
+                            MsgBox("Ingrese el telefono")
+
+                        Else
+
+
+                            If (TxtCuit = "") Then
+
+                                MsgBox("Ingrese el cuit")
+
+                            Else
+
+                                If (CbEstado = "") Then
+
+                                    MsgBox("Ingrese el estado")
+
+                                Else
+
+                                    If (TxtRazonSocial = "") Then
+
+                                        MsgBox("Ingrese la razon social")
+
+                                    Else
+                                        x.NuevoProveedor(TxtNombre,
                          TxtDomicilio,
                          CbLocalidad,
                          CbProvincia,
@@ -96,6 +156,24 @@ Public Class brlClientes
                          TxtObservaciones,
                          TxtRazonSocial)
 
+                                        Dim strmensaje As String = "El Proveedor se agrego exitosamente"
+                                        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
+
+                                    End If
+                                            End If
+                                        End If
+
+                                    End If
+                                End If
+
+                            End If
+                        End If
+
+                    End If
+
+
+     
 
     End Sub
 
@@ -224,8 +302,57 @@ Public Class brlClientes
                             ByVal TxtObservaciones)
 
 
+
+
         Dim x As New dtlClientes
-        x.NuevoProducto(TxtNombre,
+
+
+        If (TxtNombre = "") Then
+
+            MsgBox("Ingrese el nombre")
+
+        Else
+
+
+            If (TxtMarca = "") Then
+
+                MsgBox("Ingrese la marca")
+
+            Else
+
+                If (TxtDetalle = "") Then
+
+                    MsgBox("Ingrese detalle")
+
+                Else
+
+                    If (TxtCantidad = "") Then
+
+                        MsgBox("Ingrese la cantidad")
+
+                    Else
+
+                        If (TxtEstado = "") Then
+
+                            MsgBox("Ingrese estado")
+
+                        Else
+
+
+                            If (TxtProveedor = "") Then
+
+                                MsgBox("Ingrese el proveedor")
+
+                            Else
+
+                                If (TxtObservaciones = "") Then
+
+                                    MsgBox("Ingrese observaciones")
+
+                                Else
+
+
+                                    x.NuevoProducto(TxtNombre,
                          TxtMarca,
                          TxtDetalle,
                          TxtCantidad,
@@ -233,6 +360,20 @@ Public Class brlClientes
                          TxtProveedor,
                          TxtObservaciones)
 
+
+                                    Dim strmensaje As String = "El producto se agrego exitosamente"
+                                    MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
+
+                                    End If
+                                End If
+                            End If
+
+                        End If
+                    End If
+
+                End If
+            End If
 
     End Sub
 

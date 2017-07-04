@@ -32,25 +32,12 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite3", "..\..\Mis Docum
 		VWDPort = "50658"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{F3A69512-05CB-453E-A74F-5351C73C0917}|wflSistema.dll;{42EA9A00-5782-4419-A256-F8CF3B4317A9}|brlSistema.dll;{2F3E3837-1038-4B50-8242-4D9055D941F0}|dtlSistema.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/WebSite3"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\Mis Documentos\Visual Studio 2010\WebSites\WebSite3\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite3\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/WebSite3"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\Mis Documentos\Visual Studio 2010\WebSites\WebSite3\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite3\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "50658"
-		DefaultWebSiteLanguage = "Visual Basic"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imagenes", "Imagenes", "{8243C28E-66C3-43F7-94B0-3D0ED9A4DCDC}"
+	ProjectSection(SolutionItems) = preProject
+		Imagenes\Clientes.jpg = Imagenes\Clientes.jpg
+		Imagenes\producto.jpg = Imagenes\producto.jpg
+		Imagenes\proveedor.jpg = Imagenes\proveedor.jpg
 	EndProjectSection
 EndProject
 Global

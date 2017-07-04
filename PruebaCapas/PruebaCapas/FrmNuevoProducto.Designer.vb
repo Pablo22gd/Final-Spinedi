@@ -22,6 +22,7 @@ Partial Class FrmNuevoProducto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNuevoProducto))
         Me.LblNuevoProducto = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.LblMarca = New System.Windows.Forms.Label()
@@ -119,9 +120,11 @@ Partial Class FrmNuevoProducto
         '
         'PictureNuevoProducto
         '
-        Me.PictureNuevoProducto.Location = New System.Drawing.Point(525, 57)
+        Me.PictureNuevoProducto.Image = CType(resources.GetObject("PictureNuevoProducto.Image"), System.Drawing.Image)
+        Me.PictureNuevoProducto.Location = New System.Drawing.Point(504, 76)
         Me.PictureNuevoProducto.Name = "PictureNuevoProducto"
-        Me.PictureNuevoProducto.Size = New System.Drawing.Size(163, 144)
+        Me.PictureNuevoProducto.Size = New System.Drawing.Size(212, 185)
+        Me.PictureNuevoProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureNuevoProducto.TabIndex = 10
         Me.PictureNuevoProducto.TabStop = False
         '
@@ -130,6 +133,7 @@ Partial Class FrmNuevoProducto
         Me.DGVNuevoProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVNuevoProducto.Location = New System.Drawing.Point(314, 287)
         Me.DGVNuevoProducto.Name = "DGVNuevoProducto"
+        Me.DGVNuevoProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVNuevoProducto.Size = New System.Drawing.Size(608, 89)
         Me.DGVNuevoProducto.TabIndex = 11
         '
@@ -202,6 +206,7 @@ Partial Class FrmNuevoProducto
         '
         'CBEstado
         '
+        Me.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBEstado.FormattingEnabled = True
         Me.CBEstado.Items.AddRange(New Object() {"Activo", "Inactivo"})
         Me.CBEstado.Location = New System.Drawing.Point(118, 221)

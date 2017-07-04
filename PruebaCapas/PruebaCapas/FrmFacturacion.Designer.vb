@@ -53,6 +53,7 @@ Partial Class FrmFacturacion
         Me.DgvGrillaFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvGrillaFacturacion.Location = New System.Drawing.Point(21, 36)
         Me.DgvGrillaFacturacion.Name = "DgvGrillaFacturacion"
+        Me.DgvGrillaFacturacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvGrillaFacturacion.Size = New System.Drawing.Size(458, 133)
         Me.DgvGrillaFacturacion.TabIndex = 9
         '
@@ -79,6 +80,7 @@ Partial Class FrmFacturacion
         Me.DGVSeleccionarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVSeleccionarProducto.Location = New System.Drawing.Point(15, 50)
         Me.DGVSeleccionarProducto.Name = "DGVSeleccionarProducto"
+        Me.DGVSeleccionarProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVSeleccionarProducto.Size = New System.Drawing.Size(277, 119)
         Me.DGVSeleccionarProducto.TabIndex = 30
         '
