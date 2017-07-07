@@ -19,7 +19,17 @@ Public Class FrmIngresarNuevoCliente
                          CbEstado.Text
                          )
 
-
+        TxtNombre.Text = ""
+        TxtApellido.Text = ""
+        TxtDNI.Text = ""
+        TxtDomicilio.Text = ""
+        CbSexo.Text = ""
+        DTPFechaDeNacimiento.Text = ""
+        TxtTelefono.Text = ""
+        TxtEmail.Text = ""
+        CbProvincia.Text = ""
+        CbLocalidad.Text = ""
+        CbEstado.Text = ""
 
     End Sub
 
@@ -29,9 +39,15 @@ Public Class FrmIngresarNuevoCliente
         Dim x As New wflClientes
         Dim dt As New DataTable
 
-        x.ObtenerProvincia(
-                        dt
-                         )
+        x.ObtenerProvincia(dt)
+
+        CbLocalidad.SelectedValue = ""
+        CbLocalidad.Text = ""
+        CbProvincia.DataSource = dt
+
+        CbProvincia.ValueMember = "provincia"
+
+        CbProvincia.DisplayMember = "provincia"
 
 
 
@@ -49,9 +65,23 @@ Public Class FrmIngresarNuevoCliente
         Dim x As New wflClientes
         Dim dt As New DataTable
 
-        x.ObtenerLocalidad(
+
+
+        Dim valor As [String] = DirectCast(CbProvincia.SelectedItem, System.Data.DataRowView).Row.ItemArray(0).ToString()
+
+
+        x.ObtenerLocalidad(valor,
                         dt
                          )
+
+        CbLocalidad.DataSource = dt
+
+        CbLocalidad.ValueMember = "localidad"
+
+        CbLocalidad.DisplayMember = "localidad"
+
+
+
 
     End Sub
 
@@ -61,5 +91,13 @@ Public Class FrmIngresarNuevoCliente
 
     Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
         e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+    End Sub
+
+    Private Sub CbProvincia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CbProvincia.KeyPress
+
+    End Sub
+
+    Private Sub CbProvincia_KeyDown(sender As Object, e As KeyEventArgs) Handles CbProvincia.KeyDown
+
     End Sub
 End Class

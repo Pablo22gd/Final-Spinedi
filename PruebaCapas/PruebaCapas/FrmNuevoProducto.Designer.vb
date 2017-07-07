@@ -32,7 +32,6 @@ Partial Class FrmNuevoProducto
         Me.LblProveedor = New System.Windows.Forms.Label()
         Me.LblObservaciones = New System.Windows.Forms.Label()
         Me.PictureNuevoProducto = New System.Windows.Forms.PictureBox()
-        Me.DGVNuevoProducto = New System.Windows.Forms.DataGridView()
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
@@ -43,7 +42,6 @@ Partial Class FrmNuevoProducto
         Me.TxtMarca = New System.Windows.Forms.TextBox()
         Me.CBEstado = New System.Windows.Forms.ComboBox()
         CType(Me.PictureNuevoProducto, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGVNuevoProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblNuevoProducto
@@ -127,15 +125,6 @@ Partial Class FrmNuevoProducto
         Me.PictureNuevoProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureNuevoProducto.TabIndex = 10
         Me.PictureNuevoProducto.TabStop = False
-        '
-        'DGVNuevoProducto
-        '
-        Me.DGVNuevoProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVNuevoProducto.Location = New System.Drawing.Point(314, 287)
-        Me.DGVNuevoProducto.Name = "DGVNuevoProducto"
-        Me.DGVNuevoProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGVNuevoProducto.Size = New System.Drawing.Size(608, 89)
-        Me.DGVNuevoProducto.TabIndex = 11
         '
         'BtnVolver
         '
@@ -228,7 +217,6 @@ Partial Class FrmNuevoProducto
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.BtnVolver)
-        Me.Controls.Add(Me.DGVNuevoProducto)
         Me.Controls.Add(Me.PictureNuevoProducto)
         Me.Controls.Add(Me.LblObservaciones)
         Me.Controls.Add(Me.LblProveedor)
@@ -242,7 +230,6 @@ Partial Class FrmNuevoProducto
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Asistente para ingresar un nuevo producto"
         CType(Me.PictureNuevoProducto, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGVNuevoProducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -257,7 +244,6 @@ Partial Class FrmNuevoProducto
     Friend WithEvents LblProveedor As Label
     Friend WithEvents LblObservaciones As Label
     Friend WithEvents PictureNuevoProducto As PictureBox
-    Friend WithEvents DGVNuevoProducto As DataGridView
     Friend WithEvents BtnVolver As Button
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents TxtNombre As TextBox

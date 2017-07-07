@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmNuevoProveedor
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmNuevoProveedor
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNuevoProveedor))
         Me.TxtCuit = New System.Windows.Forms.TextBox()
@@ -45,9 +45,7 @@ Partial Class FrmNuevoProveedor
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.CbLocalidad = New System.Windows.Forms.ComboBox()
-        Me.DGVNuevoProveedor = New System.Windows.Forms.DataGridView()
         CType(Me.PictureNuevoProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGVNuevoProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TxtCuit
@@ -126,7 +124,7 @@ Partial Class FrmNuevoProveedor
         '
         Me.CbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbEstado.FormattingEnabled = True
-        Me.CbEstado.Items.AddRange(New Object() {"activo"})
+        Me.CbEstado.Items.AddRange(New Object() {"Activo", "Inactivo"})
         Me.CbEstado.Location = New System.Drawing.Point(212, 249)
         Me.CbEstado.Name = "CbEstado"
         Me.CbEstado.Size = New System.Drawing.Size(200, 21)
@@ -137,7 +135,7 @@ Partial Class FrmNuevoProveedor
         Me.CbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbProvincia.FormattingEnabled = True
         Me.CbProvincia.Items.AddRange(New Object() {"bsas"})
-        Me.CbProvincia.Location = New System.Drawing.Point(212, 169)
+        Me.CbProvincia.Location = New System.Drawing.Point(212, 140)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(200, 21)
         Me.CbProvincia.TabIndex = 3
@@ -170,7 +168,7 @@ Partial Class FrmNuevoProveedor
         'LblLocalidad
         '
         Me.LblLocalidad.AutoSize = True
-        Me.LblLocalidad.Location = New System.Drawing.Point(79, 143)
+        Me.LblLocalidad.Location = New System.Drawing.Point(77, 172)
         Me.LblLocalidad.Name = "LblLocalidad"
         Me.LblLocalidad.Size = New System.Drawing.Size(53, 13)
         Me.LblLocalidad.TabIndex = 79
@@ -179,7 +177,7 @@ Partial Class FrmNuevoProveedor
         'LblProvincia
         '
         Me.LblProvincia.AutoSize = True
-        Me.LblProvincia.Location = New System.Drawing.Point(79, 172)
+        Me.LblProvincia.Location = New System.Drawing.Point(77, 148)
         Me.LblProvincia.Name = "LblProvincia"
         Me.LblProvincia.Size = New System.Drawing.Size(51, 13)
         Me.LblProvincia.TabIndex = 78
@@ -243,26 +241,16 @@ Partial Class FrmNuevoProveedor
         Me.CbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbLocalidad.FormattingEnabled = True
         Me.CbLocalidad.Items.AddRange(New Object() {"bsas"})
-        Me.CbLocalidad.Location = New System.Drawing.Point(212, 140)
+        Me.CbLocalidad.Location = New System.Drawing.Point(212, 169)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(200, 21)
         Me.CbLocalidad.TabIndex = 2
-        '
-        'DGVNuevoProveedor
-        '
-        Me.DGVNuevoProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVNuevoProveedor.Location = New System.Drawing.Point(488, 283)
-        Me.DGVNuevoProveedor.Name = "DGVNuevoProveedor"
-        Me.DGVNuevoProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGVNuevoProveedor.Size = New System.Drawing.Size(485, 91)
-        Me.DGVNuevoProveedor.TabIndex = 108
         '
         'FrmNuevoProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 598)
-        Me.Controls.Add(Me.DGVNuevoProveedor)
         Me.Controls.Add(Me.CbLocalidad)
         Me.Controls.Add(Me.TxtTelefono)
         Me.Controls.Add(Me.TxtCuit)
@@ -288,7 +276,6 @@ Partial Class FrmNuevoProveedor
         Me.Name = "FrmNuevoProveedor"
         Me.Text = "Asistente para agregar un nuevo proveedor"
         CType(Me.PictureNuevoProveedor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGVNuevoProveedor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -316,5 +303,4 @@ Partial Class FrmNuevoProveedor
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents CbLocalidad As ComboBox
-    Friend WithEvents DGVNuevoProveedor As DataGridView
 End Class

@@ -56,4 +56,14 @@
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Me.Close()
     End Sub
+
+    Private Sub ConsultaClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaClienteToolStripMenuItem.Click
+        Dim frmconsultaCliente As New FrmConsultaCliente()
+        frmconsultaCliente.Show()
+    End Sub
+
+    Private Sub ConsultaProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaProductoToolStripMenuItem.Click
+        Dim frmconsultaProducto As New FrmConsultaProducto()
+        frmconsultaProducto.Show()
+    End Sub
 End Class

@@ -5,13 +5,26 @@ Public Class wflClientes
         x.ObtenerProvincia(provincia)
     End Sub
 
+    Public Sub ObtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
+        Dim x As New brlClientes
+        x.obtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
+    End Sub
 
-    Public Sub ObtenerLocalidad(ByRef localidad As DataTable)
-            Dim x As New brlClientes
-            x.ObtenerLocalidad(localidad)
-        End Sub
+    Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As String, ByRef cliente As DataTable)
+        Dim x As New brlClientes
+        x.obtenerGrillaClienteFiltrada(buscar, cliente)
+    End Sub
+    Public Sub logueo(ByVal usuario As String, ByVal password As String, ByRef resultado As DataTable)
+        Dim x As New brlClientes
+        x.logueo(usuario, password, resultado)
+    End Sub
 
-        Public Sub obtenerRegistro(ByVal idcliente As Integer, ByRef clientes As DataTable)
+    Public Sub ObtenerLocalidad(ByVal valor As String, ByRef localidad As DataTable)
+        Dim x As New brlClientes
+        x.ObtenerLocalidad(valor, localidad)
+    End Sub
+
+    Public Sub obtenerRegistro(ByVal idcliente As Integer, ByRef clientes As DataTable)
         Dim x As New brlClientes
         x.obtenerRegistro(idcliente, clientes)
     End Sub
@@ -22,7 +35,7 @@ Public Class wflClientes
 
     End Sub
 
-    Public Sub obtenerGrillaProductos(producto As DataTable)
+    Public Sub obtenerGrillaProductos(ByRef producto As DataTable)
         Dim x As New brlClientes
         x.obtenerGrillaProductos(producto)
 
@@ -153,6 +166,8 @@ Public Class wflClientes
     Public Sub eliminarCliente(ByVal idCliente As Integer)
         Dim x As New brlClientes
         x.eliminarCliente(idCliente)
+
+
     End Sub
 
     Public Sub eliminarRegistro(ByVal idcliente As Integer, ByRef strmensaje As String)

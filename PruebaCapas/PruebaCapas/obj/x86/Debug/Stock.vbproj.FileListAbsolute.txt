@@ -29,3 +29,5 @@ C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.Resources.res
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\Stock.vbproj.GenerateResource.Cache
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmFacturacion.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmPrincipal.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaCliente.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProducto.resources

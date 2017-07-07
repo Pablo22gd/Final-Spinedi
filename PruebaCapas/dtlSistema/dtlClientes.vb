@@ -43,25 +43,106 @@ Public Class dtlClientes
 
     End Sub
 
-    Public Sub ObtenerLocalidad(ByRef localidad As DataTable)
+    Public Sub ObtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
-        If oConn.State = 1 Then oConn.Close()
-        oConn.Open()
-        Dim table As New DataTable
-        Dim Adp As New SqlDataAdapter()
+        '
 
+        Dim cmd As New SqlCommand("obtenerProductoFiltrado_q_sp", oConn)
 
-        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
-        Adp.SelectCommand.Connection = oConn 'Conexión
-        Adp.SelectCommand.CommandText = "obtenerLocalidadCorrespondiente_q_sp"
-        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+        cmd.CommandType = CommandType.StoredProcedure
 
-        Adp.Fill(table)
-        localidad = table
+        cmd.Parameters.AddWithValue("valor", txtIngresarDato)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        resultado = dt
 
 
     End Sub
 
+    Public Sub ObtenerLocalidad(ByVal valor As String, ByRef localidad As DataTable)
+
+
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        '
+
+        Dim cmd As New SqlCommand("obtenerLocalidadCorrespondiente_q_sp", oConn)
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("valor", valor)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        localidad = dt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    End Sub
+
+
+    Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As String, ByRef cliente As DataTable)
+
+
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        '
+
+        Dim cmd As New SqlCommand("buscarClienteFiltrado_q_sp", oConn)
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("buscar", buscar)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        cliente = dt
+
+
+    End Sub
 
 
     Public Sub obtenerGrillaModCliente(ByRef Clientes As DataTable)
@@ -178,36 +259,52 @@ Public Class dtlClientes
 
     Public Sub obtenerGrillaProveedoresFiltrada(ByVal buscar As String, ByRef proveedor As DataTable)
 
+
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
-        If oConn.State = 1 Then oConn.Close()
-        oConn.Open()
-        Dim table As New DataTable
-        Dim Adp As New SqlDataAdapter()
-        Dim param(0) As SqlParameter
+        '
 
+        Dim cmd As New SqlCommand("obtenerProveedorFiltrado_q_sp", oConn)
 
-        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
-        Adp.SelectCommand.Connection = oConn 'Conexión
+        cmd.CommandType = CommandType.StoredProcedure
 
+        cmd.Parameters.AddWithValue("buscar", buscar)
 
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
 
-        param(0) = New SqlParameter("@buscar", buscar)
+        Dim dt As New DataTable()
 
-        Adp.SelectCommand.CommandText = "obtenerProveedor_q_sp"
+        da.Fill(dt)
 
-        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
-
-        Adp.Fill(table)
-        proveedor = table
+        proveedor = dt
 
 
 
 
 
+    End Sub
 
 
+    Public Sub logueo(ByVal usuario As String, ByVal password As String, ByRef resultado As DataTable)
 
 
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        '
+
+        Dim cmd As New SqlCommand("", oConn)
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("usuario", usuario)
+
+        cmd.Parameters.AddWithValue("password", password)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        resultado = dt
 
 
 
@@ -410,7 +507,7 @@ Public Class dtlClientes
 
 
         cmd.CommandType = CommandType.StoredProcedure
-        cmd.CommandText = "eliminarProducto_d_sp"
+        cmd.CommandText = "eliminarproducto_d_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 

@@ -97,6 +97,24 @@
     <Compile Include="FrmBajaProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmConsultaCliente.Designer.vb">
+      <DependentUpon>FrmConsultaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaProducto.Designer.vb">
+      <DependentUpon>FrmConsultaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaProveedor.Designer.vb">
+      <DependentUpon>FrmConsultaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmFacturacion.Designer.vb">
       <DependentUpon>FrmFacturacion.vb</DependentUpon>
     </Compile>
@@ -179,6 +197,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaProducto.resx">
       <DependentUpon>FrmBajaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaCliente.resx">
+      <DependentUpon>FrmConsultaCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaProducto.resx">
+      <DependentUpon>FrmConsultaProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFacturacion.resx">
       <DependentUpon>FrmFacturacion.vb</DependentUpon>

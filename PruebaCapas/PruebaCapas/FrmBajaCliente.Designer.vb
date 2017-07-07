@@ -23,38 +23,26 @@ Partial Class FrmBajaCliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBajaCliente))
-        Me.LblFiltrarPor = New System.Windows.Forms.Label()
         Me.LblBuscar = New System.Windows.Forms.Label()
         Me.DGVGrillaBajaCliente = New System.Windows.Forms.DataGridView()
         Me.PictureBajaCliente = New System.Windows.Forms.PictureBox()
-        Me.CBFiltro = New System.Windows.Forms.ComboBox()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.LblBajaCliente = New System.Windows.Forms.Label()
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DGVGrillaBajaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBajaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'LblFiltrarPor
-        '
-        Me.LblFiltrarPor.AutoSize = True
-        Me.LblFiltrarPor.Location = New System.Drawing.Point(112, 106)
-        Me.LblFiltrarPor.Name = "LblFiltrarPor"
-        Me.LblFiltrarPor.Size = New System.Drawing.Size(50, 13)
-        Me.LblFiltrarPor.TabIndex = 0
-        Me.LblFiltrarPor.Text = "Filtrar por"
-        '
         'LblBuscar
         '
         Me.LblBuscar.AutoSize = True
-        Me.LblBuscar.Location = New System.Drawing.Point(112, 149)
+        Me.LblBuscar.Location = New System.Drawing.Point(48, 152)
         Me.LblBuscar.Name = "LblBuscar"
-        Me.LblBuscar.Size = New System.Drawing.Size(40, 13)
+        Me.LblBuscar.Size = New System.Drawing.Size(124, 13)
         Me.LblBuscar.TabIndex = 1
-        Me.LblBuscar.Text = "Buscar"
+        Me.LblBuscar.Text = "Ingrese nombre a buscar"
         '
         'DGVGrillaBajaCliente
         '
@@ -74,15 +62,6 @@ Partial Class FrmBajaCliente
         Me.PictureBajaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBajaCliente.TabIndex = 3
         Me.PictureBajaCliente.TabStop = False
-        '
-        'CBFiltro
-        '
-        Me.CBFiltro.FormattingEnabled = True
-        Me.CBFiltro.Items.AddRange(New Object() {"DNI", "Apellido", "Numero de Cliente", "cuit"})
-        Me.CBFiltro.Location = New System.Drawing.Point(178, 106)
-        Me.CBFiltro.Name = "CBFiltro"
-        Me.CBFiltro.Size = New System.Drawing.Size(179, 21)
-        Me.CBFiltro.TabIndex = 4
         '
         'TxtBuscar
         '
@@ -120,36 +99,26 @@ Partial Class FrmBajaCliente
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(283, 191)
+        Me.btnBuscar.Location = New System.Drawing.Point(377, 149)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 9
-        Me.btnBuscar.Text = "Button1"
+        Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(427, 167)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 10
         '
         'FrmBajaCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1022, 395)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.LblBajaCliente)
         Me.Controls.Add(Me.TxtBuscar)
-        Me.Controls.Add(Me.CBFiltro)
         Me.Controls.Add(Me.PictureBajaCliente)
         Me.Controls.Add(Me.DGVGrillaBajaCliente)
         Me.Controls.Add(Me.LblBuscar)
-        Me.Controls.Add(Me.LblFiltrarPor)
         Me.Name = "FrmBajaCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Asistente para dar de baja el cliente"
@@ -159,16 +128,12 @@ Partial Class FrmBajaCliente
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents LblFiltrarPor As Label
     Friend WithEvents LblBuscar As Label
     Friend WithEvents DGVGrillaBajaCliente As DataGridView
     Friend WithEvents PictureBajaCliente As PictureBox
-    Friend WithEvents CBFiltro As ComboBox
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents LblBajaCliente As Label
     Friend WithEvents BtnVolver As Button
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents TextBox1 As TextBox
 End Class

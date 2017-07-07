@@ -197,9 +197,11 @@ Partial Class FrmIngresarNuevoCliente
         'DTPFechaDeNacimiento
         '
         Me.DTPFechaDeNacimiento.Location = New System.Drawing.Point(151, 214)
+        Me.DTPFechaDeNacimiento.MaxDate = New Date(1998, 12, 31, 0, 0, 0, 0)
         Me.DTPFechaDeNacimiento.Name = "DTPFechaDeNacimiento"
         Me.DTPFechaDeNacimiento.Size = New System.Drawing.Size(210, 20)
         Me.DTPFechaDeNacimiento.TabIndex = 5
+        Me.DTPFechaDeNacimiento.Value = New Date(1998, 12, 31, 0, 0, 0, 0)
         '
         'LblEmail
         '

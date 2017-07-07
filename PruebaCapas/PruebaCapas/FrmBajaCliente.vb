@@ -28,7 +28,7 @@ Public Class FrmBajaCliente
 
             Dim x As New wflClientes
 
-            Dim strmensaje As String = ""
+
 
 
             x.eliminarCliente(modSeleccion)
@@ -39,6 +39,8 @@ Public Class FrmBajaCliente
 
             DGVGrillaBajaCliente.DataSource = dt
 
+
+
         End If
 
     End Sub
@@ -46,7 +48,14 @@ Public Class FrmBajaCliente
 
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim x As New wflClientes
+        Dim dt As New DataTable
 
+        Dim strmensaje As String = ""
+
+
+        x.obtenerGrillaClienteFiltrada(TxtBuscar.Text, dt)
+        DGVGrillaBajaCliente.DataSource = dt
 
     End Sub
 

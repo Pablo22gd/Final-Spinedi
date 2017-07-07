@@ -23,11 +23,9 @@ Partial Class FrmBajaProducto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBajaProducto))
-        Me.LblFiltrar = New System.Windows.Forms.Label()
         Me.LblIngresarDato = New System.Windows.Forms.Label()
         Me.PictureBajaProducto = New System.Windows.Forms.PictureBox()
         Me.LblBajaProducto = New System.Windows.Forms.Label()
-        Me.CBFiltrar = New System.Windows.Forms.ComboBox()
         Me.TxtIngresarDato = New System.Windows.Forms.TextBox()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.BtnVolver = New System.Windows.Forms.Button()
@@ -36,15 +34,6 @@ Partial Class FrmBajaProducto
         CType(Me.PictureBajaProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVBajaProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'LblFiltrar
-        '
-        Me.LblFiltrar.AutoSize = True
-        Me.LblFiltrar.Location = New System.Drawing.Point(45, 109)
-        Me.LblFiltrar.Name = "LblFiltrar"
-        Me.LblFiltrar.Size = New System.Drawing.Size(32, 13)
-        Me.LblFiltrar.TabIndex = 0
-        Me.LblFiltrar.Text = "Filtrar"
         '
         'LblIngresarDato
         '
@@ -74,15 +63,6 @@ Partial Class FrmBajaProducto
         Me.LblBajaProducto.TabIndex = 3
         Me.LblBajaProducto.Text = "Baja de producto"
         '
-        'CBFiltrar
-        '
-        Me.CBFiltrar.FormattingEnabled = True
-        Me.CBFiltrar.Items.AddRange(New Object() {"Codigo", "Nombre", "Estado", "Proveedor"})
-        Me.CBFiltrar.Location = New System.Drawing.Point(122, 109)
-        Me.CBFiltrar.Name = "CBFiltrar"
-        Me.CBFiltrar.Size = New System.Drawing.Size(121, 21)
-        Me.CBFiltrar.TabIndex = 4
-        '
         'TxtIngresarDato
         '
         Me.TxtIngresarDato.Location = New System.Drawing.Point(122, 169)
@@ -92,7 +72,7 @@ Partial Class FrmBajaProducto
         '
         'BtnBuscar
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(305, 139)
+        Me.BtnBuscar.Location = New System.Drawing.Point(312, 162)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.BtnBuscar.TabIndex = 6
@@ -136,11 +116,9 @@ Partial Class FrmBajaProducto
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.TxtIngresarDato)
-        Me.Controls.Add(Me.CBFiltrar)
         Me.Controls.Add(Me.LblBajaProducto)
         Me.Controls.Add(Me.PictureBajaProducto)
         Me.Controls.Add(Me.LblIngresarDato)
-        Me.Controls.Add(Me.LblFiltrar)
         Me.Name = "FrmBajaProducto"
         Me.Text = "Asistente para eliminar producto"
         CType(Me.PictureBajaProducto, System.ComponentModel.ISupportInitialize).EndInit()
@@ -149,12 +127,9 @@ Partial Class FrmBajaProducto
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents LblFiltrar As Label
     Friend WithEvents LblIngresarDato As Label
     Friend WithEvents PictureBajaProducto As PictureBox
     Friend WithEvents LblBajaProducto As Label
-    Friend WithEvents CBFiltrar As ComboBox
     Friend WithEvents TxtIngresarDato As TextBox
     Friend WithEvents BtnBuscar As Button
     Friend WithEvents BtnVolver As Button

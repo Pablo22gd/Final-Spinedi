@@ -7,15 +7,32 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub obtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
+        Dim x As New dtlClientes
+        x.ObtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
+
+    End Sub
+    Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As Integer, ByRef clientes As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerGrillaClienteFiltrada(buscar, clientes)
+
+    End Sub
+
+    Public Sub logueo(ByVal usuario As String, ByVal password As String, ByRef resultado As DataTable)
+        Dim x As New dtlClientes
+        x.logueo(usuario, password, resultado)
+
+    End Sub
+
     Public Sub ObtenerProvincia(ByRef provincia As DataTable)
         Dim x As New dtlClientes
         x.ObtenerProvincia(provincia)
 
     End Sub
 
-    Public Sub ObtenerLocalidad(ByRef localidad As DataTable)
+    Public Sub ObtenerLocalidad(ByVal valor As String, ByRef localidad As DataTable)
         Dim x As New dtlClientes
-        x.ObtenerLocalidad(localidad)
+        x.ObtenerLocalidad(valor, localidad)
 
     End Sub
 
@@ -30,12 +47,14 @@ Public Class brlClientes
     Public Sub eliminarCliente(ByVal idCliente As Integer)
         Dim x As New dtlClientes
         x.eliminarCliente(idCliente)
+        Dim strmensaje As String = "El cliente se ELIMINÓ exitosamente"
+        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
     End Sub
 
     Public Sub eliminarProducto(ByVal idProducto As Integer)
         Dim x As New dtlClientes
-        x.eliminarCliente(idProducto)
+        x.eliminarProducto(idProducto)
 
     End Sub
     Public Sub obtenerGrillaCliente(ByRef cliente As DataTable)
@@ -43,7 +62,7 @@ Public Class brlClientes
         x.obtenerGrillaCliente(cliente)
 
     End Sub
-    Public Sub obtenerGrillaProductos(producto As DataTable)
+    Public Sub obtenerGrillaProductos(ByRef producto As DataTable)
         Dim x As New dtlClientes
         x.obtenerGrillaProductos(producto)
 
@@ -220,14 +239,8 @@ Public Class brlClientes
 
                             MsgBox("Ingrese el sexo")
 
+
                         Else
-
-
-                            If (DTPFechaDeNacimiento = "") Then
-
-                                MsgBox("Ingrese la fecha de nacimiento")
-
-                            Else
 
                                 If (TxtTelefono = "") Then
 
@@ -269,10 +282,12 @@ Public Class brlClientes
                          CbProvincia,
                          CbLocalidad,
                          CbEstado)
+                                                Dim strmensaje As String = "El cliente se agrego exitosamente"
+                                                MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
 
 
-                                                End If
+                                            End If
                                             End If
                                         End If
 
@@ -288,7 +303,7 @@ Public Class brlClientes
 
             End If
 
-            End If
+           
 
 
     End Sub
@@ -345,14 +360,10 @@ Public Class brlClientes
 
                             Else
 
-                                If (TxtObservaciones = "") Then
-
-                                    MsgBox("Ingrese observaciones")
-
-                                Else
 
 
-                                    x.NuevoProducto(TxtNombre,
+
+                                x.NuevoProducto(TxtNombre,
                          TxtMarca,
                          TxtDetalle,
                          TxtCantidad,
@@ -373,7 +384,6 @@ Public Class brlClientes
                     End If
 
                 End If
-            End If
 
     End Sub
 

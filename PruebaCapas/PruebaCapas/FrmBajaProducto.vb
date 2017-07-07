@@ -5,7 +5,6 @@ Public Class FrmBajaProducto
         Dim x As New wflClientes
         Dim dt As New DataTable
 
-        Dim strmensaje As String = ""
 
 
         x.obtenerGrillaProductos(dt)
@@ -19,6 +18,14 @@ Public Class FrmBajaProducto
     End Sub
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+        Dim strmensaje As String = ""
+
+
+        x.ObtenerGrillaProductoFiltrado(TxtIngresarDato.Text, dt)
+        DGVBajaProducto.DataSource = dt
 
 
 
@@ -46,12 +53,16 @@ Public Class FrmBajaProducto
 
             Dim dt As New DataTable
 
-            x.obtenerGrillaProveedores(dt)
+            x.obtenerGrillaProductos(dt)
 
             DGVBajaProducto.DataSource = dt
 
 
 
         End If
+    End Sub
+
+    Private Sub DGVBajaProducto_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVBajaProducto.CellContentClick
+
     End Sub
 End Class
