@@ -7,12 +7,14 @@ Public Class brlClientes
 
     End Sub
 
+
+
     Public Sub obtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         Dim x As New dtlClientes
         x.ObtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
 
     End Sub
-    Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As Integer, ByRef clientes As DataTable)
+    Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As String, ByRef clientes As DataTable)
         Dim x As New dtlClientes
         x.obtenerGrillaClienteFiltrada(buscar, clientes)
 
@@ -30,6 +32,12 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub obtenerProveedor(ByRef proveedor As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerProveedor(proveedor)
+
+    End Sub
+
     Public Sub ObtenerLocalidad(ByVal valor As String, ByRef localidad As DataTable)
         Dim x As New dtlClientes
         x.ObtenerLocalidad(valor, localidad)
@@ -39,6 +47,8 @@ Public Class brlClientes
     Public Sub eliminarProveedor(ByVal idProveedor As Integer)
         Dim x As New dtlClientes
         x.eliminarProveedor(idProveedor)
+        Dim strmensaje As String = "El proveedor se ELIMINÓ exitosamente"
+        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
     End Sub
 
@@ -55,6 +65,8 @@ Public Class brlClientes
     Public Sub eliminarProducto(ByVal idProducto As Integer)
         Dim x As New dtlClientes
         x.eliminarProducto(idProducto)
+        Dim strmensaje As String = "El producto se ELIMINÓ exitosamente"
+        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
     End Sub
     Public Sub obtenerGrillaCliente(ByRef cliente As DataTable)
@@ -242,36 +254,36 @@ Public Class brlClientes
 
                         Else
 
-                                If (TxtTelefono = "") Then
+                            If (TxtTelefono = "") Then
 
-                                    MsgBox("Ingrese el telefono")
+                                MsgBox("Ingrese el telefono")
+
+                            Else
+
+                                If (TxtEmail = "") Then
+
+                                    MsgBox("Ingrese el email")
 
                                 Else
 
-                                    If (TxtEmail = "") Then
+                                    If (CbProvincia = "") Then
 
-                                        MsgBox("Ingrese el email")
+                                        MsgBox("Ingrese la provincia")
 
                                     Else
 
-                                        If (CbProvincia = "") Then
+                                        If (CbLocalidad = "") Then
 
-                                            MsgBox("Ingrese la provincia")
+                                            MsgBox("Ingrese la localidad")
 
                                         Else
 
-                                            If (CbLocalidad = "") Then
+                                            If (CbEstado = "") Then
 
-                                                MsgBox("Ingrese la localidad")
+                                                MsgBox("Ingrese el estado")
 
                                             Else
-
-                                                If (CbEstado = "") Then
-
-                                                    MsgBox("Ingrese el estado")
-
-                                                Else
-                                                    x.NuevoCliente(TxtNombre,
+                                                x.NuevoCliente(TxtNombre,
                          TxtApellido,
                          TxtDNI,
                          TxtDomicilio,
@@ -288,22 +300,136 @@ Public Class brlClientes
 
 
                                             End If
-                                            End If
                                         End If
-
                                     End If
+
                                 End If
-
                             End If
-                        End If
 
+                        End If
                     End If
 
                 End If
 
             End If
 
-           
+        End If
+
+
+
+
+    End Sub
+
+    Public Sub modificarClienteSeleccionado(ByVal TxtNombre,
+                            ByVal TxtApellido,
+                            ByVal TxtDNI,
+                            ByVal TxtDomicilio,
+                            ByVal CbSexo,
+                            ByVal DTPFechaDeNacimiento,
+                            ByVal TxtTelefono,
+                            ByVal TxtEmail,
+                            ByVal CbProvincia,
+                            ByVal CbLocalidad,
+                            ByVal CbEstado,
+                            ByVal modSeleccion)
+
+
+        Dim x As New dtlClientes
+        If (TxtNombre = "") Then
+
+            MsgBox("Ingrese el nombre")
+
+        Else
+
+
+            If (TxtApellido = "") Then
+
+                MsgBox("Ingrese el apellido")
+
+            Else
+
+                If (TxtDNI = "") Then
+
+                    MsgBox("Ingrese el dni")
+
+                Else
+
+                    If (TxtDomicilio = "") Then
+
+                        MsgBox("Ingrese el domicilio")
+
+                    Else
+
+                        If (CbSexo = "") Then
+
+                            MsgBox("Ingrese el sexo")
+
+
+                        Else
+
+                            If (TxtTelefono = "") Then
+
+                                MsgBox("Ingrese el telefono")
+
+                            Else
+
+                                If (TxtEmail = "") Then
+
+                                    MsgBox("Ingrese el email")
+
+                                Else
+
+                                    If (CbProvincia = "") Then
+
+                                        MsgBox("Ingrese la provincia")
+
+                                    Else
+
+                                        If (CbLocalidad = "") Then
+
+                                            MsgBox("Ingrese la localidad")
+
+                                        Else
+
+                                            If (CbEstado = "") Then
+
+                                                MsgBox("Ingrese el estado")
+
+                                            Else
+                                                x.modificarClienteSeleccionado(TxtNombre,
+                         TxtApellido,
+                         TxtDNI,
+                         TxtDomicilio,
+                         CbSexo,
+                         DTPFechaDeNacimiento,
+                         TxtTelefono,
+                         TxtEmail,
+                         CbProvincia,
+                         CbLocalidad,
+                         CbEstado,
+                         modSeleccion)
+                                                Dim strmensaje As String = "El cliente se modificó exitosamente"
+                                                MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
+
+
+                                            End If
+                                        End If
+                                    End If
+
+                                End If
+                            End If
+
+                        End If
+                    End If
+
+                End If
+
+            End If
+
+        End If
+
+
 
 
     End Sub

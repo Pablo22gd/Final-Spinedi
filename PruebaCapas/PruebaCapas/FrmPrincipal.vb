@@ -66,4 +66,9 @@
         Dim frmconsultaProducto As New FrmConsultaProducto()
         frmconsultaProducto.Show()
     End Sub
+
+    Private Sub ListadoDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeProveedoresToolStripMenuItem.Click
+        Dim frmconsultaProveedor As New FrmConsultaProveedor()
+        frmconsultaProveedor.Show()
+    End Sub
 End Class

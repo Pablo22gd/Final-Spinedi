@@ -5,6 +5,11 @@ Public Class wflClientes
         x.ObtenerProvincia(provincia)
     End Sub
 
+    Public Sub ObtenerProveedor(ByRef proveedor As DataTable)
+        Dim x As New brlClientes
+        x.obtenerProveedor(proveedor)
+    End Sub
+
     Public Sub ObtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         Dim x As New brlClientes
         x.obtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
@@ -130,6 +135,37 @@ Public Class wflClientes
                          CbProvincia,
                          CbLocalidad,
                          CbEstado)
+
+    End Sub
+
+    Public Sub modificarClienteSeleccionado(
+                         ByVal TxtNombre,
+                         ByVal TxtApellido,
+                         ByVal TxtDNI,
+                         ByVal TxtDomicilio,
+                         ByVal CbSexo,
+                         ByVal DTPFechaDeNacimiento,
+                         ByVal TxtTelefono,
+                         ByVal TxtEmail,
+                         ByVal CbProvincia,
+                         ByVal CbLocalidad,
+                         ByVal CbEstado,
+                         ByVal modSeleccion)
+
+        Dim x As New brlClientes
+
+        x.modificarClienteSeleccionado(TxtNombre,
+                         TxtApellido,
+                         TxtDNI,
+                         TxtDomicilio,
+                         CbSexo,
+                         Convert.ToDateTime(DTPFechaDeNacimiento),
+                         TxtTelefono,
+                         TxtEmail,
+                         CbProvincia,
+                         CbLocalidad,
+                         CbEstado,
+                         modSeleccion)
 
     End Sub
     Public Sub NuevoProducto(

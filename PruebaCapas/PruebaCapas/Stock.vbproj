@@ -204,6 +204,9 @@
     <EmbeddedResource Include="FrmConsultaProducto.resx">
       <DependentUpon>FrmConsultaProducto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaProveedor.resx">
+      <DependentUpon>FrmConsultaProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmFacturacion.resx">
       <DependentUpon>FrmFacturacion.vb</DependentUpon>
     </EmbeddedResource>

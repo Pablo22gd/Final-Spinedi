@@ -48,6 +48,8 @@ Partial Class FrmModificarCliente
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PictureModificarCliente = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.fechaNacimiento = New System.Windows.Forms.DateTimePicker()
         CType(Me.DGVGrillaModificarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureModificarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,34 +75,30 @@ Partial Class FrmModificarCliente
         '
         'CbEstado
         '
-        Me.CbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbEstado.FormattingEnabled = True
-        Me.CbEstado.Location = New System.Drawing.Point(153, 310)
+        Me.CbEstado.Location = New System.Drawing.Point(153, 333)
         Me.CbEstado.Name = "CbEstado"
         Me.CbEstado.Size = New System.Drawing.Size(200, 21)
         Me.CbEstado.TabIndex = 52
         '
         'CbLocalidad
         '
-        Me.CbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbLocalidad.FormattingEnabled = True
-        Me.CbLocalidad.Location = New System.Drawing.Point(153, 278)
+        Me.CbLocalidad.Location = New System.Drawing.Point(153, 301)
         Me.CbLocalidad.Name = "CbLocalidad"
         Me.CbLocalidad.Size = New System.Drawing.Size(200, 21)
         Me.CbLocalidad.TabIndex = 51
         '
         'CbProvincia
         '
-        Me.CbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbProvincia.FormattingEnabled = True
-        Me.CbProvincia.Location = New System.Drawing.Point(153, 251)
+        Me.CbProvincia.Location = New System.Drawing.Point(153, 274)
         Me.CbProvincia.Name = "CbProvincia"
         Me.CbProvincia.Size = New System.Drawing.Size(200, 21)
         Me.CbProvincia.TabIndex = 50
         '
         'CbSexo
         '
-        Me.CbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbSexo.FormattingEnabled = True
         Me.CbSexo.Location = New System.Drawing.Point(153, 166)
         Me.CbSexo.Name = "CbSexo"
@@ -130,7 +128,7 @@ Partial Class FrmModificarCliente
         '
         'TxtDomicilio
         '
-        Me.TxtDomicilio.Location = New System.Drawing.Point(153, 225)
+        Me.TxtDomicilio.Location = New System.Drawing.Point(153, 248)
         Me.TxtDomicilio.Name = "TxtDomicilio"
         Me.TxtDomicilio.Size = New System.Drawing.Size(200, 20)
         Me.TxtDomicilio.TabIndex = 45
@@ -152,7 +150,7 @@ Partial Class FrmModificarCliente
         'LblEstado
         '
         Me.LblEstado.AutoSize = True
-        Me.LblEstado.Location = New System.Drawing.Point(43, 313)
+        Me.LblEstado.Location = New System.Drawing.Point(43, 336)
         Me.LblEstado.Name = "LblEstado"
         Me.LblEstado.Size = New System.Drawing.Size(40, 13)
         Me.LblEstado.TabIndex = 42
@@ -161,7 +159,7 @@ Partial Class FrmModificarCliente
         'LblLocalidad
         '
         Me.LblLocalidad.AutoSize = True
-        Me.LblLocalidad.Location = New System.Drawing.Point(43, 281)
+        Me.LblLocalidad.Location = New System.Drawing.Point(43, 304)
         Me.LblLocalidad.Name = "LblLocalidad"
         Me.LblLocalidad.Size = New System.Drawing.Size(53, 13)
         Me.LblLocalidad.TabIndex = 41
@@ -170,7 +168,7 @@ Partial Class FrmModificarCliente
         'LblProvincia
         '
         Me.LblProvincia.AutoSize = True
-        Me.LblProvincia.Location = New System.Drawing.Point(43, 254)
+        Me.LblProvincia.Location = New System.Drawing.Point(43, 277)
         Me.LblProvincia.Name = "LblProvincia"
         Me.LblProvincia.Size = New System.Drawing.Size(51, 13)
         Me.LblProvincia.TabIndex = 40
@@ -215,7 +213,7 @@ Partial Class FrmModificarCliente
         'LblDomicilio
         '
         Me.LblDomicilio.AutoSize = True
-        Me.LblDomicilio.Location = New System.Drawing.Point(42, 228)
+        Me.LblDomicilio.Location = New System.Drawing.Point(42, 251)
         Me.LblDomicilio.Name = "LblDomicilio"
         Me.LblDomicilio.Size = New System.Drawing.Size(49, 13)
         Me.LblDomicilio.TabIndex = 35
@@ -267,11 +265,29 @@ Partial Class FrmModificarCliente
         Me.PictureModificarCliente.TabIndex = 55
         Me.PictureModificarCliente.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(43, 224)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(91, 13)
+        Me.Label1.TabIndex = 56
+        Me.Label1.Text = "Fecha nacimiento"
+        '
+        'fechaNacimiento
+        '
+        Me.fechaNacimiento.Location = New System.Drawing.Point(153, 224)
+        Me.fechaNacimiento.Name = "fechaNacimiento"
+        Me.fechaNacimiento.Size = New System.Drawing.Size(200, 20)
+        Me.fechaNacimiento.TabIndex = 57
+        '
         'FrmModificarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1007, 518)
+        Me.Controls.Add(Me.fechaNacimiento)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureModificarCliente)
         Me.Controls.Add(Me.DGVGrillaModificarCliente)
         Me.Controls.Add(Me.LblModificarCliente)
@@ -331,4 +347,6 @@ Partial Class FrmModificarCliente
     Friend WithEvents BtnVolver As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PictureModificarCliente As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents fechaNacimiento As DateTimePicker
 End Class

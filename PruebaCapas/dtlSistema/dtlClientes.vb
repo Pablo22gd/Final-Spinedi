@@ -43,6 +43,25 @@ Public Class dtlClientes
 
     End Sub
 
+    Public Sub obtenerProveedor(ByRef provincia As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerCbProveedor_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        provincia = table
+
+
+    End Sub
+
     Public Sub ObtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         '
@@ -406,6 +425,51 @@ Public Class dtlClientes
 
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "Nuevo_Cliente_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub modificarClienteSeleccionado(ByVal TxtNombre,
+                            ByVal TxtApellido,
+                            ByVal TxtDNI,
+                            ByVal TxtDomicilio,
+                            ByVal CbSexo,
+                            ByVal DTPFechaDeNacimiento,
+                            ByVal TxtTelefono,
+                            ByVal TxtEmail,
+                            ByVal CbProvincia,
+                            ByVal CbLocalidad,
+                            ByVal CbEstado,
+                            ByVal modSeleccion)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(11) As SqlParameter
+
+        param(0) = New SqlParameter("@nombre", TxtNombre)
+        param(1) = New SqlParameter("@apellido", TxtApellido)
+        param(2) = New SqlParameter("@dni", TxtDNI)
+        param(3) = New SqlParameter("@domicilio", TxtDomicilio)
+        param(4) = New SqlParameter("@sexo", CbSexo)
+        param(5) = New SqlParameter("@fecha_de_nacimiento", DTPFechaDeNacimiento)
+        param(6) = New SqlParameter("@telefono", TxtTelefono)
+        param(7) = New SqlParameter("@email", TxtEmail)
+        param(8) = New SqlParameter("@provincia", CbProvincia)
+        param(9) = New SqlParameter("@localidad", CbLocalidad)
+        param(10) = New SqlParameter("@estado", CbEstado)
+        param(11) = New SqlParameter("@modSeleccion", modSeleccion)
+
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "modificarClienteSeleccionado_u_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 

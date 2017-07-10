@@ -22,7 +22,7 @@ Public Class FrmNuevoProducto
                          TxtDetalle.Text,
                          TxtCantidad.Text,
                          CBEstado.Text,
-                         TxtProveedor.Text,
+                         cbProducto.Text,
                          TxtObservaciones.Text
                                                )
 
@@ -31,7 +31,7 @@ Public Class FrmNuevoProducto
         TxtDetalle.Text = ""
         TxtCantidad.Text = ""
         CBEstado.Text = ""
-        TxtProveedor.Text = ""
+        cbProducto.Text = ""
         TxtObservaciones.Text = ""
 
 
@@ -44,6 +44,28 @@ Public Class FrmNuevoProducto
     Private Sub TxtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCantidad.KeyPress
 
         e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
+
+    End Sub
+
+    Private Sub cbProducto_MouseClick(sender As Object, e As MouseEventArgs) Handles cbProducto.MouseClick
+
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+        x.ObtenerProveedor(dt)
+
+        cbProducto.SelectedValue = ""
+        cbProducto.Text = ""
+        cbProducto.DataSource = dt
+
+        cbProducto.ValueMember = "nombre"
+
+        cbProducto.DisplayMember = "nombre"
+
+
+
+
+
 
     End Sub
 End Class

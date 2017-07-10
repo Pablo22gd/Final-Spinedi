@@ -31,3 +31,4 @@ C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmFacturacio
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmPrincipal.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaCliente.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProducto.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProveedor.resources

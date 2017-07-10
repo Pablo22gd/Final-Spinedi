@@ -35,12 +35,12 @@ Partial Class FrmNuevoProducto
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
-        Me.TxtProveedor = New System.Windows.Forms.TextBox()
         Me.TxtObservaciones = New System.Windows.Forms.TextBox()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.TxtDetalle = New System.Windows.Forms.TextBox()
         Me.TxtMarca = New System.Windows.Forms.TextBox()
         Me.CBEstado = New System.Windows.Forms.ComboBox()
+        Me.cbProducto = New System.Windows.Forms.ComboBox()
         CType(Me.PictureNuevoProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -152,13 +152,6 @@ Partial Class FrmNuevoProducto
         Me.TxtNombre.Size = New System.Drawing.Size(178, 20)
         Me.TxtNombre.TabIndex = 0
         '
-        'TxtProveedor
-        '
-        Me.TxtProveedor.Location = New System.Drawing.Point(118, 248)
-        Me.TxtProveedor.Name = "TxtProveedor"
-        Me.TxtProveedor.Size = New System.Drawing.Size(178, 20)
-        Me.TxtProveedor.TabIndex = 5
-        '
         'TxtObservaciones
         '
         Me.TxtObservaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -203,17 +196,26 @@ Partial Class FrmNuevoProducto
         Me.CBEstado.Size = New System.Drawing.Size(178, 21)
         Me.CBEstado.TabIndex = 4
         '
+        'cbProducto
+        '
+        Me.cbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbProducto.FormattingEnabled = True
+        Me.cbProducto.Location = New System.Drawing.Point(118, 249)
+        Me.cbProducto.Name = "cbProducto"
+        Me.cbProducto.Size = New System.Drawing.Size(178, 21)
+        Me.cbProducto.TabIndex = 11
+        '
         'FrmNuevoProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(960, 486)
+        Me.Controls.Add(Me.cbProducto)
         Me.Controls.Add(Me.CBEstado)
         Me.Controls.Add(Me.TxtMarca)
         Me.Controls.Add(Me.TxtDetalle)
         Me.Controls.Add(Me.TxtCantidad)
         Me.Controls.Add(Me.TxtObservaciones)
-        Me.Controls.Add(Me.TxtProveedor)
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.BtnVolver)
@@ -247,10 +249,10 @@ Partial Class FrmNuevoProducto
     Friend WithEvents BtnVolver As Button
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents TxtNombre As TextBox
-    Friend WithEvents TxtProveedor As TextBox
     Friend WithEvents TxtObservaciones As TextBox
     Friend WithEvents TxtCantidad As TextBox
     Friend WithEvents TxtDetalle As TextBox
     Friend WithEvents TxtMarca As TextBox
     Friend WithEvents CBEstado As ComboBox
+    Friend WithEvents cbProducto As ComboBox
 End Class
