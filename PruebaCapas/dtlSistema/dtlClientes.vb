@@ -87,11 +87,11 @@ Public Class dtlClientes
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         '
 
-        Dim cmd As New SqlCommand("", oConn)
+        Dim cmd As New SqlCommand("obtenerProveedorFiltrado_q_sp", oConn)
 
         cmd.CommandType = CommandType.StoredProcedure
 
-        cmd.Parameters.AddWithValue("valor", txtIngresarDato)
+        cmd.Parameters.AddWithValue("@buscar", txtIngresarDato)
 
         Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
 
@@ -381,6 +381,7 @@ Public Class dtlClientes
 
     End Sub
 
+
     Public Sub modificarProveedorSeleccionado(ByVal TxtNombre,
                          ByVal TxtDomicilio,
                          ByVal CbLocalidad,
@@ -536,6 +537,44 @@ Public Class dtlClientes
 
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "Nuevo_Producto_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub ModificarProductoSeleccionado(ByVal TxtNombre,
+                         ByVal TxtMarca,
+                         ByVal TxtDetalle,
+                         ByVal TxtCantidad,
+                         ByVal CbEstado,
+                         ByVal TxtProveedor,
+                         ByVal TxtObservaciones,
+                         ByVal modseleccion)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(7) As SqlParameter
+
+        param(0) = New SqlParameter("@nombre", TxtNombre)
+        param(1) = New SqlParameter("@marca", TxtMarca)
+        param(2) = New SqlParameter("@detalle", TxtDetalle)
+        param(3) = New SqlParameter("@cantidad", TxtCantidad)
+        param(4) = New SqlParameter("@estado", CbEstado)
+        param(5) = New SqlParameter("@proveedor", TxtProveedor)
+        param(6) = New SqlParameter("@observaciones", TxtObservaciones)
+        param(7) = New SqlParameter("@modseleccion", modseleccion)
+
+
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "modificarproductoseleccionado_u_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 

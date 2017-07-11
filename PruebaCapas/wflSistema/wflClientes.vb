@@ -213,6 +213,27 @@ Public Class wflClientes
                          TxtObservaciones)
 
     End Sub
+    Public Sub ModificarProductoSeleccionado(
+                         ByVal TxtNombre,
+                         ByVal TxtMarca,
+                         ByVal TxtDetalle,
+                         ByVal TxtCantidad,
+                         ByVal CbEstado,
+                         ByVal TxtProveedor,
+                         ByVal TxtObservaciones,
+                         ByVal modSeleccion)
+        Dim x As New brlClientes
+
+        x.ModificarProductoSeleccionado(TxtNombre,
+                         TxtMarca,
+                         TxtDetalle,
+                         TxtCantidad,
+                         CbEstado,
+                         TxtProveedor,
+                         TxtObservaciones,
+                         modSeleccion)
+
+    End Sub
 
 
     Public Sub eliminarProveedor(ByVal idProveedor As Integer)

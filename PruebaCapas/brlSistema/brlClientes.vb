@@ -599,18 +599,98 @@ Public Class brlClientes
                          TxtObservaciones)
 
 
-                                    Dim strmensaje As String = "El producto se agrego exitosamente"
-                                    MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+                                Dim strmensaje As String = "El producto se agrego exitosamente"
+                                MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
 
-                                    End If
-                                End If
                             End If
-
                         End If
                     End If
 
                 End If
+            End If
+
+        End If
+
+    End Sub
+    Public Sub ModificarProductoSeleccionado(ByVal TxtNombre,
+                            ByVal TxtMarca,
+                            ByVal TxtDetalle,
+                            ByVal TxtCantidad,
+                            ByVal TxtEstado,
+                            ByVal TxtProveedor,
+                            ByVal TxtObservaciones,
+                            ByVal modseleccion)
+
+
+
+
+        Dim x As New dtlClientes
+
+
+        If (TxtNombre = "") Then
+
+            MsgBox("Ingrese el nombre")
+
+        Else
+
+
+            If (TxtMarca = "") Then
+
+                MsgBox("Ingrese la marca")
+
+            Else
+
+                If (TxtDetalle = "") Then
+
+                    MsgBox("Ingrese detalle")
+
+                Else
+
+                    If (TxtCantidad = "") Then
+
+                        MsgBox("Ingrese la cantidad")
+
+                    Else
+
+                        If (TxtEstado = "") Then
+
+                            MsgBox("Ingrese estado")
+
+                        Else
+
+
+                            If (TxtProveedor = "") Then
+
+                                MsgBox("Ingrese el proveedor")
+
+                            Else
+
+
+
+
+                                x.ModificarProductoSeleccionado(TxtNombre,
+                         TxtMarca,
+                         TxtDetalle,
+                         TxtCantidad,
+                         TxtEstado,
+                         TxtProveedor,
+                         TxtObservaciones,
+                         modseleccion)
+
+
+                                Dim strmensaje As String = "El producto se agrego exitosamente"
+                                MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
+
+                            End If
+                        End If
+                    End If
+
+                End If
+            End If
+
+        End If
 
     End Sub
 

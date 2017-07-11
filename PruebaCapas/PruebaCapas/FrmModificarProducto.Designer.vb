@@ -28,7 +28,6 @@ Partial Class FrmModificarProducto
         Me.TxtDetalle = New System.Windows.Forms.TextBox()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.TxtObservaciones = New System.Windows.Forms.TextBox()
-        Me.TxtProveedor = New System.Windows.Forms.TextBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.BtnVolver = New System.Windows.Forms.Button()
@@ -42,13 +41,13 @@ Partial Class FrmModificarProducto
         Me.LblMarca = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.LblModificarProducto = New System.Windows.Forms.Label()
+        Me.CbProveedor = New System.Windows.Forms.ComboBox()
         CType(Me.DGVModificarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureModificarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CBEstado
         '
-        Me.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBEstado.FormattingEnabled = True
         Me.CBEstado.Items.AddRange(New Object() {"Activo", "Inactivo"})
         Me.CBEstado.Location = New System.Drawing.Point(136, 235)
@@ -86,13 +85,6 @@ Partial Class FrmModificarProducto
         Me.TxtObservaciones.Size = New System.Drawing.Size(178, 89)
         Me.TxtObservaciones.TabIndex = 36
         '
-        'TxtProveedor
-        '
-        Me.TxtProveedor.Location = New System.Drawing.Point(136, 262)
-        Me.TxtProveedor.Name = "TxtProveedor"
-        Me.TxtProveedor.Size = New System.Drawing.Size(178, 20)
-        Me.TxtProveedor.TabIndex = 35
-        '
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(136, 127)
@@ -102,16 +94,16 @@ Partial Class FrmModificarProducto
         '
         'BtnAceptar
         '
-        Me.BtnAceptar.Location = New System.Drawing.Point(737, 421)
+        Me.BtnAceptar.Location = New System.Drawing.Point(419, 421)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.BtnAceptar.TabIndex = 33
-        Me.BtnAceptar.Text = "Aceptar"
+        Me.BtnAceptar.Text = "Modificar"
         Me.BtnAceptar.UseVisualStyleBackColor = True
         '
         'BtnVolver
         '
-        Me.BtnVolver.Location = New System.Drawing.Point(490, 421)
+        Me.BtnVolver.Location = New System.Drawing.Point(846, 421)
         Me.BtnVolver.Name = "BtnVolver"
         Me.BtnVolver.Size = New System.Drawing.Size(75, 23)
         Me.BtnVolver.TabIndex = 32
@@ -209,17 +201,25 @@ Partial Class FrmModificarProducto
         Me.LblModificarProducto.TabIndex = 22
         Me.LblModificarProducto.Text = "Modificar producto"
         '
+        'CbProveedor
+        '
+        Me.CbProveedor.FormattingEnabled = True
+        Me.CbProveedor.Location = New System.Drawing.Point(136, 263)
+        Me.CbProveedor.Name = "CbProveedor"
+        Me.CbProveedor.Size = New System.Drawing.Size(178, 21)
+        Me.CbProveedor.TabIndex = 41
+        '
         'FrmModificarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(992, 489)
+        Me.Controls.Add(Me.CbProveedor)
         Me.Controls.Add(Me.CBEstado)
         Me.Controls.Add(Me.TxtMarca)
         Me.Controls.Add(Me.TxtDetalle)
         Me.Controls.Add(Me.TxtCantidad)
         Me.Controls.Add(Me.TxtObservaciones)
-        Me.Controls.Add(Me.TxtProveedor)
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.BtnVolver)
@@ -247,7 +247,6 @@ Partial Class FrmModificarProducto
     Friend WithEvents TxtDetalle As TextBox
     Friend WithEvents TxtCantidad As TextBox
     Friend WithEvents TxtObservaciones As TextBox
-    Friend WithEvents TxtProveedor As TextBox
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents BtnVolver As Button
@@ -261,4 +260,5 @@ Partial Class FrmModificarProducto
     Friend WithEvents LblMarca As Label
     Friend WithEvents LblNombre As Label
     Friend WithEvents LblModificarProducto As Label
+    Friend WithEvents CbProveedor As ComboBox
 End Class
