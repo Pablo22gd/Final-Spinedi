@@ -14,6 +14,12 @@ Public Class brlClientes
         x.ObtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
 
     End Sub
+
+    Public Sub obtenerGrillaProveedorFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
+        Dim x As New dtlClientes
+        x.ObtenerGrillaProveedorFiltrado(txtIngresarDato, resultado)
+
+    End Sub
     Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As String, ByRef clientes As DataTable)
         Dim x As New dtlClientes
         x.obtenerGrillaClienteFiltrada(buscar, clientes)
@@ -192,19 +198,114 @@ Public Class brlClientes
 
 
                                     End If
-                                            End If
-                                        End If
-
-                                    End If
                                 End If
-
                             End If
-                        End If
 
+                        End If
                     End If
 
+                End If
+            End If
 
-     
+        End If
+
+
+
+
+    End Sub
+
+    Public Sub modificarProveedorSeleccionado(ByVal TxtNombre,
+                         ByVal TxtDomicilio,
+                         ByVal CbLocalidad,
+                         ByVal CbProvincia,
+                         ByVal TxtTelefono,
+                         ByVal TxtCuit,
+                         ByVal CbEstado,
+                         ByVal TxtObservaciones,
+                         ByVal TxtRazonSocial,
+                         ByVal modseleccion)
+
+
+        Dim x As New dtlClientes
+
+        'If (TxtNombre = "") Then
+
+        '    MsgBox("Ingrese el nombre")
+
+        'Else
+
+
+        '    If (TxtDomicilio = "") Then
+
+        '        MsgBox("Ingrese el domicilio")
+
+        '    Else
+
+        '        If (CbLocalidad = "") Then
+
+        '            MsgBox("Ingrese la localidad")
+
+        '        Else
+
+        '            If (CbProvincia = "") Then
+
+        '                MsgBox("Ingrese la provincia")
+
+        '            Else
+
+        '                If (TxtTelefono = "") Then
+
+        '                    MsgBox("Ingrese el telefono")
+
+        '                Else
+
+
+        '                    If (TxtCuit = "") Then
+
+        '                        MsgBox("Ingrese el cuit")
+
+        '                    Else
+
+        '                        If (CbEstado = "") Then
+
+        '                            MsgBox("Ingrese el estado")
+
+        '                        Else
+
+        '                            If (TxtRazonSocial = "") Then
+
+        '                                MsgBox("Ingrese la razon social")
+
+        '                            Else
+        x.modificarProveedorSeleccionado(TxtNombre,
+                         TxtDomicilio,
+                         CbLocalidad,
+                         CbProvincia,
+                         TxtTelefono,
+                         TxtCuit,
+                         CbEstado,
+                         TxtObservaciones,
+                         TxtRazonSocial,
+                         modseleccion)
+
+                                        Dim strmensaje As String = "El Proveedor se modificó exitosamente"
+                                        MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
+
+        '                            End If
+        '                        End If
+        '                    End If
+
+        '                End If
+        '            End If
+
+        '        End If
+        '    End If
+
+        'End If
+
+
+
 
     End Sub
 

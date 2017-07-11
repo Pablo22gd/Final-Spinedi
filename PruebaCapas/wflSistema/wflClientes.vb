@@ -15,6 +15,11 @@ Public Class wflClientes
         x.obtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
     End Sub
 
+    Public Sub ObtenerGrillaProveedorFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
+        Dim x As New brlClientes
+        x.obtenerGrillaProveedorFiltrado(txtIngresarDato, resultado)
+    End Sub
+
     Public Sub obtenerGrillaClienteFiltrada(ByVal buscar As String, ByRef cliente As DataTable)
         Dim x As New brlClientes
         x.obtenerGrillaClienteFiltrada(buscar, cliente)
@@ -51,9 +56,29 @@ Public Class wflClientes
 
     End Sub
 
-    Public Sub obtenerGrillaProveedoresFiltrada(ByVal TxtIngresarDato As String, ByRef proveedor As DataTable)
+    Public Sub modificarProveedorSeleccionado(
+                         ByVal TxtNombre,
+                         ByVal TxtDomicilio,
+                         ByVal CbLocalidad,
+                         ByVal CbProvincia,
+                         ByVal TxtTelefono,
+                         ByVal TxtCuit,
+                         ByVal CbEstado,
+                         ByVal TxtObservaciones,
+                         ByVal TxtRazonSocial,
+                         ByVal modSeleccion)
         Dim x As New brlClientes
-        x.obtenerGrillaProveedoresFiltrada(TxtIngresarDato, proveedor)
+
+        x.modificarProveedorSeleccionado(TxtNombre,
+                         TxtDomicilio,
+                         CbLocalidad,
+                         CbProvincia,
+                         TxtTelefono,
+                         TxtCuit,
+                         CbEstado,
+                         TxtObservaciones,
+                         TxtRazonSocial,
+                         modSeleccion)
 
     End Sub
 
@@ -109,6 +134,7 @@ Public Class wflClientes
                          TxtRazonSocial)
 
     End Sub
+
     Public Sub NuevoCliente(
                          ByVal TxtNombre,
                          ByVal TxtApellido,

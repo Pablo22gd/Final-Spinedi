@@ -83,6 +83,27 @@ Public Class dtlClientes
 
     End Sub
 
+    Public Sub ObtenerGrillaProveedorFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        '
+
+        Dim cmd As New SqlCommand("", oConn)
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("valor", txtIngresarDato)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        resultado = dt
+
+
+    End Sub
+
     Public Sub ObtenerLocalidad(ByVal valor As String, ByRef localidad As DataTable)
 
 
@@ -102,38 +123,6 @@ Public Class dtlClientes
         da.Fill(dt)
 
         localidad = dt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -382,6 +371,47 @@ Public Class dtlClientes
 
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "insertarProveedor_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub modificarProveedorSeleccionado(ByVal TxtNombre,
+                         ByVal TxtDomicilio,
+                         ByVal CbLocalidad,
+                         ByVal CbProvincia,
+                         ByVal TxtTelefono,
+                         ByVal TxtCuit,
+                         ByVal CbEstado,
+                         ByVal TxtObservaciones,
+                         ByVal TxtRazonSocial,
+                         ByVal modseleccion)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(9) As SqlParameter
+
+        param(0) = New SqlParameter("@nombre", TxtNombre)
+        param(1) = New SqlParameter("@domicilio", TxtDomicilio)
+        param(2) = New SqlParameter("@provincia", CbProvincia)
+        param(3) = New SqlParameter("@localidad", CbLocalidad)
+        param(4) = New SqlParameter("@telefono", TxtTelefono)
+        param(5) = New SqlParameter("@cuit", TxtCuit)
+        param(6) = New SqlParameter("@estado", CbEstado)
+        param(7) = New SqlParameter("@razonSocial", TxtRazonSocial)
+        param(8) = New SqlParameter("@observaciones", TxtObservaciones)
+        param(9) = New SqlParameter("@modSeleccion", modseleccion)
+
+
+
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "modificarProveedorSeleccionado_u_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 

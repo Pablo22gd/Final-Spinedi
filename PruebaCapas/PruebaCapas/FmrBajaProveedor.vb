@@ -49,7 +49,7 @@ Public Class FmrBajaProveedor
         Dim strmensaje As String = ""
 
 
-        x.obtenerGrillaProveedoresFiltrada(TxtIngresarDato.Text, dt)
+        x.ObtenerGrillaProveedorFiltrado(TxtIngresarDato.Text, dt)
 
         DGVBjaProveedor.DataSource = dt
     End Sub

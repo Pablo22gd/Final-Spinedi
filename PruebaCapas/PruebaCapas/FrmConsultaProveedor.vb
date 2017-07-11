@@ -16,7 +16,7 @@ Public Class FrmConsultaProveedor
         Dim x As New wflClientes
         Dim dt As New DataTable
 
-        x.obtenerGrillaProveedoresFiltrada(TxtBuscar.Text, dt)
+        x.ObtenerGrillaProveedorFiltrado(TxtBuscar.Text, dt)
         DGVConsultaProveedor.DataSource = dt
     End Sub
 
