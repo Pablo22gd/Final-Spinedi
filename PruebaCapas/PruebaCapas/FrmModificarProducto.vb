@@ -68,4 +68,20 @@ Public Class FrmModificarProducto
 
         DGVModificarProducto.DataSource = dt
     End Sub
+
+    Private Sub CbProveedor_MouseClick(sender As Object, e As MouseEventArgs) Handles CbProveedor.MouseClick
+
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+        x.ObtenerProveedor(dt)
+
+        CbProveedor.SelectedValue = ""
+        CbProveedor.Text = ""
+        CbProveedor.DataSource = dt
+
+        CbProveedor.ValueMember = "nombre"
+
+        CbProveedor.DisplayMember = "nombre"
+    End Sub
 End Class

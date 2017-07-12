@@ -5,6 +5,11 @@ Public Class wflClientes
         x.ObtenerProvincia(provincia)
     End Sub
 
+    Public Sub obtenerProductosEnStock(ByRef stock As DataTable)
+        Dim x As New brlClientes
+        x.obtenerProductosEnStock(stock)
+    End Sub
+
     Public Sub ObtenerProveedor(ByRef proveedor As DataTable)
         Dim x As New brlClientes
         x.obtenerProveedor(proveedor)
@@ -13,6 +18,16 @@ Public Class wflClientes
     Public Sub ObtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         Dim x As New brlClientes
         x.obtenerGrillaProductoFiltrado(txtIngresarDato, resultado)
+    End Sub
+
+    Public Sub guardarPreFacturacion(ByVal id_cliente As String, ByVal id_producto As String, ByVal cantidad As String)
+        Dim x As New brlClientes
+        x.guardarPreFacturacion(id_cliente, id_producto, cantidad)
+    End Sub
+
+    Public Sub buscarProductosEnStock(ByVal txtbuscar As String, ByRef stock As DataTable)
+        Dim x As New brlClientes
+        x.buscarProductosEnStock(txtbuscar, stock)
     End Sub
 
     Public Sub ObtenerGrillaProveedorFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)

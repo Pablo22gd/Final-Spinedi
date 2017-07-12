@@ -81,4 +81,49 @@ Public Class FrmModificarCliente
         End If
 
     End Sub
+
+    Private Sub CbProvincia_MouseClick(sender As Object, e As MouseEventArgs) Handles CbProvincia.MouseClick
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+        x.ObtenerProvincia(dt)
+
+        CbLocalidad.SelectedValue = ""
+        CbLocalidad.Text = ""
+        CbProvincia.DataSource = dt
+
+        CbProvincia.ValueMember = "provincia"
+
+        CbProvincia.DisplayMember = "provincia"
+
+
+
+
+
+
+
+
+    End Sub
+
+    Private Sub CbLocalidad_MouseClick(sender As Object, e As MouseEventArgs) Handles CbLocalidad.MouseClick
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+
+
+
+        Dim valor As [String] = DirectCast(CbProvincia.SelectedItem, System.Data.DataRowView).Row.ItemArray(0).ToString()
+
+
+        x.ObtenerLocalidad(valor,
+                        dt
+                         )
+
+        CbLocalidad.DataSource = dt
+
+        CbLocalidad.ValueMember = "localidad"
+
+        CbLocalidad.DisplayMember = "localidad"
+
+
+    End Sub
 End Class

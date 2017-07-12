@@ -43,6 +43,25 @@ Public Class dtlClientes
 
     End Sub
 
+    Public Sub obtenerProductosEnStock(ByRef provincia As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim table As New DataTable
+        Dim Adp As New SqlDataAdapter()
+
+
+        Adp.SelectCommand = New SqlCommand() ' Creando una Instancia de SqlCommand
+        Adp.SelectCommand.Connection = oConn 'Conexión
+        Adp.SelectCommand.CommandText = "obtenerProductosEnStock_q_sp"
+        Adp.SelectCommand.CommandType = CommandType.StoredProcedure
+
+        Adp.Fill(table)
+        provincia = table
+
+
+    End Sub
+
     Public Sub obtenerProveedor(ByRef provincia As DataTable)
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         If oConn.State = 1 Then oConn.Close()
@@ -79,6 +98,29 @@ Public Class dtlClientes
         da.Fill(dt)
 
         resultado = dt
+
+
+    End Sub
+
+
+
+    Public Sub buscarProductosEnStock(ByVal txtBuscar As String, ByRef stock As DataTable)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        '
+
+        Dim cmd As New SqlCommand("buscarProductosEnStock_q_sp", oConn)
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("@buscar", txtBuscar)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        stock = dt
 
 
     End Sub
@@ -371,6 +413,30 @@ Public Class dtlClientes
 
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "insertarProveedor_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub guardarPreFacturacion(ByVal id_cliente,
+                         ByVal id_producto,
+                                     ByVal cantidad)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(2) As SqlParameter
+
+        param(0) = New SqlParameter("@id_cliente", id_cliente)
+        param(1) = New SqlParameter("@id_producto", id_producto)
+        param(2) = New SqlParameter("@cantidad", cantidad)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "guardarPreFacturacion_i_sp"
         cmd.Connection = oConn
         cmd.Parameters.AddRange(param)
 

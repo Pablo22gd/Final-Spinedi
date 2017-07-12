@@ -28,13 +28,15 @@ Partial Class FrmFacturacion
         Me.DGVSeleccionarProducto = New System.Windows.Forms.DataGridView()
         Me.GBProducto = New System.Windows.Forms.GroupBox()
         Me.BtnBuscar = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNombreCliente = New System.Windows.Forms.TextBox()
         Me.LblBuscarProducto = New System.Windows.Forms.Label()
-        Me.TxtBuscarProducto = New System.Windows.Forms.TextBox()
-        Me.LblCantidad = New System.Windows.Forms.Label()
-        Me.LblNombreProducto = New System.Windows.Forms.Label()
-        Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
         Me.BtnAceptar = New System.Windows.Forms.Button()
+        Me.TxtBuscarProducto = New System.Windows.Forms.TextBox()
+        Me.LblNombreProducto = New System.Windows.Forms.Label()
+        Me.TxtCantidad = New System.Windows.Forms.TextBox()
+        Me.LblCantidad = New System.Windows.Forms.Label()
         Me.GBFacturacion = New System.Windows.Forms.GroupBox()
         Me.CBTipoDeFactura = New System.Windows.Forms.ComboBox()
         Me.LblMostrarTotal = New System.Windows.Forms.Label()
@@ -42,10 +44,15 @@ Partial Class FrmFacturacion
         Me.LblRazonSocial = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.LblTipoDeFactura = New System.Windows.Forms.Label()
+        Me.btnBuscarClientes = New System.Windows.Forms.Button()
+        Me.TxtBuscarClientes = New System.Windows.Forms.TextBox()
+        Me.DGVGrillaCliente = New System.Windows.Forms.DataGridView()
+        Me.LblBuscar = New System.Windows.Forms.Label()
         CType(Me.DgvGrillaFacturacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVSeleccionarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBProducto.SuspendLayout()
         Me.GBFacturacion.SuspendLayout()
+        CType(Me.DGVGrillaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DgvGrillaFacturacion
@@ -54,12 +61,12 @@ Partial Class FrmFacturacion
         Me.DgvGrillaFacturacion.Location = New System.Drawing.Point(21, 36)
         Me.DgvGrillaFacturacion.Name = "DgvGrillaFacturacion"
         Me.DgvGrillaFacturacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvGrillaFacturacion.Size = New System.Drawing.Size(458, 133)
+        Me.DgvGrillaFacturacion.Size = New System.Drawing.Size(509, 353)
         Me.DgvGrillaFacturacion.TabIndex = 9
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(769, 363)
+        Me.BtnCancelar.Location = New System.Drawing.Point(774, 528)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.BtnCancelar.TabIndex = 28
@@ -68,7 +75,7 @@ Partial Class FrmFacturacion
         '
         'BtnFacturar
         '
-        Me.BtnFacturar.Location = New System.Drawing.Point(873, 363)
+        Me.BtnFacturar.Location = New System.Drawing.Point(878, 528)
         Me.BtnFacturar.Name = "BtnFacturar"
         Me.BtnFacturar.Size = New System.Drawing.Size(75, 23)
         Me.BtnFacturar.TabIndex = 29
@@ -78,68 +85,99 @@ Partial Class FrmFacturacion
         'DGVSeleccionarProducto
         '
         Me.DGVSeleccionarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVSeleccionarProducto.Location = New System.Drawing.Point(15, 50)
+        Me.DGVSeleccionarProducto.Location = New System.Drawing.Point(11, 270)
         Me.DGVSeleccionarProducto.Name = "DGVSeleccionarProducto"
         Me.DGVSeleccionarProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGVSeleccionarProducto.Size = New System.Drawing.Size(277, 119)
+        Me.DGVSeleccionarProducto.Size = New System.Drawing.Size(357, 119)
         Me.DGVSeleccionarProducto.TabIndex = 30
         '
         'GBProducto
         '
+        Me.GBProducto.Controls.Add(Me.btnBuscarClientes)
+        Me.GBProducto.Controls.Add(Me.TxtBuscarClientes)
+        Me.GBProducto.Controls.Add(Me.DGVGrillaCliente)
+        Me.GBProducto.Controls.Add(Me.LblBuscar)
         Me.GBProducto.Controls.Add(Me.BtnBuscar)
+        Me.GBProducto.Controls.Add(Me.Label3)
+        Me.GBProducto.Controls.Add(Me.txtNombreCliente)
         Me.GBProducto.Controls.Add(Me.LblBuscarProducto)
-        Me.GBProducto.Controls.Add(Me.TxtBuscarProducto)
-        Me.GBProducto.Controls.Add(Me.LblCantidad)
-        Me.GBProducto.Controls.Add(Me.LblNombreProducto)
-        Me.GBProducto.Controls.Add(Me.TxtCantidad)
+        Me.GBProducto.Controls.Add(Me.DGVSeleccionarProducto)
         Me.GBProducto.Controls.Add(Me.TxtNombreProducto)
         Me.GBProducto.Controls.Add(Me.BtnAceptar)
-        Me.GBProducto.Controls.Add(Me.DGVSeleccionarProducto)
-        Me.GBProducto.Location = New System.Drawing.Point(34, 29)
+        Me.GBProducto.Controls.Add(Me.TxtBuscarProducto)
+        Me.GBProducto.Controls.Add(Me.LblNombreProducto)
+        Me.GBProducto.Controls.Add(Me.TxtCantidad)
+        Me.GBProducto.Controls.Add(Me.LblCantidad)
+        Me.GBProducto.Location = New System.Drawing.Point(12, 29)
         Me.GBProducto.Name = "GBProducto"
-        Me.GBProducto.Size = New System.Drawing.Size(321, 312)
+        Me.GBProducto.Size = New System.Drawing.Size(380, 504)
         Me.GBProducto.TabIndex = 31
         Me.GBProducto.TabStop = False
         Me.GBProducto.Text = "Seleccinar el producto que desea adquirir"
         '
         'BtnBuscar
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(228, 21)
+        Me.BtnBuscar.Location = New System.Drawing.Point(233, 241)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.BtnBuscar.TabIndex = 38
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(1, 190)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "Nombre cliente"
+        '
+        'txtNombreCliente
+        '
+        Me.txtNombreCliente.Location = New System.Drawing.Point(98, 190)
+        Me.txtNombreCliente.Name = "txtNombreCliente"
+        Me.txtNombreCliente.ReadOnly = True
+        Me.txtNombreCliente.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombreCliente.TabIndex = 32
+        '
         'LblBuscarProducto
         '
         Me.LblBuscarProducto.AutoSize = True
-        Me.LblBuscarProducto.Location = New System.Drawing.Point(12, 23)
+        Me.LblBuscarProducto.Location = New System.Drawing.Point(17, 243)
         Me.LblBuscarProducto.Name = "LblBuscarProducto"
         Me.LblBuscarProducto.Size = New System.Drawing.Size(85, 13)
         Me.LblBuscarProducto.TabIndex = 37
         Me.LblBuscarProducto.Text = "Buscar producto"
         '
+        'TxtNombreProducto
+        '
+        Me.TxtNombreProducto.Location = New System.Drawing.Point(109, 406)
+        Me.TxtNombreProducto.Name = "TxtNombreProducto"
+        Me.TxtNombreProducto.ReadOnly = True
+        Me.TxtNombreProducto.Size = New System.Drawing.Size(100, 20)
+        Me.TxtNombreProducto.TabIndex = 32
+        '
+        'BtnAceptar
+        '
+        Me.BtnAceptar.Location = New System.Drawing.Point(290, 475)
+        Me.BtnAceptar.Name = "BtnAceptar"
+        Me.BtnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnAceptar.TabIndex = 31
+        Me.BtnAceptar.Text = "Aceptar"
+        Me.BtnAceptar.UseVisualStyleBackColor = True
+        '
         'TxtBuscarProducto
         '
-        Me.TxtBuscarProducto.Location = New System.Drawing.Point(113, 23)
+        Me.TxtBuscarProducto.Location = New System.Drawing.Point(118, 243)
         Me.TxtBuscarProducto.Name = "TxtBuscarProducto"
         Me.TxtBuscarProducto.Size = New System.Drawing.Size(100, 20)
         Me.TxtBuscarProducto.TabIndex = 36
         '
-        'LblCantidad
-        '
-        Me.LblCantidad.AutoSize = True
-        Me.LblCantidad.Location = New System.Drawing.Point(6, 212)
-        Me.LblCantidad.Name = "LblCantidad"
-        Me.LblCantidad.Size = New System.Drawing.Size(49, 13)
-        Me.LblCantidad.TabIndex = 35
-        Me.LblCantidad.Text = "Cantidad"
-        '
         'LblNombreProducto
         '
         Me.LblNombreProducto.AutoSize = True
-        Me.LblNombreProducto.Location = New System.Drawing.Point(7, 186)
+        Me.LblNombreProducto.Location = New System.Drawing.Point(12, 406)
         Me.LblNombreProducto.Name = "LblNombreProducto"
         Me.LblNombreProducto.Size = New System.Drawing.Size(89, 13)
         Me.LblNombreProducto.TabIndex = 34
@@ -147,26 +185,19 @@ Partial Class FrmFacturacion
         '
         'TxtCantidad
         '
-        Me.TxtCantidad.Location = New System.Drawing.Point(104, 212)
+        Me.TxtCantidad.Location = New System.Drawing.Point(109, 432)
         Me.TxtCantidad.Name = "TxtCantidad"
         Me.TxtCantidad.Size = New System.Drawing.Size(100, 20)
         Me.TxtCantidad.TabIndex = 33
         '
-        'TxtNombreProducto
+        'LblCantidad
         '
-        Me.TxtNombreProducto.Location = New System.Drawing.Point(104, 186)
-        Me.TxtNombreProducto.Name = "TxtNombreProducto"
-        Me.TxtNombreProducto.Size = New System.Drawing.Size(100, 20)
-        Me.TxtNombreProducto.TabIndex = 32
-        '
-        'BtnAceptar
-        '
-        Me.BtnAceptar.Location = New System.Drawing.Point(217, 249)
-        Me.BtnAceptar.Name = "BtnAceptar"
-        Me.BtnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAceptar.TabIndex = 31
-        Me.BtnAceptar.Text = "Aceptar"
-        Me.BtnAceptar.UseVisualStyleBackColor = True
+        Me.LblCantidad.AutoSize = True
+        Me.LblCantidad.Location = New System.Drawing.Point(11, 432)
+        Me.LblCantidad.Name = "LblCantidad"
+        Me.LblCantidad.Size = New System.Drawing.Size(49, 13)
+        Me.LblCantidad.TabIndex = 35
+        Me.LblCantidad.Text = "Cantidad"
         '
         'GBFacturacion
         '
@@ -179,7 +210,7 @@ Partial Class FrmFacturacion
         Me.GBFacturacion.Controls.Add(Me.DgvGrillaFacturacion)
         Me.GBFacturacion.Location = New System.Drawing.Point(398, 29)
         Me.GBFacturacion.Name = "GBFacturacion"
-        Me.GBFacturacion.Size = New System.Drawing.Size(548, 312)
+        Me.GBFacturacion.Size = New System.Drawing.Size(548, 493)
         Me.GBFacturacion.TabIndex = 32
         Me.GBFacturacion.TabStop = False
         Me.GBFacturacion.Text = "Facturacion"
@@ -188,7 +219,7 @@ Partial Class FrmFacturacion
         '
         Me.CBTipoDeFactura.FormattingEnabled = True
         Me.CBTipoDeFactura.Items.AddRange(New Object() {"Factura A", "Factura B", "Factura C"})
-        Me.CBTipoDeFactura.Location = New System.Drawing.Point(146, 235)
+        Me.CBTipoDeFactura.Location = New System.Drawing.Point(126, 445)
         Me.CBTipoDeFactura.Name = "CBTipoDeFactura"
         Me.CBTipoDeFactura.Size = New System.Drawing.Size(121, 21)
         Me.CBTipoDeFactura.TabIndex = 41
@@ -196,7 +227,7 @@ Partial Class FrmFacturacion
         'LblMostrarTotal
         '
         Me.LblMostrarTotal.AutoSize = True
-        Me.LblMostrarTotal.Location = New System.Drawing.Point(388, 182)
+        Me.LblMostrarTotal.Location = New System.Drawing.Point(386, 409)
         Me.LblMostrarTotal.Name = "LblMostrarTotal"
         Me.LblMostrarTotal.Size = New System.Drawing.Size(16, 13)
         Me.LblMostrarTotal.TabIndex = 40
@@ -205,7 +236,7 @@ Partial Class FrmFacturacion
         'LblTotal
         '
         Me.LblTotal.AutoSize = True
-        Me.LblTotal.Location = New System.Drawing.Point(349, 182)
+        Me.LblTotal.Location = New System.Drawing.Point(343, 406)
         Me.LblTotal.Name = "LblTotal"
         Me.LblTotal.Size = New System.Drawing.Size(37, 13)
         Me.LblTotal.TabIndex = 39
@@ -214,7 +245,7 @@ Partial Class FrmFacturacion
         'LblRazonSocial
         '
         Me.LblRazonSocial.AutoSize = True
-        Me.LblRazonSocial.Location = New System.Drawing.Point(49, 273)
+        Me.LblRazonSocial.Location = New System.Drawing.Point(312, 448)
         Me.LblRazonSocial.Name = "LblRazonSocial"
         Me.LblRazonSocial.Size = New System.Drawing.Size(68, 13)
         Me.LblRazonSocial.TabIndex = 38
@@ -222,7 +253,7 @@ Partial Class FrmFacturacion
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(146, 273)
+        Me.TextBox5.Location = New System.Drawing.Point(409, 448)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(121, 20)
         Me.TextBox5.TabIndex = 37
@@ -230,17 +261,51 @@ Partial Class FrmFacturacion
         'LblTipoDeFactura
         '
         Me.LblTipoDeFactura.AutoSize = True
-        Me.LblTipoDeFactura.Location = New System.Drawing.Point(49, 238)
+        Me.LblTipoDeFactura.Location = New System.Drawing.Point(29, 448)
         Me.LblTipoDeFactura.Name = "LblTipoDeFactura"
         Me.LblTipoDeFactura.Size = New System.Drawing.Size(79, 13)
         Me.LblTipoDeFactura.TabIndex = 36
         Me.LblTipoDeFactura.Text = "Tipo de factura"
         '
+        'btnBuscarClientes
+        '
+        Me.btnBuscarClientes.Location = New System.Drawing.Point(270, 31)
+        Me.btnBuscarClientes.Name = "btnBuscarClientes"
+        Me.btnBuscarClientes.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscarClientes.TabIndex = 42
+        Me.btnBuscarClientes.Text = "Buscar"
+        Me.btnBuscarClientes.UseVisualStyleBackColor = True
+        '
+        'TxtBuscarClientes
+        '
+        Me.TxtBuscarClientes.Location = New System.Drawing.Point(129, 33)
+        Me.TxtBuscarClientes.Name = "TxtBuscarClientes"
+        Me.TxtBuscarClientes.Size = New System.Drawing.Size(122, 20)
+        Me.TxtBuscarClientes.TabIndex = 41
+        '
+        'DGVGrillaCliente
+        '
+        Me.DGVGrillaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVGrillaCliente.Location = New System.Drawing.Point(11, 65)
+        Me.DGVGrillaCliente.Name = "DGVGrillaCliente"
+        Me.DGVGrillaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGVGrillaCliente.Size = New System.Drawing.Size(363, 94)
+        Me.DGVGrillaCliente.TabIndex = 40
+        '
+        'LblBuscar
+        '
+        Me.LblBuscar.AutoSize = True
+        Me.LblBuscar.Location = New System.Drawing.Point(8, 36)
+        Me.LblBuscar.Name = "LblBuscar"
+        Me.LblBuscar.Size = New System.Drawing.Size(124, 13)
+        Me.LblBuscar.TabIndex = 39
+        Me.LblBuscar.Text = "Ingrese nombre a buscar"
+        '
         'FrmFacturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(972, 413)
+        Me.ClientSize = New System.Drawing.Size(972, 563)
         Me.Controls.Add(Me.GBFacturacion)
         Me.Controls.Add(Me.GBProducto)
         Me.Controls.Add(Me.BtnFacturar)
@@ -254,6 +319,7 @@ Partial Class FrmFacturacion
         Me.GBProducto.PerformLayout()
         Me.GBFacturacion.ResumeLayout(False)
         Me.GBFacturacion.PerformLayout()
+        CType(Me.DGVGrillaCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -277,4 +343,10 @@ Partial Class FrmFacturacion
     Friend WithEvents TextBox5 As TextBox
     Protected WithEvents LblTipoDeFactura As Label
     Friend WithEvents CBTipoDeFactura As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtNombreCliente As TextBox
+    Friend WithEvents btnBuscarClientes As Button
+    Friend WithEvents TxtBuscarClientes As TextBox
+    Friend WithEvents DGVGrillaCliente As DataGridView
+    Friend WithEvents LblBuscar As Label
 End Class

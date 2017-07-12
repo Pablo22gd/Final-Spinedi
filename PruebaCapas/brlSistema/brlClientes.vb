@@ -7,6 +7,17 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub guardarPreFacturacion(ByVal id_cliente As String, ByVal id_producto As String, ByVal cantidad As String)
+        Dim x As New dtlClientes
+        x.guardarPreFacturacion(id_cliente, id_producto, cantidad)
+
+    End Sub
+
+    Public Sub obtenerProductosEnStock(ByRef stock As DataTable)
+        Dim x As New dtlClientes
+        x.obtenerProductosEnStock(stock)
+
+    End Sub
 
 
     Public Sub obtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
@@ -15,6 +26,11 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub buscarProductosEnStock(ByVal txtBuscar As String, ByRef stock As DataTable)
+        Dim x As New dtlClientes
+        x.buscarProductosEnStock(txtBuscar, stock)
+
+    End Sub
     Public Sub obtenerGrillaProveedorFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         Dim x As New dtlClientes
         x.ObtenerGrillaProveedorFiltrado(txtIngresarDato, resultado)
@@ -679,7 +695,7 @@ Public Class brlClientes
                          modseleccion)
 
 
-                                Dim strmensaje As String = "El producto se agrego exitosamente"
+                                Dim strmensaje As String = "El producto se modifico exitosamente"
                                 MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
 
 

@@ -1,6 +1,3 @@
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.exe
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.xml
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.pdb
 C:\Final Spinedi\PruebaCapas\PruebaCapas\bin\Debug\PruebaCapas.exe
 C:\Final Spinedi\PruebaCapas\PruebaCapas\bin\Debug\PruebaCapas.pdb
 C:\Final Spinedi\PruebaCapas\PruebaCapas\bin\Debug\PruebaCapas.xml
@@ -18,6 +15,10 @@ C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FmrBajaProvee
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FormIngreso.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmBajaCliente.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmBajaProducto.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaCliente.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProducto.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProveedor.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmFacturacion.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmLogin.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmModificarCliente.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmModificarProducto.resources
@@ -25,10 +26,9 @@ C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmModificarP
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmIngresarNuevoCliente.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmNuevoProducto.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmNuevoProveedor.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmPrincipal.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.Resources.resources
 C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\Stock.vbproj.GenerateResource.Cache
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmFacturacion.resources
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmPrincipal.resources
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaCliente.resources
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProducto.resources
-C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.FrmConsultaProveedor.resources
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.exe
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.xml
+C:\Final Spinedi\PruebaCapas\PruebaCapas\obj\x86\Debug\PruebaCapas.pdb
