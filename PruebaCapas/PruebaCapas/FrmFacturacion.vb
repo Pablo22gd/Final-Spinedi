@@ -5,6 +5,9 @@ Public Class FrmFacturacion
         Me.Close()
     End Sub
 
+    Dim cantidad As New Integer
+    Dim cantidadTotal As New Integer
+
     Private Sub FrmFacturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim x As New wflClientes
         Dim dt As New DataTable
@@ -40,30 +43,42 @@ Public Class FrmFacturacion
         Dim id_producto As String
 
 
+
         If TxtCantidad.Text > (DGVSeleccionarProducto(1, DGVSeleccionarProducto.CurrentCell.RowIndex).Value.ToString()) Then
 
             MsgBox("Ingrese una cantidad valida")
 
         Else
             Dim x As New wflClientes
+
             Dim tabla As New DataTable
+            Dim pasarProductosAGrilla As New DataTable
+
 
             id_producto = (DGVSeleccionarProducto(3, DGVSeleccionarProducto.CurrentCell.RowIndex).Value.ToString())
 
             id_cliente = (DGVGrillaCliente(0, DGVGrillaCliente.CurrentCell.RowIndex).Value.ToString())
 
+            If cantidad > -1 Then
 
-            x.guardarPreFacturacion(id_cliente, id_producto, TxtCantidad.Text)
+                cantidad = cantidad + 1
 
 
+            End If
 
+            cantidadTotal = cantidad
+
+            x.ProductosParaFacturar(
+                                        id_cliente,
+                                        id_producto,
+                                        TxtCantidad.Text,
+                                        cantidadTotal,
+                                        txtRazonSocial.Text,
+                                        CBTipoDeFactura.Text,
+                                        pasarProductosAGrilla
+            )
 
         End If
-
-
-
-
-
     End Sub
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
@@ -134,7 +149,7 @@ Public Class FrmFacturacion
 
         End If
 
-
+        '  DGVGrillaCliente.Enabled = False
 
 
 

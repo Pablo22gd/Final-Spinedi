@@ -333,6 +333,42 @@ Public Class dtlClientes
 
     End Sub
 
+    Public Sub ProductosParaFacturar(ByVal id_cliente As String,
+                                     ByVal id_producto As String,
+                                     ByVal TxtCantidad As String,
+                                     ByVal cantidadTotal As String,
+                                     ByVal txtRazonSocial As String,
+                                     ByVal CBTipoDeFactura As String, ByRef pasarProductosAGrilla As DataTable)
+
+
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        '
+
+        Dim cmd As New SqlCommand("obtenerCarrito_q_sp", oConn)
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        cmd.Parameters.AddWithValue("id_cliente", id_cliente)
+        cmd.Parameters.AddWithValue("id_producto", id_producto)
+        cmd.Parameters.AddWithValue("cantidad", TxtCantidad)
+        cmd.Parameters.AddWithValue("sumaProductos", cantidadTotal)
+        cmd.Parameters.AddWithValue("razonSocial", txtRazonSocial)
+        cmd.Parameters.AddWithValue("tipoFactura", CBTipoDeFactura)
+
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+
+        Dim dt As New DataTable()
+
+        da.Fill(dt)
+
+        pasarProductosAGrilla = dt
+
+
+
+
+
+    End Sub
+
 
     Public Sub logueo(ByVal usuario As String, ByVal password As String, ByRef resultado As DataTable)
 
@@ -422,6 +458,8 @@ Public Class dtlClientes
 
 
     End Sub
+
+
 
     Public Sub guardarPreFacturacion(ByVal id_cliente,
                          ByVal id_producto,

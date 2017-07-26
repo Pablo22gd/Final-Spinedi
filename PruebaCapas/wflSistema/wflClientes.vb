@@ -39,6 +39,18 @@ Public Class wflClientes
         Dim x As New brlClientes
         x.obtenerGrillaClienteFiltrada(buscar, cliente)
     End Sub
+
+    Public Sub ProductosParaFacturar(ByVal id_cliente As String,
+                                     ByVal id_producto As String,
+                                     ByVal TxtCantidad As String,
+                                     ByVal cantidadTotal As String,
+                                     ByVal txtRazonSocial As String,
+                                     ByVal CBTipoDeFactura As String, ByRef pasarProductosAGrilla As DataTable)
+
+
+        Dim x As New brlClientes
+        x.ProductosParaFacturar(id_cliente, id_producto, TxtCantidad, cantidadTotal, txtRazonSocial, CBTipoDeFactura, pasarProductosAGrilla)
+    End Sub
     Public Sub logueo(ByVal usuario As String, ByVal password As String, ByRef resultado As DataTable)
         Dim x As New brlClientes
         x.logueo(usuario, password, resultado)

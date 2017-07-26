@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmFacturacion
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,17 @@ Partial Class FrmFacturacion
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DgvGrillaFacturacion = New System.Windows.Forms.DataGridView()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnFacturar = New System.Windows.Forms.Button()
         Me.DGVSeleccionarProducto = New System.Windows.Forms.DataGridView()
         Me.GBProducto = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarClientes = New System.Windows.Forms.Button()
+        Me.TxtBuscarClientes = New System.Windows.Forms.TextBox()
+        Me.DGVGrillaCliente = New System.Windows.Forms.DataGridView()
+        Me.LblBuscar = New System.Windows.Forms.Label()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombreCliente = New System.Windows.Forms.TextBox()
@@ -42,17 +46,13 @@ Partial Class FrmFacturacion
         Me.LblMostrarTotal = New System.Windows.Forms.Label()
         Me.LblTotal = New System.Windows.Forms.Label()
         Me.LblRazonSocial = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtRazonSocial = New System.Windows.Forms.TextBox()
         Me.LblTipoDeFactura = New System.Windows.Forms.Label()
-        Me.btnBuscarClientes = New System.Windows.Forms.Button()
-        Me.TxtBuscarClientes = New System.Windows.Forms.TextBox()
-        Me.DGVGrillaCliente = New System.Windows.Forms.DataGridView()
-        Me.LblBuscar = New System.Windows.Forms.Label()
         CType(Me.DgvGrillaFacturacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVSeleccionarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBProducto.SuspendLayout()
-        Me.GBFacturacion.SuspendLayout()
         CType(Me.DGVGrillaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBFacturacion.SuspendLayout()
         Me.SuspendLayout()
         '
         'DgvGrillaFacturacion
@@ -114,6 +114,40 @@ Partial Class FrmFacturacion
         Me.GBProducto.TabIndex = 31
         Me.GBProducto.TabStop = False
         Me.GBProducto.Text = "Seleccinar el producto que desea adquirir"
+        '
+        'btnBuscarClientes
+        '
+        Me.btnBuscarClientes.Location = New System.Drawing.Point(270, 31)
+        Me.btnBuscarClientes.Name = "btnBuscarClientes"
+        Me.btnBuscarClientes.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscarClientes.TabIndex = 42
+        Me.btnBuscarClientes.Text = "Buscar"
+        Me.btnBuscarClientes.UseVisualStyleBackColor = True
+        '
+        'TxtBuscarClientes
+        '
+        Me.TxtBuscarClientes.Location = New System.Drawing.Point(129, 33)
+        Me.TxtBuscarClientes.Name = "TxtBuscarClientes"
+        Me.TxtBuscarClientes.Size = New System.Drawing.Size(122, 20)
+        Me.TxtBuscarClientes.TabIndex = 41
+        '
+        'DGVGrillaCliente
+        '
+        Me.DGVGrillaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVGrillaCliente.Location = New System.Drawing.Point(11, 65)
+        Me.DGVGrillaCliente.Name = "DGVGrillaCliente"
+        Me.DGVGrillaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGVGrillaCliente.Size = New System.Drawing.Size(363, 94)
+        Me.DGVGrillaCliente.TabIndex = 40
+        '
+        'LblBuscar
+        '
+        Me.LblBuscar.AutoSize = True
+        Me.LblBuscar.Location = New System.Drawing.Point(8, 36)
+        Me.LblBuscar.Name = "LblBuscar"
+        Me.LblBuscar.Size = New System.Drawing.Size(124, 13)
+        Me.LblBuscar.TabIndex = 39
+        Me.LblBuscar.Text = "Ingrese nombre a buscar"
         '
         'BtnBuscar
         '
@@ -205,7 +239,7 @@ Partial Class FrmFacturacion
         Me.GBFacturacion.Controls.Add(Me.LblMostrarTotal)
         Me.GBFacturacion.Controls.Add(Me.LblTotal)
         Me.GBFacturacion.Controls.Add(Me.LblRazonSocial)
-        Me.GBFacturacion.Controls.Add(Me.TextBox5)
+        Me.GBFacturacion.Controls.Add(Me.txtRazonSocial)
         Me.GBFacturacion.Controls.Add(Me.LblTipoDeFactura)
         Me.GBFacturacion.Controls.Add(Me.DgvGrillaFacturacion)
         Me.GBFacturacion.Location = New System.Drawing.Point(398, 29)
@@ -251,12 +285,12 @@ Partial Class FrmFacturacion
         Me.LblRazonSocial.TabIndex = 38
         Me.LblRazonSocial.Text = "Razon social"
         '
-        'TextBox5
+        'txtRazonSocial
         '
-        Me.TextBox5.Location = New System.Drawing.Point(409, 448)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox5.TabIndex = 37
+        Me.txtRazonSocial.Location = New System.Drawing.Point(409, 448)
+        Me.txtRazonSocial.Name = "txtRazonSocial"
+        Me.txtRazonSocial.Size = New System.Drawing.Size(121, 20)
+        Me.txtRazonSocial.TabIndex = 37
         '
         'LblTipoDeFactura
         '
@@ -266,40 +300,6 @@ Partial Class FrmFacturacion
         Me.LblTipoDeFactura.Size = New System.Drawing.Size(79, 13)
         Me.LblTipoDeFactura.TabIndex = 36
         Me.LblTipoDeFactura.Text = "Tipo de factura"
-        '
-        'btnBuscarClientes
-        '
-        Me.btnBuscarClientes.Location = New System.Drawing.Point(270, 31)
-        Me.btnBuscarClientes.Name = "btnBuscarClientes"
-        Me.btnBuscarClientes.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscarClientes.TabIndex = 42
-        Me.btnBuscarClientes.Text = "Buscar"
-        Me.btnBuscarClientes.UseVisualStyleBackColor = True
-        '
-        'TxtBuscarClientes
-        '
-        Me.TxtBuscarClientes.Location = New System.Drawing.Point(129, 33)
-        Me.TxtBuscarClientes.Name = "TxtBuscarClientes"
-        Me.TxtBuscarClientes.Size = New System.Drawing.Size(122, 20)
-        Me.TxtBuscarClientes.TabIndex = 41
-        '
-        'DGVGrillaCliente
-        '
-        Me.DGVGrillaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVGrillaCliente.Location = New System.Drawing.Point(11, 65)
-        Me.DGVGrillaCliente.Name = "DGVGrillaCliente"
-        Me.DGVGrillaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGVGrillaCliente.Size = New System.Drawing.Size(363, 94)
-        Me.DGVGrillaCliente.TabIndex = 40
-        '
-        'LblBuscar
-        '
-        Me.LblBuscar.AutoSize = True
-        Me.LblBuscar.Location = New System.Drawing.Point(8, 36)
-        Me.LblBuscar.Name = "LblBuscar"
-        Me.LblBuscar.Size = New System.Drawing.Size(124, 13)
-        Me.LblBuscar.TabIndex = 39
-        Me.LblBuscar.Text = "Ingrese nombre a buscar"
         '
         'FrmFacturacion
         '
@@ -317,9 +317,9 @@ Partial Class FrmFacturacion
         CType(Me.DGVSeleccionarProducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBProducto.ResumeLayout(False)
         Me.GBProducto.PerformLayout()
+        CType(Me.DGVGrillaCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBFacturacion.ResumeLayout(False)
         Me.GBFacturacion.PerformLayout()
-        CType(Me.DGVGrillaCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -340,7 +340,7 @@ Partial Class FrmFacturacion
     Friend WithEvents LblMostrarTotal As Label
     Friend WithEvents LblTotal As Label
     Friend WithEvents LblRazonSocial As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtRazonSocial As TextBox
     Protected WithEvents LblTipoDeFactura As Label
     Friend WithEvents CBTipoDeFactura As ComboBox
     Friend WithEvents Label3 As Label

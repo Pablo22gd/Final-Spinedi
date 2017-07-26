@@ -19,6 +19,16 @@ Public Class brlClientes
 
     End Sub
 
+    Public Sub ProductosParaFacturar(ByVal id_cliente As String,
+                                     ByVal id_producto As String,
+                                     ByVal TxtCantidad As String,
+                                     ByVal cantidadTotal As String,
+                                     ByVal txtRazonSocial As String,
+                                     ByVal CBTipoDeFactura As String, ByRef pasarProductosAGrilla As DataTable)
+        Dim x As New dtlClientes
+        x.ProductosParaFacturar(id_cliente, id_producto, TxtCantidad, cantidadTotal, txtRazonSocial, CBTipoDeFactura, pasarProductosAGrilla)
+
+    End Sub
 
     Public Sub obtenerGrillaProductoFiltrado(ByVal txtIngresarDato As String, ByRef resultado As DataTable)
         Dim x As New dtlClientes
