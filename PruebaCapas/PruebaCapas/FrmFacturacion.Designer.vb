@@ -81,6 +81,7 @@ Partial Class FrmFacturacion
         Me.BtnFacturar.TabIndex = 29
         Me.BtnFacturar.Text = "Facturar"
         Me.BtnFacturar.UseVisualStyleBackColor = True
+        Me.BtnFacturar.Visible = False
         '
         'DGVSeleccionarProducto
         '
@@ -251,6 +252,7 @@ Partial Class FrmFacturacion
         '
         'CBTipoDeFactura
         '
+        Me.CBTipoDeFactura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBTipoDeFactura.FormattingEnabled = True
         Me.CBTipoDeFactura.Items.AddRange(New Object() {"Factura A", "Factura B", "Factura C"})
         Me.CBTipoDeFactura.Location = New System.Drawing.Point(126, 445)

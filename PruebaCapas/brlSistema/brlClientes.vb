@@ -21,12 +21,26 @@ Public Class brlClientes
 
     Public Sub ProductosParaFacturar(ByVal id_cliente As String,
                                      ByVal id_producto As String,
-                                     ByVal TxtCantidad As String,
-                                     ByVal cantidadTotal As String,
-                                     ByVal txtRazonSocial As String,
-                                     ByVal CBTipoDeFactura As String, ByRef pasarProductosAGrilla As DataTable)
+                                     ByVal TxtCantidad As String)
         Dim x As New dtlClientes
-        x.ProductosParaFacturar(id_cliente, id_producto, TxtCantidad, cantidadTotal, txtRazonSocial, CBTipoDeFactura, pasarProductosAGrilla)
+        x.ProductosParaFacturar(id_cliente, id_producto, TxtCantidad)
+
+    End Sub
+
+    Public Sub ConfirmarFacturacion(ByVal cantidadTotal As String,
+                                     ByVal CBTipoDeFactura As String,
+                                     ByVal txtRazonSocial As String
+                                     )
+        Dim x As New dtlClientes
+        x.ConfirmarFacturacion(cantidadTotal, CBTipoDeFactura, txtRazonSocial)
+
+    End Sub
+
+    Public Sub ProductosParaFacturar2(
+                                     ByVal cantidadTotal As String,
+                                     ByRef pasarProductosAGrilla As DataTable)
+        Dim x As New dtlClientes
+        x.ProductosParaFacturar2(cantidadTotal, pasarProductosAGrilla)
 
     End Sub
 

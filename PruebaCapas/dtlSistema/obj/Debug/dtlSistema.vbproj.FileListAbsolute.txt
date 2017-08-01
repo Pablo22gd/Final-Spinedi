@@ -26,4 +26,3 @@ C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.vbproj.GenerateReso
 C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.dll
 C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.xml
 C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.pdb
-C:\Final Spinedi\PruebaCapas\dtlSistema\obj\Debug\dtlSistema.vbprojResolveAssemblyReference.cache

@@ -335,25 +335,66 @@ Public Class dtlClientes
 
     Public Sub ProductosParaFacturar(ByVal id_cliente As String,
                                      ByVal id_producto As String,
-                                     ByVal TxtCantidad As String,
+                                     ByVal TxtCantidad As String)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(2) As SqlParameter
+
+        param(0) = New SqlParameter("@id_cliente", id_cliente)
+        param(1) = New SqlParameter("@id_producto", id_producto)
+        param(2) = New SqlParameter("@cantidad", TxtCantidad)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "insertarCarrito_q_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub confirmarFacturacion(ByVal cantidadTotal As String,
+                                     ByVal CBTipoDeFactura As String,
+                                     ByVal txtRazonSocial As String)
+        oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
+        If oConn.State = 1 Then oConn.Close()
+        oConn.Open()
+        Dim cmd As New SqlCommand
+        Dim param(2) As SqlParameter
+
+        param(0) = New SqlParameter("@cantidadTotal", cantidadTotal)
+        param(1) = New SqlParameter("@TipoFactura", CBTipoDeFactura)
+        param(2) = New SqlParameter("@RazonSocial", txtRazonSocial)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "insertarFactura_i_sp"
+        cmd.Connection = oConn
+        cmd.Parameters.AddRange(param)
+
+
+        cmd.ExecuteNonQuery()
+
+
+
+    End Sub
+
+    Public Sub ProductosParaFacturar2(
                                      ByVal cantidadTotal As String,
-                                     ByVal txtRazonSocial As String,
-                                     ByVal CBTipoDeFactura As String, ByRef pasarProductosAGrilla As DataTable)
+                                     ByRef pasarProductosAGrilla As DataTable)
 
 
         oConn = New SqlConnection("Data Source=192.168.5.82\SQLEXPRESS;Initial Catalog=Stock;User ID=joel;Password=casa12;")
         '
 
-        Dim cmd As New SqlCommand("obtenerCarrito_q_sp", oConn)
+        Dim cmd As New SqlCommand("obtenerCarrito2_q_sp", oConn)
 
         cmd.CommandType = CommandType.StoredProcedure
 
-        cmd.Parameters.AddWithValue("id_cliente", id_cliente)
-        cmd.Parameters.AddWithValue("id_producto", id_producto)
-        cmd.Parameters.AddWithValue("cantidad", TxtCantidad)
         cmd.Parameters.AddWithValue("sumaProductos", cantidadTotal)
-        cmd.Parameters.AddWithValue("razonSocial", txtRazonSocial)
-        cmd.Parameters.AddWithValue("tipoFactura", CBTipoDeFactura)
+
 
         Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
 

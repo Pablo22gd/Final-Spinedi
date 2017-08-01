@@ -41,43 +41,52 @@ Public Class FrmFacturacion
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         Dim id_cliente As String
         Dim id_producto As String
+        Dim valor As String
 
+        valor = DGVSeleccionarProducto(1, DGVSeleccionarProducto.CurrentCell.RowIndex).Value.ToString()
 
-
-        If TxtCantidad.Text > (DGVSeleccionarProducto(1, DGVSeleccionarProducto.CurrentCell.RowIndex).Value.ToString()) Then
-
-            MsgBox("Ingrese una cantidad valida")
-
+        If TxtCantidad.Text = "" Then
+            MsgBox("Ingrese una cantidad")
         Else
-            Dim x As New wflClientes
-
-            Dim tabla As New DataTable
-            Dim pasarProductosAGrilla As New DataTable
 
 
-            id_producto = (DGVSeleccionarProducto(3, DGVSeleccionarProducto.CurrentCell.RowIndex).Value.ToString())
+            If (Convert.ToInt32(TxtCantidad.Text) > Convert.ToInt32(valor)) Then
 
-            id_cliente = (DGVGrillaCliente(0, DGVGrillaCliente.CurrentCell.RowIndex).Value.ToString())
+                MsgBox("Ingrese una cantidad valida")
 
-            If cantidad > -1 Then
+            Else
+                Dim x As New wflClientes
 
-                cantidad = cantidad + 1
+                Dim pasarProductosAGrilla As New DataTable
+
+
+                id_producto = (DGVSeleccionarProducto(3, DGVSeleccionarProducto.CurrentCell.RowIndex).Value.ToString())
+
+                id_cliente = (DGVGrillaCliente(0, DGVGrillaCliente.CurrentCell.RowIndex).Value.ToString())
+
+                If cantidad > -1 Then
+
+                    cantidad = cantidad + 1
+
+
+
+                End If
+
+                cantidadTotal = cantidad
+
+                x.ProductosParaFacturar(
+                                        id_cliente,
+                                        id_producto,
+                                        TxtCantidad.Text)
+
+                x.ProductosParaFacturar2(cantidadTotal, pasarProductosAGrilla)
+
+                DgvGrillaFacturacion.DataSource = pasarProductosAGrilla
+
+                BtnFacturar.Visible = True
 
 
             End If
-
-            cantidadTotal = cantidad
-
-            x.ProductosParaFacturar(
-                                        id_cliente,
-                                        id_producto,
-                                        TxtCantidad.Text,
-                                        cantidadTotal,
-                                        txtRazonSocial.Text,
-                                        CBTipoDeFactura.Text,
-                                        pasarProductosAGrilla
-            )
-
         End If
     End Sub
 
@@ -154,5 +163,43 @@ Public Class FrmFacturacion
 
 
 
+    End Sub
+
+    Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+        Dim x As New wflClientes
+        Dim dt As New DataTable
+        Dim tabla As New DataTable
+
+        If (CBTipoDeFactura.SelectedItem = "") Then
+            MsgBox("Ingrese el tipo de factura")
+        Else
+            If (txtRazonSocial.Text = "") Then
+                MsgBox("Ingrese la razon social")
+            Else
+
+                Dim strmensaje As String = "Esta seguro que desea realizar la operacion"
+                MsgBox(strmensaje, MsgBoxStyle.OkOnly, "Mensaje al operador")
+
+
+                x.ConfirmarFacturacion(
+            cantidadTotal,
+            CBTipoDeFactura.Text,
+            txtRazonSocial.Text)
+
+                MsgBox("La facturacion se realizo con exito")
+
+
+            End If
+
+        End If
+
+
+
+
+
+    End Sub
+
+    Private Sub TxtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCantidad.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
     End Sub
 End Class
